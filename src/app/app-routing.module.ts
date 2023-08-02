@@ -9,11 +9,12 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: '/about', component: AboutComponent },
-  { path: '/sesiones', component: SesionesComponent },
-  { path: '/reservas', component: ReservasComponent },
-  { path: '/blog', component: BlogComponent },
-  { path: '/contacto', component: ContactoComponent },
+  { path: 'home', component: HomeComponent},
+  { path: 'about', component: AboutComponent },
+  { path: 'sesiones', component: SesionesComponent },
+  { path: 'reservas', component: ReservasComponent },
+  { path: 'blog', component: BlogComponent },
+  { path: 'contacto', component: ContactoComponent },
   { path: '**', redirectTo: '/home' },
 ];
 

@@ -15,6 +15,14 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { NewbornComponent } from './pages/sesiones/newborn/newborn.component';
+import { ComunionComponent } from './pages/sesiones/comunion/comunion.component';
+import { EmbarazoComponent } from './pages/sesiones/embarazo/embarazo.component';
+import { BebesComponent } from './pages/sesiones/bebes/bebes.component';
+import { FamiliaComponent } from './pages/sesiones/familia/familia.component';
+import { FineArtComponent } from './pages/sesiones/fine-art/fine-art.component';
+import { NavidadComponent } from './pages/sesiones/navidad/navidad.component';
+import { CumplesComponent } from './pages/sesiones/cumples/cumples.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +35,14 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     ContactoComponent,
     MenuComponent,
     CalendarComponent,
+    NewbornComponent,
+    ComunionComponent,
+    EmbarazoComponent,
+    BebesComponent,
+    FamiliaComponent,
+    FineArtComponent,
+    NavidadComponent,
+    CumplesComponent,
   ],
   imports: [
     BrowserModule,

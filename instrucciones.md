@@ -21,3 +21,6 @@
 sesiones service
 contacto service
 reservas service
+calendar service
+blog service
+
