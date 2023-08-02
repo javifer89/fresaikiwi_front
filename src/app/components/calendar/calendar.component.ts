@@ -71,22 +71,22 @@ export class CalendarComponent implements OnInit {
     };
   }
 
-  async getEvents(): Promise<CalendarEvent[] | any> {
-    try {
-      const response = await this.calendarServices.getAll();
-      const calendarEvents: CalendarEvent[] = response.map((event) => {
-        return {
-          title: event.titulo,
-          description: event.descripcion,
-          start: event.fecha_reserva,
-          end: event.fecha_fin_reserva,
-        };
-      });
-      return calendarEvents;
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  // async getEvents(): Promise<CalendarEvent[] | any> {
+  //   try {
+  //     const response = await this.calendarServices.getAll();
+  //     const calendarEvents: CalendarEvent[] = response.map((event) => {
+  //       return {
+  //         title: event.titulo,
+  //         description: event.descripcion,
+  //         start: event.fecha_reserva,
+  //         end: event.fecha_fin_reserva,
+  //       };
+  //     });
+  //     return calendarEvents;
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 
   ngOnChanges(changes: SimpleChanges) {
     this.calendarComponent.events = changes['reservas'].currentValue;
