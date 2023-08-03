@@ -23,6 +23,12 @@ import { FamiliaComponent } from './pages/sesiones/familia/familia.component';
 import { FineArtComponent } from './pages/sesiones/fine-art/fine-art.component';
 import { NavidadComponent } from './pages/sesiones/navidad/navidad.component';
 import { CumplesComponent } from './pages/sesiones/cumples/cumples.component';
+import { RegistroComponent } from './pages/usuarios/registro/registro.component';
+import { LoginComponent } from './pages/usuarios/login/login.component';
+import { ListaUsuariosComponent } from './pages/usuarios/lista-usuarios/lista-usuarios.component';
+import { EditarUsuariosComponent } from './pages/usuarios/editar-usuarios/editar-usuarios.component';
+import { PanelUsuariosComponent } from './pages/usuarios/panel-usuarios/panel-usuarios.component';
+import { ListaReservasComponent } from './pages/reservas/lista-reservas/lista-reservas.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +49,12 @@ import { CumplesComponent } from './pages/sesiones/cumples/cumples.component';
     FineArtComponent,
     NavidadComponent,
     CumplesComponent,
+    RegistroComponent,
+    LoginComponent,
+    ListaUsuariosComponent,
+    EditarUsuariosComponent,
+    PanelUsuariosComponent,
+    ListaReservasComponent,
   ],
   imports: [
     BrowserModule,

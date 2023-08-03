@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { UsuariosService } from 'src/app/services/usuarios.service';
 // import { StaffService } from 'src/app/services/staff.service';
-// import { UsuariosService } from 'src/app/services/usuarios.service';
 
 @Component({
   selector: 'app-menu',
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class MenuComponent {
   // staffService = inject(StaffService);
 
-  // usuariosService = inject(UsuariosService);
+usuariosService = inject(UsuariosService);
 
   router = inject(Router);
 
