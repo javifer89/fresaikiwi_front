@@ -28,8 +28,8 @@ export class ReservasComponent {
       titulo: new FormControl(null, [Validators.required]),
       descripcion: new FormControl(null, [Validators.required]),
 
-      fecha_reserva: new FormControl(null, [Validators.required]),
-      hora_reserva: new FormControl(null, [Validators.required]),
+      fecha: new FormControl(null, [Validators.required]),
+      hora: new FormControl(null, [Validators.required]),
 
       // fecha_fin_reserva: new FormControl(null, [Validators.required]),
       // hora_fin_reserva: new FormControl(null, [Validators.required]),
@@ -44,18 +44,18 @@ export class ReservasComponent {
     this.sesionId = 0;
   }
 
-  async ngOnInit() {
-    const { sesionId } = this.activatedRoute.snapshot.params;
-    try {
-      this.sesionSeleccionada = await this.sesionService.getById(sesionId);
-    } catch (error) {
-      console.log(error);
-    }
-    this.activatedRoute.params.subscribe(async (params) => {
-      this.sesionId = params['sesionId'];
-      this.sesion = await this.sesionService.getById(params['sesionId']);
-    });
-  }
+  // async ngOnInit() {
+  //   const { sesionId } = this.activatedRoute.snapshot.params;
+  //   try {
+  //     this.sesionSeleccionada = await this.sesionService.getById(sesionId);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  //   this.activatedRoute.params.subscribe(async (params) => {
+  //     this.sesionId = params['sesionId'];
+  //     this.sesion = await this.sesionService.getById(params['sesionId']);
+  //   });
+  // }
 
   // async onSubmit() {
   //   try {
@@ -103,20 +103,20 @@ export class ReservasComponent {
   //   }
   // }
 
-  // onSelect(event: { startStr: string; endStr: string }) {
-  //   this.formulario.patchValue({
-  //     fecha_reserva: event.startStr.split('T')[0],
-  //   });
-  //   this.formulario.patchValue({
-  //     fecha_fin_reserva: event.endStr.split('T')[0],
-  //   });
-  //   this.formulario.patchValue({
-  //     hora_reserva: event.startStr.split('T')[1].slice(0, 5),
-  //   });
-  //   this.formulario.patchValue({
-  //     hora_fin_reserva: event.endStr.split('T')[1].slice(0, 5),
-  //   });
-  // }
+  onSelect(event: { startStr: string; endStr: string }) {
+    this.formulario.patchValue({
+      fecha: event.startStr.split('T')[0],
+    });
+    // this.formulario.patchValue({
+    //   fecha_fin_reserva: event.endStr.split('T')[0],
+    // });
+    this.formulario.patchValue({
+      hora: event.startStr.split('T')[1].slice(0, 5),
+    });
+    // this.formulario.patchValue({
+    //   hora_fin_reserva: event.endStr.split('T')[1].slice(0, 5),
+    // });
+  }
 
   checkError(field: string, error: string): boolean | undefined {
     return (

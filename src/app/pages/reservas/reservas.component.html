@@ -1,5 +1,5 @@
 <div class="container mt-5">
-  <h3 class="text-center">Formulario de reserva de sala</h3>
+  <h3 class="text-center">Formulario de reserva de sesión</h3>
 
 
 
@@ -25,7 +25,7 @@
         <!-- <form [formGroup]="formulario" (ngSubmit)="onSubmit()"> -->
 <form [formGroup]="formulario">
           <div class="input-group mt-3">
-            <span class="input-group-text">Título para la reserva</span>
+            <span class="input-group-text">Título de la reserva</span>
             <input type="text" class="form-control" formControlName="titulo" />
 
             <span class="input-group-text">Descripción</span>
@@ -41,16 +41,16 @@
 
           <div class="input-group mt-3">
             <span class="input-group-text">Fecha</span>
-            <input type="date" class="form-control" formControlName="fecha_reserva" />
+            <input type="date" class="form-control" formControlName="fecha" />
 
             <span class="input-group-text">Hora de inicio</span>
-            <input type="time" class="form-control" formControlName="hora_reserva" />
+            <input type="time" class="form-control" formControlName="hora" />
 
           </div>
-          <p class="error" *ngIf="checkError('fecha_reserva', 'required')">
+          <p class="error" *ngIf="checkError('fecha', 'required')">
             Tienes que indicar una fecha de reserva.
           </p>
-          <p class="error" *ngIf="checkError('hora_reserva', 'required')">
+          <p class="error" *ngIf="checkError('hora', 'required')">
             Tienes que indicar una hora de reserva.
           </p>
 
@@ -71,7 +71,7 @@
             Tienes que indicar hasta qué hora se hace la reserva.
           </p> -->
 
-          <input class="btn" type="submit" class="btn mt-3 mb-3" value="Guardar" />
+          <input class="btn btn-secondary" type="submit" class="btn mt-3 mb-3" value="Guardar" />
         </form>
       </div>
     </div>
