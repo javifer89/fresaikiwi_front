@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root',
 })
-export class SalasService {
+export class SesionesService {
   private httpClient = inject(HttpClient);
   private baseUrl: string;
   private reservas: string;
