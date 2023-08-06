@@ -1,12 +1,73 @@
+.carousel {
+    display: flex;
+    overflow: hidden;
+}
 div.carousel img {
-    width: 650px;
-    height: 468px;
+    width: 100%;
+    height: 100%;
     display: block;
+    object-fit: contain;
+    background-position: center;
+        background-size: cover;
+        transition: 1s ease-in-out;
+}
+/* .carousel-item {
+    min-width: 100%;
+    height: 500px; */
+
+    /* background-position: center;
+    background-size: cover;
+    transition: 1s ease-in-out;
+} */
+
+.carousel-item {
+    min-width: 100%;
+    height: 500px;
+    /* Ajusta la altura del carrusel según tu preferencia */
+    background-position: center;
+    background-size: cover;
+    transition: 1s ease-in-out;
+}
+.carousel-item:not(:first-child) {
+    margin-left: -100%;
+}
+
+.elementToFadeInAndOut {
+    animation: fadeInOut 5s linear forwards;
+    animation-iteration-count: infinite
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.galeria {
+    width: 100%;
+    height: 80vh;
+    max-height: 60vh;
 }
 
 .botones {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .btn {
@@ -18,6 +79,34 @@ div.carousel img {
 .btn:hover {
     background-color: rgb(1, 101, 129);
 }
+
+
+/* SESIONES */
+.seccionSesiones1 .circulo {
+    width: 20vh;
+    height: 20vh;
+    border-radius: 25px;
+}
+
+.Sesiones1 .circulo img{
+position:contain;
+display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* seccion inicial */
 
