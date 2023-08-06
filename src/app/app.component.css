@@ -19,9 +19,15 @@ i {
     font-size: 40px;
     color: #ffffff;
 }
-
+.titulo p {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+/* TODO SOLUCIONAR EL AREA CLICKEABLE DEL MAPA WEB */
+}
 .titulo a {
     width: 25%;
+
 }
 
 @media (max-width: 576px) {
