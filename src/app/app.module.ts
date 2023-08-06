@@ -29,6 +29,8 @@ import { ListaUsuariosComponent } from './pages/usuarios/lista-usuarios/lista-us
 import { EditarUsuariosComponent } from './pages/usuarios/editar-usuarios/editar-usuarios.component';
 import { PanelUsuariosComponent } from './pages/usuarios/panel-usuarios/panel-usuarios.component';
 import { ListaReservasComponent } from './pages/reservas/lista-reservas/lista-reservas.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,7 @@ import { ListaReservasComponent } from './pages/reservas/lista-reservas/lista-re
     EditarUsuariosComponent,
     PanelUsuariosComponent,
     ListaReservasComponent,
+    CarouselComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +65,7 @@ import { ListaReservasComponent } from './pages/reservas/lista-reservas/lista-re
     ReactiveFormsModule,
     HttpClientModule,
     FullCalendarModule,
+    CarouselModule.forRoot(),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
