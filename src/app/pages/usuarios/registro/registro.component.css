@@ -28,3 +28,6 @@ p {
     font-size: small;
     color: red;
 }
+p strong {
+    cursor: pointer;
+}
