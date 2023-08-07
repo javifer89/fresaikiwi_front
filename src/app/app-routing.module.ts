@@ -14,6 +14,8 @@ import { FamiliaComponent } from './pages/sesiones/familia/familia.component';
 import { FineArtComponent } from './pages/sesiones/fine-art/fine-art.component';
 import { NavidadComponent } from './pages/sesiones/navidad/navidad.component';
 import { NewbornComponent } from './pages/sesiones/newborn/newborn.component';
+import { RegistroComponent } from './pages/usuarios/registro/registro.component';
+import { LoginComponent } from './pages/usuarios/login/login.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -34,6 +36,8 @@ const routes: Routes = [
   { path: 'reservas', component: ReservasComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'contacto', component: ContactoComponent },
+  { path: 'usuarios/login', component: LoginComponent },
+  { path: 'usuarios/registro', component: RegistroComponent},
 
   { path: '**', redirectTo: '/home' },
 ];
