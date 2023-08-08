@@ -22,34 +22,28 @@ export class HomeComponent implements OnInit {
   constructor() {
     this.images = [
       {
-        nombre: 'Sala de conferencias',
+        nombre: 'Newborn',
         url: '../../../assets/images/NEWBORN/EIRE-35 copia.jpg',
-        descripcion: 'Sala de conferencias',
       },
       {
-        nombre: 'Sala de conciertos',
+        nombre: 'Comunión',
         url: '../../../assets/images/COMUNIONES/EDURNE-74 copia.jpg',
-        descripcion: 'Sala de conciertos Hotel Hacienda de Cortés',
       },
       {
-        nombre: 'Sala de exposiciones',
+        nombre: 'Cumpleaños',
         url: '../../../assets/images/CUMPLE/CARLOTA_2ANYS-147 còpia copia.jpg',
-        descripcion: 'Sala de exposiciones',
       },
       {
-        nombre: 'Sala de formación',
+        nombre: 'Bebés',
         url: '../../../assets/images/BEBÉS/ALEJANDRI_9M-43.jpg',
-        descripcion: 'Sala de formación Da Vinci',
       },
       {
-        nombre: 'Teatro Jovellanos',
+        nombre: 'Comunión',
         url: '../../../assets/images/COMUNIONES/SYRA_EXTERIORS-69 copia.jpg',
-        descripcion: 'Teatro Jovellanos de Gijón',
       },
       {
-        nombre: 'Sala de conferencias Chachi',
+        nombre: 'Embarazo',
         url: '../../../assets/images/EMBARAZO/EUGE_EMB-8.jpg',
-        descripcion: 'Teatro Jovellanos de Gijón',
       },
     ];
   }

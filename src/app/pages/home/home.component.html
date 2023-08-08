@@ -1,174 +1,194 @@
 <div class="container mt-5 mb-5">
   <div class="row">
-    <div class="col-12">
-
+    <div class="seccionInicial col-md-12">
       <!-- Carousel -->
       <div class="carousel">
-      <img class="elementToFadeInAndOut"
-          [src]="images[imagenSeleccionada].url" [alt]="'slider'"/>
-        </div>
+        <img
+          class="elementToFadeInAndOut"
+          [src]="images[imagenSeleccionada].url"
+          [alt]="'slider'"
+        />
       </div>
     </div>
+  </div>
 
-      <!-- Carousel bootstrap -->
-      <!-- <div class="carousel">
+  <!-- Carousel bootstrap -->
+  <!-- <div class="carousel">
   <div *ngFor="let image of images" [style.backgroundImage]="'url(' + image + ')'" class="carousel-item"></div> -->
-      <!-- <app-carousel></app-carousel> -->
+  <!-- <app-carousel></app-carousel> -->
 
-
-
-    <div class="col-12 col-sm">
+  <div class="row">
+    <div class="seccionWelcome col-md-12 col-sm-12">
       <h1 class="mb-3">FRESAIKIWI FOTOGRAFIA</h1>
-  <!-- TODO REVISAR TEXTO (hablar de estudio, exterior, detallar sesiones interior o exterior.
+      <!-- TODO REVISAR TEXTO (hablar de estudio, exterior, detallar sesiones interior o exterior.
     Falta decidir si reservamos aqui on uphlow)-->
 
-    <h6 class="mb-3">
-      Bienvenidos a nuestro estudio de fotografía, capturamos los momentos más
-    especiales de tu vida. Somos un equipo de fotógrafos profesionales
-    apasionados por nuestro trabajo, que se esfuerzan por ofrecer a nuestros
-    clientes la mejor experiencia posible.
-  </h6>
-  <p>
-    En Fresaikiwi Fotografía ofrecemos una amplia gama de sesiones para
-    satisfacer todas tus necesidades, desde fotografía para bodas, newborn,
-    familiar y de retratos, hasta fotografía de eventos y productos. Nuestros
-    fotógrafos están altamente capacitados y cuentan con la experiencia
-    necesaria para capturar imágenes increíbles que te encantarán.
-  </p>
+      <h6 class="mb-3">
+        Bienvenidos a nuestro estudio de fotografía, capturamos los momentos más
+        especiales de tu vida. Somos un equipo de fotógrafos profesionales
+        apasionados por nuestro trabajo, que se esfuerzan por ofrecer a nuestros
+        clientes la mejor experiencia posible.
+      </h6>
+      <p>
+        En Fresaikiwi Fotografía ofrecemos una amplia gama de sesiones para
+        satisfacer todas tus necesidades, desde fotografía para bodas, newborn,
+        familiar y de retratos, hasta fotografía de eventos y productos.
+        Nuestros fotógrafos están altamente capacitados y cuentan con la
+        experiencia necesaria para capturar imágenes increíbles que te
+        encantarán.
+      </p>
 
-  <p>
-    Gracias a nuestro catálogo de sesiones disponibles, encontrarás la manera
-    perfecta de inmortalizar tus momentos más importantes.
-  </p>
+      <p>
+        Gracias a nuestro catálogo de sesiones disponibles, encontrarás la
+        manera perfecta de inmortalizar tus momentos más importantes.
+      </p>
 
-  <p>
-    Además de poder ver qué sesiones realizamos, con información detallada de
-    cada tipo de sesión y algunas fotos para que podáis ver el resultado,
-    podréis agendar la sesión que elijáis en el apartado de Reservas, de una
-    manera sencilla y cómoda. Con un solo clic, podrás verificar la
-    disponibilidad, confirmar fechas y realizar pagos seguros. Olvídate de las
-    preocupaciones, ¡nosotros nos encargamos de todo!
-  </p>
-</div>
+      <p>
+        Además de poder ver qué sesiones realizamos, con información detallada
+        de cada tipo de sesión y algunas fotos para que podáis ver el resultado,
+        podréis agendar la sesión que elijáis en el apartado de Reservas, de una
+        manera sencilla y cómoda. Con un solo clic, podrás verificar la
+        disponibilidad, confirmar fechas y realizar pagos seguros. Olvídate de
+        las preocupaciones, ¡nosotros nos encargamos de todo!
+      </p>
+    </div>
+  </div>
 
-
-
-    <!-- Titulo, texto y seccion con las sesiones -->
-    <!-- <section class="Sesiones1">
+  <!-- Titulo, texto y seccion con las sesiones -->
+  <div class="row">
+    <h3>Capturando mágicos recuerdos</h3>
+    <section class="sesiones1">
       <div class="container">
-        <div>
+        <article>
           <div>
             <div>
               <div class="circulo">
-                <a [routerLink]="['/sesiones/bebes']">BEBÉS
-                  <img src="../../../assets/images/BEBÉS/P1_FILES_EMMA_BATHMILK-5.jpg"
-                    alt="cumpleaños"/>
+                <a [routerLink]="['/sesiones/bebes']"
+                  >BEBÉS
+                  <img class="img-fluid"
+                    src="../../../assets/images/BEBÉS/P1_FILES_EMMA_BATHMILK-5.jpg"
+                    alt="cumpleaños"
+                  />
                 </a>
               </div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div>
+        <article>
           <div>
             <div>
               <div class="circulo">
-                <a [routerLink]="['/sesiones/newborn']">NEWBORN
-                  <img src="../../../assets/images/NEWBORN/SOFÍA_NB-13 copia.jpg"
-                    alt="cumpleaños"/>
+                <a [routerLink]="['/sesiones/newborn']"
+                  >NEWBORN
+                  <img class="img-fluid"
+                    src="../../../assets/images/NEWBORN/SOFÍA_NB-13 copia.jpg"
+                    alt="cumpleaños"
+                  />
                 </a>
               </div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div>
+        <article>
           <div>
             <div>
               <div class="circulo">
-                <a [routerLink]="['/sesiones/comunion']">COMUNIÓN
-                  <img src="../../../assets/images/COMUNIONES/EDURNE_EXTERIORS-135 còpia.jpg"
-                    alt="cumpleaños"/>
+                <a [routerLink]="['/sesiones/comunion']"
+                  >COMUNIÓN
+                  <img class="img-fluid"
+                    src="../../../assets/images/COMUNIONES/EDURNE_EXTERIORS-135 còpia.jpg"
+                    alt="cumpleaños"
+                  />
                 </a>
               </div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div>
+        <article>
           <div>
             <div class="circulo">
-              <a [routerLink]="['/sesiones/cumples']">CUMPLEAÑOS
-                <img src="../../../assets/images/CUMPLE/TRISTAN-209.jpg"
-                  alt="cumpleaños"/>
+              <a [routerLink]="['/sesiones/cumples']"
+                >CUMPLEAÑOS
+                <img class="img-fluid"
+                  src="../../../assets/images/CUMPLE/TRISTAN-209.jpg"
+                  alt="cumpleaños"
+                />
               </a>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
-
-    <section class="Sesiones2">
+    <section class="sesiones2">
       <div class="container">
-
-        <div>
+        <article>
           <div>
             <div>
               <div class="circulo">
-                <a a [routerLink]="['/sesiones/familia']">FAMILIA
-                  <img src="../../../assets/images/FAMILIA/"
-                  alt="familia"/>
+                <a a [routerLink]="['/sesiones/familia']"
+                  >FAMILIA
+                  <img class="img-fluid" src="../../../assets/images/FAMILIA/" alt="familia" />
                 </a>
               </div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div>
+        <article>
           <div>
             <div>
               <div class="circulo">
-                <a a [routerLink]="['/sesiones/embarazo']">EMBARAZO
-                  <img src="../../../assets/images/EMBARAZO/auro.jpg"
-                  alt="embarazo"/>
+                <a a [routerLink]="['/sesiones/embarazo']"
+                  >EMBARAZO
+                  <img class="img-fluid"
+                    src="../../../assets/images/EMBARAZO/auro.jpg"
+                    alt="embarazo"
+                  />
                 </a>
               </div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div>
+        <article>
           <div>
             <div>
               <div class="circulo">
-                <a a [routerLink]="['/sesiones/navidad']">NAVIDAD
-                  <img src="../../../assets/images/NAVIDAD/"
-                  alt="navidad"/>
+                <a a [routerLink]="['/sesiones/navidad']"
+                  >NAVIDAD
+                  <img class="img-fluid" src="../../../assets/images/NAVIDAD/" alt="navidad" />
                 </a>
               </div>
             </div>
           </div>
-        </div>
+        </article>
 
-        <div>
+        <article>
           <div>
             <div>
               <div class="circulo">
-                <a a [routerLink]="['/sesiones/fine-art']">FINE ART
-                  <img src="../../../assets/images/FINE ART/AURO+LAIA-26.jpg"
-                  alt="fine-art"/>
+                <a a [routerLink]="['/sesiones/fine-art']"
+                  >FINE ART
+                  <img class="img-fluid"
+                    src="../../../assets/images/FINE ART/AURO+LAIA-26.jpg"
+                    alt="fine-art"
+                  />
                 </a>
               </div>
             </div>
           </div>
-        </div>
-
+        </article>
 
       </div>
     </section>
 
-  </div> -->
+  </div>
+
+</div>
 
 <!-- TODO REVISAR TEXTOS -->
 <!-- <div class="bordes col-md-4">
