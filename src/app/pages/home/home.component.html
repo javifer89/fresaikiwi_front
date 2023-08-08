@@ -1,30 +1,60 @@
 <div class="container mt-5 mb-5">
   <div class="row">
     <div class="col-12">
-      <!-- <div class="carousel"> -->
+
       <!-- Carousel -->
-      <!-- <button class="btn" (click)="startInterval()">Ver imagenes</button> -->
-      <!-- <button class="btn" (click)="stopInterval()">Detener</button> -->
-      <!-- <img
-          class="elementToFadeInAndOut"
-          [src]="images[imagenSeleccionada].url"
-          [alt]=""
-        /> -->
-      <!-- <div class="carousel">
-  <div *ngFor="let image of images" [style.backgroundImage]="'url(' + image + ')'" class="carousel-item"></div>
-</div>
-      </div>-->
-      <app-carousel></app-carousel>
+      <div class="carousel">
+      <img class="elementToFadeInAndOut"
+          [src]="images[imagenSeleccionada].url" [alt]="'slider'"/>
+        </div>
+      </div>
     </div>
 
-<!-- TODO SOLUCIONAR CAROUSEL: O EL DE BOOTSTRAP O EL QUE YA HAY HECHO -->
-    <!-- <div class="botones">
-      <button class="btn" [routerLink]="['/sesiones']">Ver sesiones</button>
-      <button class="btn" [routerLink]="['/reservas']">Reservas</button>
-    </div> -->
+      <!-- Carousel bootstrap -->
+      <!-- <div class="carousel">
+  <div *ngFor="let image of images" [style.backgroundImage]="'url(' + image + ')'" class="carousel-item"></div> -->
+      <!-- <app-carousel></app-carousel> -->
+
+
+
+    <div class="col-12 col-sm">
+      <h1 class="mb-3">FRESAIKIWI FOTOGRAFIA</h1>
+  <!-- TODO REVISAR TEXTO (hablar de estudio, exterior, detallar sesiones interior o exterior.
+    Falta decidir si reservamos aqui on uphlow)-->
+
+    <h6 class="mb-3">
+      Bienvenidos a nuestro estudio de fotografía, capturamos los momentos más
+    especiales de tu vida. Somos un equipo de fotógrafos profesionales
+    apasionados por nuestro trabajo, que se esfuerzan por ofrecer a nuestros
+    clientes la mejor experiencia posible.
+  </h6>
+  <p>
+    En Fresaikiwi Fotografía ofrecemos una amplia gama de sesiones para
+    satisfacer todas tus necesidades, desde fotografía para bodas, newborn,
+    familiar y de retratos, hasta fotografía de eventos y productos. Nuestros
+    fotógrafos están altamente capacitados y cuentan con la experiencia
+    necesaria para capturar imágenes increíbles que te encantarán.
+  </p>
+
+  <p>
+    Gracias a nuestro catálogo de sesiones disponibles, encontrarás la manera
+    perfecta de inmortalizar tus momentos más importantes.
+  </p>
+
+  <p>
+    Además de poder ver qué sesiones realizamos, con información detallada de
+    cada tipo de sesión y algunas fotos para que podáis ver el resultado,
+    podréis agendar la sesión que elijáis en el apartado de Reservas, de una
+    manera sencilla y cómoda. Con un solo clic, podrás verificar la
+    disponibilidad, confirmar fechas y realizar pagos seguros. Olvídate de las
+    preocupaciones, ¡nosotros nos encargamos de todo!
+  </p>
+</div>
+
+
 
     <!-- Titulo, texto y seccion con las sesiones -->
-    <section class="Sesiones1">
+    <!-- <section class="Sesiones1">
       <div class="container">
         <div>
           <div>
@@ -138,47 +168,10 @@
       </div>
     </section>
 
-  </div>
-</div>
-
-<div class="col-12 col-sm">
-  <h1 class="mb-3">FRESAIKIWI FOTOGRAFIA</h1>
-  <!-- TODO REVISAR TEXTO (hablar de estudio, exterior, detallar sesiones interior o exterior.
-         Falta decidir si reservamos aqui on uphlow)-->
-
-  <h6 class="mb-3">
-    Bienvenidos a nuestro estudio de fotografía, capturamos los momentos más
-    especiales de tu vida. Somos un equipo de fotógrafos profesionales
-    apasionados por nuestro trabajo, que se esfuerzan por ofrecer a nuestros
-    clientes la mejor experiencia posible.
-  </h6>
-  <p>
-    En Fresaikiwi Fotografía ofrecemos una amplia gama de sesiones para
-    satisfacer todas tus necesidades, desde fotografía para bodas, newborn,
-    familiar y de retratos, hasta fotografía de eventos y productos. Nuestros
-    fotógrafos están altamente capacitados y cuentan con la experiencia
-    necesaria para capturar imágenes increíbles que te encantarán.
-  </p>
-
-  <p>
-    Gracias a nuestro catálogo de sesiones disponibles, encontrarás la manera
-    perfecta de inmortalizar tus momentos más importantes.
-  </p>
-
-  <p>
-    Además de poder ver qué sesiones realizamos, con información detallada de
-    cada tipo de sesión y algunas fotos para que podáis ver el resultado,
-    podréis agendar la sesión que elijáis en el apartado de Reservas, de una
-    manera sencilla y cómoda. Con un solo clic, podrás verificar la
-    disponibilidad, confirmar fechas y realizar pagos seguros. Olvídate de las
-    preocupaciones, ¡nosotros nos encargamos de todo!
-  </p>
-</div>
-
-<!-- </div> -->
+  </div> -->
 
 <!-- TODO REVISAR TEXTOS -->
-<div class="bordes col-md-4">
+<!-- <div class="bordes col-md-4">
   <h5 class="text-center">¿Por qué reservar con nosotros?</h5>
   <div class="d-flex flex-column p-4">
     <div class="d-flex mb-5">
@@ -199,4 +192,4 @@
       <strong [routerLink]="['/contacto']">¡Contacta ya con nosotros!</strong>
     </p>
   </div>
-</div>
+</div> -->
