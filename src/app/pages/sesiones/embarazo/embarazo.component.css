@@ -10,6 +10,8 @@ h3 {
     text-decoration: underline;
     padding: 10px;
     margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 .texto h3 {
@@ -21,7 +23,7 @@ h3 {
     padding: 10px;
 }
 .texto p:last-child {
-    
+
     padding: 0;
 }
 

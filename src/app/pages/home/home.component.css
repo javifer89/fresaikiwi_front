@@ -1,60 +1,27 @@
-/* estilos antiguos carousel */
-/* .carousel {
-    display: flex;
-    overflow: hidden;
-}
-div.carousel img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: contain;
-    background-position: center;
-        background-size: cover;
-        transition: 1s ease-in-out;
-}
-/* .carousel-item {
-    min-width: 100%;
-    height: 500px; */
-    /* background-position: center;
-    background-size: cover;
-    transition: 1s ease-in-out;
-} */
-/* .carousel-item {
-    min-width: 100%;
-    height: 500px;
-/* Ajusta la altura del carrusel según tu preferencia */
-    /* background-position: center;
-    background-size: cover;
-    transition: 1s ease-in-out;
-}
-.carousel-item:not(:first-child) {
-    margin-left: -100%;
-} */
-
-
 /* Sección SLIDER */
-
 .carousel {
     /* Configura el slider para que ocupe todo el ancho y alto de la ventana */
-    position: absolute; /* fixed o absolute ?? */
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;  /* Coloca el slider detrás del contenido */
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    /* Coloca el slider detrás del contenido */
     display: flex;
 }
 /* Ajusta el estilo de las slides para que se ajusten al tamaño del slider */
-.carousel .img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover ; /* Ajusta la imagen para que cubra todo el espacio */
+.carousel img {
+    width: 100vw;
+    object-fit: cover;
+    /* Ajusta la imagen para que cubra todo el espacio */
 }
 /*Animación fadeinOut para slider*/
 .elementToFadeInAndOut {
     animation: fadeInOut 5s linear forwards;
     animation-iteration-count: infinite
 }
+
 @keyframes fadeInOut {
     0% {
         opacity: 0;
@@ -78,103 +45,95 @@ div.carousel img {
 }
 
 
-/* Asegura que el contenido se muestre por encima del slider */
-/* TODO CAMBIAR .content al div que englobe contenido */
-/* .content {
-    position: relative;
-    z-index: 1;
-} */
-
-
 /* Sección Bienvenida */
 /* TODO FALTA COLOCAR BAJO DEL SLIDER */
 .seccionWelcome {
     position: relative;
-    /* display: flex;
-    flex-direction: column; */
     z-index: 1;
-    align-items: justify;
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    font-family: 'Roboto Flex', sans-serif;
 }
-.seccionWelcome  H1{
+.seccionWelcome h6 {
+    font-size: 20px;
+    font-weight: 500;
+}
+.seccionWelcome h1 {
     text-align: center;
     text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
+
 
 
 /* Sección SESIONES */
-
-h3{
+h3 {
+    font-family: 'Montserrat', sans-serif;
     font-style: italic;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 48px;
 }
+/* TODO FALTA COLOCAR BIEN LOS SPAN */
 
-.Sesiones1 {
-background-color: blue;
-width: 80%;
-height: 20vh;
-}
-.sesiones1 .circulo {
-    width: 20vh;
-    height: 20vh;
-    border-radius: 25px;
-    display: grid;
-    grid-template-rows: auto;
-}
-.sesiones1 .circulo img{
-object-fit:cover;
-display: block;
-max-width: 400px;
-max-height:400px;
-border-radius: 100px;
-}
-.sesiones1 .circulo a {
-background-color: var(--colorPrincipal);
-color: white;
-text-decoration: none;
-display: block;
-}
-
-.sesiones2 {
-    background-color: blue ;
-    width: 80%;
-    height: 20vh;
-}
-.sesiones2 .circulo {
-    width: 40vh;
-    height: 40vh;
+.sesiones1 article img {
+    width: 300px;
     border-radius: 100px;
-    display: grid;
-    grid-auto-rows: max-content;
-    grid-template-columns: repeat (3, 1fr);
-    column-gap: 10px;
+}
+.sesiones1 {
+    width: 100%;
+    height: 20vh;
+    border: solid 2px var(--colorPrincipal);
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
     justify-content: space-between;
+    border-bottom: none;
 }
-.sesiones2 .circulo img {
-    object-fit: cover;
-    display: block;
-    max-width: 400px;
-    max-height: 400px;
-    border-radius: 100px;
+.sesiones1 article {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
-.sesiones2 .circulo a {
+.sesiones1 article .section-title {
+    max-width: 120px;
+    margin-bottom: 15px;
+}
+.sesiones1 article .section-title span {
     background-color: var(--colorPrincipal);
     color: white;
-    text-decoration: none;
-    display: block;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-/* .botones {
+
+.sesiones2 article img {
+    width: 300px;
+    border-radius: 100px;
+}
+.sesiones2 {
+    width: 100%;
+    height: 20vh;
+    border: solid 2px var(--colorPrincipal);
+    border-radius: 0px 0px 10px 10px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    border-top: none;
 }
-
-.btn {
-    background-color: rgb(28, 146, 179);
-    color: var(--blanco);
-    width: 250px;
+.sesiones2 article {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
-
-.btn:hover {
-    background-color: rgb(1, 101, 129);
-} */
+.sesiones2 article .section-title {
+    max-width: 120px;
+    margin-bottom: 15px;
+}
+.sesiones2 article .section-title span {
+    background-color: var(--colorPrincipal);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}

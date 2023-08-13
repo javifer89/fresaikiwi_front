@@ -46,5 +46,5 @@
 
 .bordecito {
     background-color: white;
-    border: 1px solid rgb(28, 146, 179);
+    border: 1px solid var(--colorPrincipal);
 }

@@ -12,11 +12,6 @@
     </div>
   </div>
 
-  <!-- Carousel bootstrap -->
-  <!-- <div class="carousel">
-  <div *ngFor="let image of images" [style.backgroundImage]="'url(' + image + ')'" class="carousel-item"></div> -->
-  <!-- <app-carousel></app-carousel> -->
-
   <div class="row">
     <div class="seccionWelcome col-md-12 col-sm-12">
       <h1 class="mb-3">FRESAIKIWI FOTOGRAFIA</h1>
@@ -40,176 +35,46 @@
 
       <p>
         Gracias a nuestro catálogo de sesiones disponibles, encontrarás la
-        manera perfecta de inmortalizar tus momentos más importantes.
+        manera perfecta de inmortalizar tus momentos más importantes. Además de
+        poder ver qué sesiones realizamos, con información detallada de cada
+        tipo de sesión y algunas fotos para que podáis ver el resultado, podréis
+        agendar la sesión que elijáis en el apartado de Reservas, de una manera
+        sencilla y cómoda.
       </p>
 
       <p>
-        Además de poder ver qué sesiones realizamos, con información detallada
-        de cada tipo de sesión y algunas fotos para que podáis ver el resultado,
-        podréis agendar la sesión que elijáis en el apartado de Reservas, de una
-        manera sencilla y cómoda. Con un solo clic, podrás verificar la
-        disponibilidad, confirmar fechas y realizar pagos seguros. Olvídate de
-        las preocupaciones, ¡nosotros nos encargamos de todo!
+        Con un solo click, podrás verificar la disponibilidad, confirmar fechas
+        y realizar pagos seguros. Olvídate de las preocupaciones, ¡nosotros nos
+        encargamos de todo!
       </p>
     </div>
   </div>
 
   <!-- Titulo, texto y seccion con las sesiones -->
-  <div class="row">
-    <h3>Capturando mágicos recuerdos</h3>
-    <section class="sesiones1">
-      <div class="container">
-        <article>
-          <div>
-            <div>
-              <div class="circulo">
-                <a [routerLink]="['/sesiones/bebes']"
-                  >BEBÉS
-                  <img class="img-fluid"
-                    src="../../../assets/images/BEBÉS/P1_FILES_EMMA_BATHMILK-5.jpg"
-                    alt="cumpleaños"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
+  <div class="container">
 
-        <article>
-          <div>
-            <div>
-              <div class="circulo">
-                <a [routerLink]="['/sesiones/newborn']"
-                  >NEWBORN
-                  <img class="img-fluid"
-                    src="../../../assets/images/NEWBORN/SOFÍA_NB-13 copia.jpg"
-                    alt="cumpleaños"
-                  />
-                </a>
-              </div>
-            </div>
+    <div class="row">
+      <h3>Capturando recuerdos mágicos</h3>
+      <section class="sesiones1">
+        <article *ngFor="let sesion of sesiones1"(click)="router.navigate([sesion.routes])">
+          <div class="section-title">
+            <span>{{sesion.title}}</span>
           </div>
+          <img class="img-fluid" [src]="sesion.img" alt="{{sesion.title}}">
         </article>
+      </section>
+    </div>
 
-        <article>
-          <div>
-            <div>
-              <div class="circulo">
-                <a [routerLink]="['/sesiones/comunion']"
-                  >COMUNIÓN
-                  <img class="img-fluid"
-                    src="../../../assets/images/COMUNIONES/EDURNE_EXTERIORS-135 còpia.jpg"
-                    alt="cumpleaños"
-                  />
-                </a>
-              </div>
-            </div>
+    <div class="row">
+      <section class="sesiones2">
+        <article *ngFor="let sesion of sesiones2"(click)="router.navigate([sesion.routes])">
+          <div class="section-title">
+            <span>{{sesion.title}}</span>
           </div>
+          <img class="img-fluid" [src]="sesion.img" alt="{{sesion.title}}">
         </article>
-
-        <article>
-          <div>
-            <div class="circulo">
-              <a [routerLink]="['/sesiones/cumples']"
-                >CUMPLEAÑOS
-                <img class="img-fluid"
-                  src="../../../assets/images/CUMPLE/TRISTAN-209.jpg"
-                  alt="cumpleaños"
-                />
-              </a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="sesiones2">
-      <div class="container">
-        <article>
-          <div>
-            <div>
-              <div class="circulo">
-                <a a [routerLink]="['/sesiones/familia']"
-                  >FAMILIA
-                  <img class="img-fluid" src="../../../assets/images/FAMILIA/" alt="familia" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <div>
-            <div>
-              <div class="circulo">
-                <a a [routerLink]="['/sesiones/embarazo']"
-                  >EMBARAZO
-                  <img class="img-fluid"
-                    src="../../../assets/images/EMBARAZO/auro.jpg"
-                    alt="embarazo"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <div>
-            <div>
-              <div class="circulo">
-                <a a [routerLink]="['/sesiones/navidad']"
-                  >NAVIDAD
-                  <img class="img-fluid" src="../../../assets/images/NAVIDAD/" alt="navidad" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article>
-          <div>
-            <div>
-              <div class="circulo">
-                <a a [routerLink]="['/sesiones/fine-art']"
-                  >FINE ART
-                  <img class="img-fluid"
-                    src="../../../assets/images/FINE ART/AURO+LAIA-26.jpg"
-                    alt="fine-art"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </section>
+      </section>
+    </div>
 
   </div>
-
 </div>
-
-<!-- TODO REVISAR TEXTOS -->
-<!-- <div class="bordes col-md-4">
-  <h5 class="text-center">¿Por qué reservar con nosotros?</h5>
-  <div class="d-flex flex-column p-4">
-    <div class="d-flex mb-5">
-      <i class="fa-solid fa-x mr-3"></i>
-      <p>Sin sorpresas en la factura. Precio cerrado.</p>
-    </div>
-
-    <div class="d-flex mb-5">
-      <i class="fa-solid fa-user mr-3"></i>
-      <p>Asistencia personalizada 24/7</p>
-    </div>
-
-    <div class="d-flex">
-      <i class="fa-solid fa-thumbtack mr-3"></i>
-      <p>Espacios situados en puntos estrategicos de la ciudad</p>
-    </div>
-    <p class="text-center">
-      <strong [routerLink]="['/contacto']">¡Contacta ya con nosotros!</strong>
-    </p>
-  </div>
-</div> -->

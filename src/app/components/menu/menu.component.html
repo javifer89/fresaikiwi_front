@@ -1,122 +1,69 @@
-<!-- <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
-  <div class="container-fluid">
+<!-- <!DOCTYPE html> EJEMPLO DEJAR FIJA EL MENU AL HACER SCROLL con .AFFIX
+<html>
+
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/js/bootstrap.min.js"></script>
+
+  <style>
+  #content {
+    width: 800px;
+    height: 2000px;
+    background: #f5f5f5;
+    margin: 0 auto;
+  }
+  .menu {
+    background: #ccc;
+    width: 200px;
+    height: 400px;
+    float: left;
+  }
+  .affix {
+    position: fixed;
+    top: 20px;
+    left: auto;
+    right: auto;
+  }
+  </style>
+
+</head>
+<body>
+    <div id="content">
+        <div style="height: 200px"></div>
+
+        <div class="affix-top" data-spy="affix" data-offset-top="180">
+            <div class="menu">AFFIX BAR</div>
+        </div>
+    </div>
+</body>
+</html> -->
+
+
+<!-- TODO HACER EL MENU STICKY CUANDO HAGAMOS SCROLL HACIA BAJO (DESPUES DEL SLIDER) -->
+<div class="container">
+<nav class="navbar">
     <a class="navbar-brand" [routerLink]="['/home']">
       <div class="logo">
-        <img src="../../../assets/images/LOGOFRESAIKIWIFOTOGRAFIA-2.png" />
+        <img src="../../../assets/images/LOGO_WEB.png" alt="Logo">
       </div>
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <!-- TODO EN MOBILE OCULTAR MENU Y MOSTRAR HAMBURGUESA PARA DESPLEGAR MENU -->
+    <!-- <input type="checkbox" id="menu-toggle" class="navbar-toggler">
+    <label for="menu-toggle" class="navbar-toggler-icon"></label> -->
 
-    <nav class="collapse navbar-collapse" id="navbarNavDropdown">
-      <div class="navbar-nav">
-        <ul
-          class="nav-link dropdown-toggle"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          <li class="nav-item">
-            <a
-              [routerLink]="['/about']"
-              class="nav-link"
-              data-bs-toggle="collapse"
-              data-bs-target=".navbar-collapse.show"
-            >
-              Sobre mí
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Sesiones
-            </a>
-            <ul class="dropdown-menu">
-              <li [routerLink]="['/sesiones', 'bebes']">
-                <a class="dropdown-item">Bebés</a>
-              </li>
-              <li [routerLink]="['/sesiones', 'newborn']">
-                <a class="dropdown-item">Newborn</a>
-              </li>
-              <li [routerLink]="['/sesiones', 'embarazo']">
-                <a class="dropdown-item">Embarazo</a>
-              </li>
-              <li [routerLink]="['/sesiones', 'comunion']">
-                <a class="dropdown-item">Comunión</a>
-              </li>
-              <li [routerLink]="['/sesiones', 'navidad']">
-                <a class="dropdown-item">Navidad</a>
-              </li>
-              <li [routerLink]="['/sesiones', 'cumples']">
-                <a class="dropdown-item">Cumples</a>
-              </li>
-              <li [routerLink]="['/sesiones', 'familia']">
-                <a class="dropdown-item">Familia</a>
-              </li>
-              <li [routerLink]="['/sesiones', 'fine-art']">
-                <a class="dropdown-item">Fine Art</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a
-              [routerLink]="['/reservas']"
-              class="nav-link"
-              data-bs-toggle="collapse"
-              data-bs-target=".navbar-collapse.show"
-              >Reservar</a
-            >
-          </li>
-          <li>
-            <a
-              [routerLink]="['/blog']"
-              class="nav-link"
-              data-bs-toggle="collapse"
-              data-bs-target=".navbar-collapse.show"
-              >Blog</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              [routerLink]="['/contacto']"
-              class="nav-link"
-              data-bs-toggle="collapse"
-              data-bs-target=".navbar-collapse.show"
-              >Contacto</a
-            >
-          </li>
+    <nav class="navbar-collapse">
+      <ul class="">
+        <li *ngFor="let item of menuItems" class="nav-item">
+          <a [routerLink]="item.routes" class="nav-link">{{item.title}}</a>
+          <ul *ngIf="item.childItems" class="dropdown-menu">
+            <li *ngFor="let childItem of item.childItems"><a [routerLink]="childItem.routes" class="dropdown-item">{{childItem.title}}</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    </nav>
 
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Acceso Usuarios
-            </a>
-            <ul class="dropdown-menu">
-              <li [routerLink]="['/usuarios', 'login']">
-                <a class="dropdown-item">Login Usuarios</a>
-              </li>
-              <li [routerLink]="['/usuarios', 'registro']">
-                <a class="dropdown-item">Registro Usuarios</a>
-              </li>
-            </ul>
-          </li> -->
+  </div>
 
           <!--<ul class="dropdown-menu">
                       <li [routerLink]="['/loginStaff']"><a class="dropdown-item">Login Staff</a></li>
@@ -143,59 +90,4 @@
               <a class="nav-link active" (click)="onLogout(1)">Logout</a>
             </li> -->
 
-          <!-- </ul>
-      </div>
-    </nav>
-  </div>
-</nav> -->
-
-
-
-<nav class="navbar">
-  <div class="container">
-    <a class="navbar-brand" [routerLink]="['/home']">
-      <div class="logo">
-        <img src="../../../assets/images/LOGOFRESAIKIWIFOTOGRAFIA-2.png" alt="Logo">
-      </div>
-    </a>
-    <input type="checkbox" id="menu-toggle" class="navbar-toggler">
-    <label for="menu-toggle" class="navbar-toggler-icon"></label>
-
-    <nav class="navbar-collapse">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a [routerLink]="['/about']" class="nav-link">Sobre mí</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle">Sesiones</a>
-          <ul class="dropdown-menu">
-            <li><a [routerLink]="['/sesiones', 'bebes']" class="dropdown-item">Bebés</a></li>
-            <li><a [routerLink]="['/sesiones', 'newborn']" class="dropdown-item">Newborn</a></li>
-            <li><a [routerLink]="['/sesiones', 'embarazo']" class="dropdown-item">Embarazo</a></li>
-            <li><a [routerLink]="['/sesiones', 'comunion']" class="dropdown-item">Comunión</a></li>
-            <li><a [routerLink]="['/sesiones', 'navidad']" class="dropdown-item">Navidad</a></li>
-            <li><a [routerLink]="['/sesiones', 'cumples']" class="dropdown-item">Cumples</a></li>
-            <li><a [routerLink]="['/sesiones', 'familia']" class="dropdown-item">Familia</a></li>
-            <li><a [routerLink]="['/sesiones', 'fine-art']" class="dropdown-item">Fine Art</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a [routerLink]="['/reservas']" class="nav-link">Reservar</a>
-        </li>
-        <li class="nav-item">
-          <a [routerLink]="['/blog']" class="nav-link">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a [routerLink]="['/contacto']" class="nav-link">Contacto</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle">Acceso Usuarios</a>
-          <ul class="dropdown-menu">
-            <li><a [routerLink]="['/usuarios', 'login']" class="dropdown-item">Login Usuarios</a></li>
-            <li><a [routerLink]="['/usuarios', 'registro']" class="dropdown-item">Registro Usuarios</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</nav>
+          <!-- </ul>-->
