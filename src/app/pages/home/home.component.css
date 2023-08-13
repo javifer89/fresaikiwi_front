@@ -1,94 +1,139 @@
-div.carousel img {
-    width: 650px;
-    height: 468px;
-    display: block;
-}
-
-.botones {
+/* Sección SLIDER */
+.carousel {
+    /* Configura el slider para que ocupe todo el ancho y alto de la ventana */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    /* Coloca el slider detrás del contenido */
     display: flex;
-    justify-content: space-between;
+}
+/* Ajusta el estilo de las slides para que se ajusten al tamaño del slider */
+.carousel img {
+    width: 100vw;
+    object-fit: cover;
+    /* Ajusta la imagen para que cubra todo el espacio */
+}
+/*Animación fadeinOut para slider*/
+.elementToFadeInAndOut {
+    animation: fadeInOut 5s linear forwards;
+    animation-iteration-count: infinite
 }
 
-.btn {
-    background-color: rgb(28, 146, 179);
-    color: var(--blanco);
-    width: 250px;
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
-.btn:hover {
-    background-color: rgb(1, 101, 129);
-}
 
-/* seccion inicial */
-
-.seccionInicial {
-    background-color: rgb(219, 219, 219);
-    height: 555px;
+/* Sección Bienvenida */
+/* TODO FALTA COLOCAR BAJO DEL SLIDER */
+.seccionWelcome {
+    position: relative;
+    z-index: 1;
     display: flex;
+    text-align: justify;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
+    font-family: 'Roboto Flex', sans-serif;
 }
-
-.cajas {
-    display: flex;
-    justify-content: space-between;
-
+.seccionWelcome h6 {
+    font-size: 20px;
+    font-weight: 500;
 }
-
-.bordes {
-    border-left: 2px solid rgb(1, 101, 129);
-    border-right: 2px solid rgb(1, 101, 129);
-}
-
-
-
-/* Estilos para la sección de equipo */
-.seccionEquipo {
-    background-color: #f4f4f4;
-    padding: 30px 0;
-}
-
-.equipo {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.miembro {
+.seccionWelcome h1 {
     text-align: center;
-    width: 23%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
-.miembro img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+
+
+/* Sección SESIONES */
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 48px;
+}
+/* TODO FALTA COLOCAR BIEN LOS SPAN */
+
+.sesiones1 article img {
+    width: 300px;
+    border-radius: 100px;
+}
+.sesiones1 {
+    width: 100%;
+    height: 20vh;
+    border: solid 2px var(--colorPrincipal);
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+}
+.sesiones1 article {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+.sesiones1 article .section-title {
+    max-width: 120px;
+    margin-bottom: 15px;
+}
+.sesiones1 article .section-title span {
+    background-color: var(--colorPrincipal);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
 }
 
-.nombre {
-    margin: 5px 0;
+
+.sesiones2 article img {
+    width: 300px;
+    border-radius: 100px;
 }
-
-/* zona de los iconos */
-
-.fa-solid {
-    font-size: 40px;
-
+.sesiones2 {
+    width: 100%;
+    height: 20vh;
+    border: solid 2px var(--colorPrincipal);
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    border-top: none;
 }
-
-.d-flex {
-    align-items: flex-start;
-
+.sesiones2 article {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
-
-.d-flex i {
-    margin-right: 10px;
-
+.sesiones2 article .section-title {
+    max-width: 120px;
+    margin-bottom: 15px;
+}
+.sesiones2 article .section-title span {
+    background-color: var(--colorPrincipal);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
 }

@@ -2,18 +2,25 @@
     background-color: white;
     /* Añado margen pero no se aplica el background color */
     margin-bottom: 200px;
-
 }
 
 tbody {
     border-bottom: 1px solid lightgray;
 }
 
+.bordecito {
+    background-color: white;
+    border: 1px solid var(--colorPrincipal);
+}
+
 .btn {
-    background-color: var(--azulClaro);
-    margin-right: 3px;
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
 }
 
 .btn:hover {
     background-color: var(--colorPrincipal);
+    border: 1px solid white;
+    color: white;
 }

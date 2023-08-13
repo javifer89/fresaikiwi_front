@@ -1,0 +1,39 @@
+.imagen1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagen1 img {
+    width: 100%;
+    height: 100%;
+}
+.texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h3 {
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px;
+    margin-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+.texto h3 {
+    position: absolute;
+    text-align: center;
+}
+.texto p {
+padding: 10px;
+}
+.imagen2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagen2 img {
+    width: 100%;
+    height: 100%;
+}

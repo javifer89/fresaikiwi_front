@@ -1,10 +1,13 @@
 .btn {
-    background-color: rgb(28, 146, 179);
-    color: var(--blanco);
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
 }
 
 .btn:hover {
-    background-color: rgb(1, 101, 129);
+    background-color: var(--colorPrincipal);
+    border: 1px solid white;
+    color: white;
 }
 
 p {
@@ -15,4 +18,11 @@ p {
     text-align: left;
     font-size: small;
     color: red;
+}
+.mapa{
+    object-fit: cover;
+}
+.contacto {
+    border: solid 2px var(--colorPrincipal);
+        border-radius: 10px;
 }

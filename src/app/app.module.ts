@@ -29,6 +29,7 @@ import { ListaUsuariosComponent } from './pages/usuarios/lista-usuarios/lista-us
 import { EditarUsuariosComponent } from './pages/usuarios/editar-usuarios/editar-usuarios.component';
 import { PanelUsuariosComponent } from './pages/usuarios/panel-usuarios/panel-usuarios.component';
 import { ListaReservasComponent } from './pages/reservas/lista-reservas/lista-reservas.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { ListaReservasComponent } from './pages/reservas/lista-reservas/lista-re
     EditarUsuariosComponent,
     PanelUsuariosComponent,
     ListaReservasComponent,
+
   ],
   imports: [
     BrowserModule,

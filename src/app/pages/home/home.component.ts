@@ -1,48 +1,83 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-
 export class HomeComponent implements OnInit {
   images: any[];
   imagenSeleccionada: number = 0;
   interval: any;
-  constructor() {
+  sesiones1: Sesion[];
+  sesiones2: Sesion[];
+
+  router: Router = inject(Router)
+
+    constructor() {
     this.images = [
       {
-        nombre: 'Sala de conferencias',
-        url: 'https://www.negociaarea.com/wp-content/uploads/sala-de-conferencias.jpg',
-        descripcion: 'Sala de conferencias',
+        nombre: 'Newborn',
+        url: '../../../assets/images/NEWBORN/EIRE-35 copia.jpg',
       },
       {
-        nombre: 'Sala de conciertos',
-        url: 'https://www.hotelhaciendadecortes.com.mx/theme/img/slide/gp8/lightbox/5.jpg',
-        descripcion: 'Sala de conciertos Hotel Hacienda de Cortés',
+        nombre: 'Comunión',
+        url: '../../../assets/images/COMUNIONES/EDURNE-74 copia.jpg',
       },
       {
-        nombre: 'Sala de exposiciones',
-        url: 'http://aminuscula.es/wp-content/uploads/2019/02/Ki_Madraza_001b.jpg',
-        descripcion: 'Sala de exposiciones',
+        nombre: 'Cumpleaños',
+        url: '../../../assets/images/CUMPLE/CARLOTA_2ANYS-147 còpia copia.jpg',
       },
       {
-        nombre: 'Sala de formación',
-        url: 'https://centrodavinci.es/wp-content/uploads/2019/11/foto-2.jpg',
-        descripcion: 'Sala de formación Da Vinci',
+        nombre: 'Bebés',
+        url: '../../../assets/images/BEBÉS/ALEJANDRI_9M-43.jpg',
       },
-      {
-        nombre: 'Teatro Jovellanos',
-        url: 'https://cd1.taquilla.com/data/images/t/23/teatro-jovellanos.jpg',
-        descripcion: 'Teatro Jovellanos de Gijón',
-      },
-      {
-        nombre: 'Sala de conferencias Chachi',
-        url: 'https://2.bp.blogspot.com/-VKRF1Ls1Zf0/Wuw_gTP4IsI/AAAAAAAAUxA/YU2B52_FKiQu9QyE4tc7yzR6xOFtqn4GACLcBGAs/s1600/MG_0163.jpg',
-        descripcion: 'Teatro Jovellanos de Gijón',
-      },
-    ];
+      ];
+      this.sesiones1 = [
+        {
+          title: 'Bebés',
+          routes: ['/sesiones', 'bebes'],
+          img: '../../../assets/images/BEBÉS/P1_FILES_EMMA_BATHMILK-5.jpg',
+        },
+        {
+          title: 'Newborn',
+          routes: ['/sesiones', 'newborn'],
+          img: '../../../assets/images/NEWBORN/SOFÍA_NB-13 copia.jpg',
+        },
+        {
+          title: 'Embarazo',
+          routes: ['/sesiones', 'embarazo'],
+          img: '../../../assets/images/EMBARAZO/LAURA-1 copia.jpg',
+        },
+        {
+          title: 'Comunión',
+          routes: ['/sesiones', 'comunion'],
+          img: '../../../assets/images/COMUNIONES/EDURNE_EXTERIORS-135 còpia.jpg',
+        },
+      ];
+      this.sesiones2 = [
+        {
+          title: 'Navidad',
+          routes: ['/sesiones', 'navidad'],
+          img: '../../../assets/images/CUMPLE/SANTOS-214.jpg',
+        },
+        {
+          title: 'Cumples',
+          routes: ['/sesiones', 'cumples'],
+          img: '../../../assets/images/CUMPLE/SANTOS-214.jpg',
+        },
+        {
+          title: 'Familia',
+          routes: ['/sesiones', 'familia'],
+          img: '../../../assets/images/CUMPLE/SANTOS-214.jpg',
+        },
+        {
+          title: 'Fine Art',
+          routes: ['/sesiones', 'fine-art'],
+          img: '../../../assets/images/FINE ART/AURO+LAIA-26-2.jpg',
+        },
+      ];
   }
 
   ngOnInit(): void {
@@ -55,14 +90,25 @@ export class HomeComponent implements OnInit {
       this.imagenSeleccionada = 0;
     }
   }
-  stopInterval() {
-    clearInterval(this.interval);
-    this.interval = null;
-  }
-
   startInterval() {
     this.interval = setInterval(() => {
       this.cambiaImagen();
-    }, 1600);
+    }, 5000);
   }
+}
+  // stopInterval() {
+  //   clearInterval(this.interval);
+  //   this.interval = null;
+// }
+
+
+export interface Image{
+  nombre: string;
+  url: string;
+}
+
+export interface Sesion {
+  title: string;
+  routes: string[];
+  img: string;
 }

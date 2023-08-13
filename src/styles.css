@@ -1,10 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300;1,400&family=Roboto+Flex:opsz,wght@8..144,200;8..144,400;8..144,700&display=swap');
 
-
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
 :root {
-    --colorPrincipal: #0077B6;
+    --colorPrincipal: #F7CED2;
     --colorSecundario: #48CAE4;
     --azulClaro: #AED9E0;
     --naranja: #F3722C;

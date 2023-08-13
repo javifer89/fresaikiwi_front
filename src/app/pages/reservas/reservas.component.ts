@@ -59,7 +59,7 @@ export class ReservasComponent {
 
   // async onSubmit() {
   //   try {
-  //     this.formulario.value.salas_id = this.salaSeleccionada.id;
+  //     this.formulario.value.sesiones_id = this.sesionSeleccionada.id;
   //     const response = await this.calendarService.create(this.formulario.value);
 
   //     const date = new Date(this.formulario.value.fecha_reserva);
@@ -74,7 +74,7 @@ export class ReservasComponent {
   //     if (response.id_reserva) {
   //       Swal.fire({
   //         icon: 'success',
-  //         title: 'Sala Reservada',
+  //         title: 'Sesión Reservada',
   //         showConfirmButton: false,
   //         timer: 2500,
   //         width: 500,
@@ -95,11 +95,11 @@ export class ReservasComponent {
   //       });
   //     }
 
-  //     this.salaSeleccionada = await this.salasServices.getById(this.salaId);
+  //     this.sesionSeleccionada = await this.sesionesServices.getById(this.salaId);
   //   } catch (error) {
   //     console.log(error);
-  //Si hay error, redirección a la lista de salas
-  //     this.router.navigate(['/salas']);
+  //Si hay error, redirección a la lista de sesiones
+  //     this.router.navigate(['/sesiones']);
   //   }
   // }
 

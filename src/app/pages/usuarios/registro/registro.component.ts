@@ -37,7 +37,7 @@ export class RegistroComponent {
       password: new FormControl(null, [Validators.required]),
     });
   }
-
+// TODO REVISAR .VALID para el submit
   async onSubmit() {
     if (this.formulario.valid) {
       const response = await this.usuariosService.registro(
