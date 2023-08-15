@@ -30,6 +30,7 @@ import { EditarUsuariosComponent } from './pages/usuarios/editar-usuarios/editar
 import { PanelUsuariosComponent } from './pages/usuarios/panel-usuarios/panel-usuarios.component';
 import { ListaReservasComponent } from './pages/reservas/lista-reservas/lista-reservas.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { CrearPostComponent } from './pages/blog/crear-post/crear-post.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
     EditarUsuariosComponent,
     PanelUsuariosComponent,
     ListaReservasComponent,
+    CrearPostComponent,
 
   ],
   imports: [
