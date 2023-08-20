@@ -20,7 +20,7 @@ export class BlogService {
         imagen:
           'https://s3-eu-west-1.amazonaws.com/straus/media/products2/de81d86a57484f75935f267cf321f10a.jpg',
         fecha: '22-5-23',
-        categoria: 'comida',
+        categoria: 'campañas',
       },
       {
         titulo: 'Viaje a China',
@@ -30,7 +30,7 @@ export class BlogService {
         imagen:
           'https://a.cdn-hotels.com/gdcs/production48/d512/0c281436-7022-4d50-beff-2c64308c4dbb.jpg',
         fecha: '21-3-23',
-        categoria: 'viajes',
+        categoria: 'varios',
       },
       {
         titulo: 'Ford Mustang GT',
@@ -40,7 +40,7 @@ export class BlogService {
         imagen:
           'https://www.hdcarwallpapers.com/walls/ford_mustang_gt_fastback_2018_4k-HD.jpg',
         fecha: '22-4-23',
-        categoria: 'coches',
+        categoria: 'sesiones',
       },
       {
         titulo: 'Game of thrones',
@@ -50,7 +50,7 @@ export class BlogService {
         imagen:
           'http://thedrawshop.com/wp-content/uploads/2013/08/game-of-thrones-season-4.jpg',
         fecha: '22-6-23',
-        categoria: 'series',
+        categoria: 'modelos',
       },
       {
         titulo: 'Viaje a London',
@@ -60,7 +60,7 @@ export class BlogService {
         imagen:
           'https://i2-prod.mirror.co.uk/incoming/article28871026.ece/ALTERNATES/s1200b/0_London-at-sunset.jpg',
         fecha: '22-6-23',
-        categoria: 'viajes',
+        categoria: 'sesiones',
       },
       {
         titulo: 'Breaking Bad',
@@ -69,7 +69,7 @@ export class BlogService {
         autor: 'Laura',
         imagen: 'https://i.blogs.es/16e585/breaking-bad/1366_2000.jpg',
         fecha: '22-6-23',
-        categoria: 'series',
+        categoria: 'varios',
       },
       {
         titulo: 'Los templos del Chuletón en España',
@@ -79,7 +79,7 @@ export class BlogService {
         imagen:
           'https://www.rioja2.com/images/noticias/72682/recortes/11x6-chuleton-de-la-alameda.jpg',
         fecha: '11-6-23',
-        categoria: 'comida',
+        categoria: 'modelos',
       },
       {
         titulo: 'Nuevo Audio q8',
@@ -89,7 +89,7 @@ export class BlogService {
         imagen:
           'https://www.eventosmotor.com/wp-content/uploads/2020/10/Audi-Q8-TFSIe-eventosmotor-1.jpg',
         fecha: '10-6-23',
-        categoria: 'coches',
+        categoria: 'sesiones',
       },
     ];
   }
