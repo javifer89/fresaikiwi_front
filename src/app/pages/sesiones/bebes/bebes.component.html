@@ -33,47 +33,58 @@
 
   <div class="row">
     <h3>BEBÉS</h3>
-<div class="grid">
-  <img *ngFor="let image of imagenes, let i = index "
-  (click)="gridImgHandler(i)"
-   class="grid__img"
-   [alt]="image.alt"
-   [src]="image.src"
-   >
+    <div class="texto col-md-12">
+      <p>
+        Durante el primer año de vida de un bebé van a haber cambios increíbles,
+        sus gestos, su cuerpo….Cuando te des cuenta incluso dará sus primeros
+        pasos, y para atesorar estos momentos tenemos diferentes tipos de
+        sesiones para que no nos perdamos ni uno de esos momentos únicos.
+      </p>
+    </div>
+    <div class="grid">
+      <img
+        *ngFor="let image of imagenes; let i = index"
+        (click)="gridImgHandler(i)"
+        class="grid__img"
+        [alt]="image.alt"
+        [src]="image.src"
+      />
+    </div>
+    <div class="lightbox" [ngClass]="{ isActive: lightboxActive }">
+      <button (click)="lightboxBtnHandler()" class="lightbox__btn">
+        <svg
+          class="lightbox__svg"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+          />
+        </svg>
+      </button>
+      <img
+        [src]="imagenes[imgIndex].src"
+        alt="imagen lightbox"
+        class="lightbox__img"
+      />
+    </div>
+  </div>
 
+  <div class="row">
+    <div class="texto col-md-12">
+      <!-- <p>
+        Durante el primer año de vida de un bebé van a haber cambios increíbles,
+        sus gestos, su cuerpo….Cuando te des cuenta incluso dará sus primeros
+        pasos, y para atesorar estos momentos tenemos diferentes tipos de
+        sesiones para que no nos perdamos ni uno de esos momentos únicos.
+      </p> -->
+
+      <p>
+        Especialmente me encanta cuando se sientan solitos y todavía no gatean,
+        entre los 6-8 meses, esta etapa es realmente especial y quedan preciosos
+        con sus gestos, es una sesión para morir de amor.
+      </p>
+    </div>
+  </div>
 </div>
-<div class="lightbox" [ngClass]="{'isActive' : lightboxActive}">
-  <button (click)="lightboxBtnHandler()" class="lightbox__btn">
-    <svg class="lightbox__svg" xmlns="http://www.w3.org/2000/svg"  fill="currentColor"  viewBox="0 0 16 16">
-  <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
-</svg>
-  </button>
-  <img [src]="imagenes[imgIndex].src" alt="imagen lightbox" class="lightbox__img">
-</div>
-</div>
-
-<div class="row">
-  <div class="texto col-md-12">
-  <p>
-    Durante el primer año de vida de un bebé van a haber cambios increíbles, sus
-    gestos, su cuerpo….Cuando te des cuenta incluso dará sus primeros pasos, y
-    para atesorar estos momentos tenemos diferentes tipos de sesiones para que
-    no nos perdamos ni uno de esos momentos únicos.
-  </p>
-
-  <p>
-    Especialmente me encanta cuando se sientan solitos y todavía no gatean,
-    entre los 6-8 meses, esta etapa es realmente especial y quedan preciosos con
-    sus gestos, es una sesión para morir de amor.
-  </p>
-</div>
-</div>
-<!-- <div class="row">
-<div class="imagen2 col-md-12">
-  <img src="../../../../assets/images/BEBÉS/ALEJANDRI_9M-43.jpg" alt="" />
-</div> -->
-</div>
-
-
-
-
