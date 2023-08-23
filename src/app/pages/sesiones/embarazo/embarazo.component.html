@@ -1,14 +1,6 @@
 <div class="container">
   <div class="row">
     <h3>EMBARAZO</h3>
-    <div class="imagen1 col-md-12">
-      <img
-        src="../../../../assets/images/EMBARAZO/ELENA_EMB-134 copia 2.jpg"
-        alt=""
-      />
-    </div>
-  </div>
-  <div class="row">
     <div class="texto col-md-12">
       <p>
         Ahora estás llena de vida, estás preparándote para uno de los momentos
@@ -19,10 +11,33 @@
       </p>
     </div>
 
-    <div class="imagen2 col-md-12">
+
+    <div class="grid">
       <img
-        src="../../../../assets/images/EMBARAZO/ELENA_EMB-247 copia 2.jpg"
-        alt=""
+        *ngFor="let image of imagenes; let i = index"
+        (click)="gridImgHandler(i)"
+        class="grid__img"
+        [alt]="image.alt"
+        [src]="image.src"
+      />
+    </div>
+    <div class="lightbox" [ngClass]="{ isActive: lightboxActive }">
+      <button (click)="lightboxBtnHandler()" class="lightbox__btn">
+        <svg
+          class="lightbox__svg"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+          />
+        </svg>
+      </button>
+      <img
+        [src]="imagenes[imgIndex].src"
+        alt="imagen lightbox"
+        class="lightbox__img"
       />
     </div>
   </div>
@@ -39,9 +54,7 @@
       </p>
     </div>
 
-    <div class="imagen3 col-md-12">
-      <img src="../../../../assets/images/EMBARAZO/SONIETES-5.jpg" alt="" />
-    </div>
+
   </div>
   <div class="row">
     <div class="texto col-md-12">
@@ -56,11 +69,6 @@
       </p>
     </div>
 
-    <div class="imagen4 col-md-12">
-      <img
-        src="../../../../assets/images/EMBARAZO/EUGE_EMB-64.jpg"
-        alt=""
-      />
-    </div>
+    
   </div>
   </div>
