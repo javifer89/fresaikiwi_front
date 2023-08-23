@@ -70,12 +70,12 @@ export class HomeComponent implements OnInit {
         {
           title: 'Familia',
           routes: ['/sesiones', 'familia'],
-          img: '../../../assets/images/CUMPLE/SANTOS-214.jpg',
+          img: '/assets/images/CUMPLE/SANTOS-214.jpg',
         },
         {
           title: 'Fine Art',
           routes: ['/sesiones', 'fine-art'],
-          img: '../../../assets/images/FINE ART/AURO+LAIA-26-2.jpg',
+          img: '/assets/images/FINE ART/AURO+LAIA-26-2.jpg',
         },
       ];
   }
