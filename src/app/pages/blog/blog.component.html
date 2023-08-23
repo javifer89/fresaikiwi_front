@@ -1,4 +1,7 @@
 <h2>Blog Fresaikiwi Fotografia</h2>
+<div class="crear-post">
+      <button class="btn btn-info"[routerLink]="['/blog', 'crear-post']">Crear un nuevo post</button>
+</div>
 <div class="row d-flex justify-content-between m-4">
   <div class="card mb-3 col-12 col-md-6 " style="width: 24rem" *ngFor="let post of postOrdenados">
     <div class="card-body">
