@@ -1,9 +1,11 @@
 <div class="section-reservas"></div>
 <div class="container mt-5">
-  <h3 class="text-center">Formulario de reserva de sesión</h3>
+  <h3>Reserva tu sesión</h3>
+<!-- TODO REVISAR RESPONSIVE -->
+  <iframe src="https://app.uphlow.com/booking/sahxDk3Sker5upiZx" ></iframe>
+  <!-- <iframe src="https://app.uphlow.com/booking/sahxDk3Sker5upiZx" width="100%" height="1000"></iframe> -->
 
-
-
+</div>
   <!-- <div class="row m-1">
     <div class="col-12 col-md-4"> -->
       <!-- detalles sala -->
@@ -21,10 +23,10 @@
     <div class="col-12 col-md-8">
 
       <!-- formulario -->
-      <div class="form bordecito rounded p-3">
-        <h5 class="mt-4">Información de la reserva</h5>
+      <!-- <div class="form bordecito rounded p-3">
+        <h5 class="mt-4">Información de la reserva</h5> -->
         <!-- <form [formGroup]="formulario" (ngSubmit)="onSubmit()"> -->
-<form [formGroup]="formulario">
+<!-- <form [formGroup]="formulario">
           <div class="input-group mt-3">
             <span class="input-group-text">Título de la reserva</span>
             <input type="text" class="form-control" formControlName="titulo" />
@@ -53,7 +55,7 @@
           </p>
           <p class="error" *ngIf="checkError('hora', 'required')">
             Tienes que indicar una hora de reserva.
-          </p>
+          </p> -->
 
           <!-- <div class="input-group mt-3">
 
@@ -72,20 +74,19 @@
             Tienes que indicar hasta qué hora se hace la reserva.
           </p> -->
 
-          <input class="btn btn-secondary" type="submit" class="btn mt-3 mb-3" value="Guardar" />
+          <!-- <input class="btn btn-secondary" type="submit" class="btn mt-3 mb-3" value="Guardar" />
         </form>
       </div>
     </div>
-  </div>
+   -->
 
   <!-- calendario -->
-   <div class="calendario">
+   <!-- <div class="calendario">
     <app-calendar *ngIf="sesionSeleccionada" (onSelect)="onSelect($event)"
       [reservas]="sesionSeleccionada.reservas"></app-calendar>
-  </div>
+  </div> -->
+  <!-- </div> -->
+  <!-- <div class="calendario">
 
-<!-- </div> -->
-<div class="calendario">
-
-  <object height="400" data="https://app.uphlow.com/api/cembed?cid=sahxDk3Sker5upiZx"></object>
-</div>
+    <object height="400" data="https://app.uphlow.com/api/cembed?cid=sahxDk3Sker5upiZx"></object>
+  </div> -->
