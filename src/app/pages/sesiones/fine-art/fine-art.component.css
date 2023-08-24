@@ -42,11 +42,11 @@ h3 {
 }
 
 .grid__img:hover {
-    transform: sacle(.9);
+    transform: scale(.9);
 }
 
 .grid__img:active {
-    transform: sacle(1.1);
+    transform: scale(1.1);
 }
 
 

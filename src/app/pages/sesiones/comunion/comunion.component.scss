@@ -39,11 +39,11 @@ h3 {
     transition: all 0.5s ease;
     box-shadow: 0.5rem 0.5rem 1rem #cecece, -0.5rem -0.5rem 1rem #f2f2f2;
     &:hover {
-      transform: sacle(0.9);
+      transform: scale(0.9);
     }
 
     &:active {
-      transform: sacle(1.1);
+      transform: scale(1.1);
     }
   }
 }
