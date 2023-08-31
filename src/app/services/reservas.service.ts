@@ -13,6 +13,7 @@ export class ReservasService {
   constructor() {
     this.reservas = 'http://localhost:3000/api/reservas';
   }
+// TODO INVESTIGAR SCRAPPING A UPHLOW PARA CONECTAR LAS RESERVAS CON LA BASE DE DATOS
 
   getAll(): Promise<Reserva[]> {
     return firstValueFrom(this.httpClient.get<Reserva[]>(this.reservas));
