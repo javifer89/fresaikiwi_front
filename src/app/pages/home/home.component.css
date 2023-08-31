@@ -1,3 +1,15 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+.seccionIncial{
+    background-color: red;
+    width: 100%;
+    min-width: 400px;
+    min-height: 900px;
+}
 /* Sección SLIDER */
 .carousel {
     /* Configura el slider para que ocupe todo el ancho y alto de la ventana */
@@ -49,6 +61,7 @@
 /* TODO FALTA COLOCAR BAJO DEL SLIDER */
 .seccionWelcome {
     position: relative;
+    top: 100vh;
     z-index: 1;
     display: flex;
     text-align: justify;
@@ -56,6 +69,7 @@
     justify-content: center;
     /* align-items: center; */
     font-family: 'Roboto Flex', sans-serif;
+    margin-bottom: 30px;
 }
 .seccionWelcome h6 {
     font-size: 20px;
@@ -76,9 +90,14 @@ h3 {
     font-style: italic;
     font-weight: 300;
     font-size: 48px;
+    position: relative;
+        top: 100vh;
+        margin-bottom: 20px;
 }
 /* TODO FALTA COLOCAR BIEN LOS SPAN */
-
+.container{
+    top: 100vh;
+}
 .sesiones1 article img {
     width: 300px;
     border-radius: 100px;
@@ -91,6 +110,8 @@ h3 {
     display: flex;
     justify-content: space-between;
     border-bottom: none;
+    position: relative;
+    top: 100vh;
 }
 .sesiones1 article {
     cursor: pointer;
@@ -121,6 +142,8 @@ h3 {
     display: flex;
     justify-content: space-between;
     border-top: none;
+    position: relative;
+        top: 100vh;
 }
 .sesiones2 article {
     cursor: pointer;

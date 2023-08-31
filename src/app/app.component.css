@@ -7,6 +7,9 @@
     color: white;
     text-align: center;
     padding: 15px;
+    /* TODO SOLUCIONAR FOOTER */
+    position: sticky;
+    bottom: -100;
 }
 
 .titulo {

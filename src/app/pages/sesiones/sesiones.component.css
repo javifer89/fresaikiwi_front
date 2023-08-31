@@ -20,25 +20,43 @@ h3 {
     border-radius: 10px 10px 0px 0px;
     display: flex;
     justify-content: space-between;
+    gap: 1rem;
     border-bottom: none;
+    position: relative;
+    overflow: hidden;
 }
 
 .sesiones1 article {
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* Centra horizontalmente el contenido */
+        text-align: center;
+        padding: 20px;
+        /* Agrega un espacio interno para el artículo */
+        position: relative;
+        /* Agrega para el posicionamiento del span */
+        flex: 1;
+        /* Distribuye el espacio disponible entre los elementos */
+    }
 
 .sesiones1 article .section-title {
     max-width: 120px;
     margin-bottom: 15px;
+    position:relative;
 }
 
 .sesiones1 article .section-title span {
     background-color: var(--colorPrincipal);
+    position:absolute;
     color: white;
     padding: 10px;
     border-radius: 10px;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 
@@ -73,4 +91,15 @@ h3 {
     color: white;
     padding: 10px;
     border-radius: 10px;
+}
+/* TODO CADA SESION TIENE QUE APARECER EN COLUMNA */
+@media (max-width: 768px) {
+    .sesiones1 {
+        flex-direction: column;
+        /* Cambia a columnas en dispositivos móviles */
+    }
+        .sesiones2 {
+            flex-direction: column;
+            /* Cambia a columnas en dispositivos móviles */
+        }
 }
