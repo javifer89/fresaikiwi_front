@@ -85,6 +85,7 @@
 
 
 /* Sección SESIONES */
+/* TODO RECOLOCAR despues de haber aplicado los estilos en el css del componente */
 h3 {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
@@ -94,7 +95,6 @@ h3 {
         top: 100vh;
         margin-bottom: 20px;
 }
-/* TODO FALTA COLOCAR BIEN LOS SPAN */
 .container{
     top: 100vh;
 }
@@ -122,6 +122,7 @@ h3 {
     max-width: 120px;
     margin-bottom: 15px;
 }
+/* TODO FALTA COLOCAR BIEN LOS SPAN */
 .sesiones1 article .section-title span {
     background-color: var(--colorPrincipal);
     color: white;

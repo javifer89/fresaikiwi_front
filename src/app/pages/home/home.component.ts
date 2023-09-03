@@ -10,8 +10,8 @@ export class HomeComponent implements OnInit {
   images: any[];
   imagenSeleccionada: number = 0;
   interval: any;
-  sesiones1: Sesion[];
-  sesiones2: Sesion[];
+  // sesiones1: Sesion[];
+  // sesiones2: Sesion[];
 
   router: Router = inject(Router)
 
@@ -34,50 +34,49 @@ export class HomeComponent implements OnInit {
         url: '../../../assets/images/BEBÉS/ALEJANDRI_9M-43.jpg',
       },
       ];
-      this.sesiones1 = [
-        {
-          title: 'Bebés',
-          routes: ['/sesiones', 'bebes'],
-          img: '../../../assets/images/BEBÉS/P1_FILES_EMMA_BATHMILK-5.jpg',
-        },
-        {
-          title: 'Newborn',
-          routes: ['/sesiones', 'newborn'],
-          img: '../../../assets/images/NEWBORN/SOFÍA_NB-13 copia.jpg',
-        },
-        {
-          title: 'Embarazo',
-          routes: ['/sesiones', 'embarazo'],
-          img: '../../../assets/images/EMBARAZO/LAURA-1 copia.jpg',
-        },
-        {
-          title: 'Comunión',
-          routes: ['/sesiones', 'comunion'],
-          img: '../../../assets/images/COMUNIONES/EDURNE_EXTERIORS-135 còpia.jpg',
-        },
-      ];
-      this.sesiones2 = [
-        {
-          title: 'Navidad',
-          routes: ['/sesiones', 'navidad'],
-          img: '../../../assets/images/CUMPLE/SANTOS-214.jpg',
-        },
-        {
-          title: 'Cumples',
-          routes: ['/sesiones', 'cumples'],
-          img: '../../../assets/images/CUMPLE/SANTOS-214.jpg',
-        },
-        {
-          title: 'Familia',
-          routes: ['/sesiones', 'familia'],
-          img: '/assets/images/CUMPLE/SANTOS-214.jpg',
-        },
-        {
-          title: 'Fine Art',
-          routes: ['/sesiones', 'fine-art'],
-          img: '/assets/images/FINE ART/AURO+LAIA-26-2.jpg',
-        },
-      ];
+      // this.sesiones1 = [
+      //   {
+      //     title: 'Bebés',
+      //     routes: ['/sesiones', 'bebes'],
+      //     img: '../../../assets/images/BEBÉS/P1_FILES_EMMA_BATHMILK-5.jpg',
+      //   },
+      //   {
+      //     title: 'Newborn',
+      //     routes: ['/sesiones', 'newborn'],
+      //     img: '../../../assets/images/NEWBORN/SOFÍA_NB-13 copia.jpg',
+      //   },
+      //   {
+      //     title: 'Embarazo',
+      //     routes: ['/sesiones', 'embarazo'],
+      //     img: '../../../assets/images/EMBARAZO/LAURA-1 copia.jpg',
+      //   },
+      //   {
+      //     title: 'Comunión',
+      //     routes: ['/sesiones', 'comunion'],
+      //     img: '../../../assets/images/COMUNIONES/EDURNE_EXTERIORS-135 còpia.jpg',
+      //   },
+
+      //   {
+      //     title: 'Navidad',
+      //     routes: ['/sesiones', 'navidad'],
+      //     img: '../../../assets/images/CUMPLE/SANTOS-214.jpg',
+      //   },
+      //   {
+      //     title: 'Cumples',
+      //     routes: ['/sesiones', 'cumples'],
+      //     img: '../../../assets/images/CUMPLE/SANTOS-214.jpg',
+      //   },
+      //   {
+      //     title: 'Familia',
+      //     routes: ['/sesiones', 'familia'],
+      //     img: '/assets/images/CUMPLE/SANTOS-214.jpg',
+      //   },
+      //   {
+      //     title: 'Fine Art',
+      //     routes: ['/sesiones', 'fine-art'],
+      //     img: '/assets/images/FINE ART/AURO+LAIA-26-2.jpg',
+      //   },
+      // ];
   }
 
   ngOnInit(): void {
