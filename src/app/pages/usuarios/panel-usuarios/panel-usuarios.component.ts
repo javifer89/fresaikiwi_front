@@ -34,8 +34,4 @@ export class PanelUsuariosComponent {
       validado: 0,
     };
   }
-
-  // async ngOnInit() {
-  //   this.staff = await this.staffService.perfil();
-  // }
 }

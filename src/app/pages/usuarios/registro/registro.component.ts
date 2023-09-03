@@ -33,7 +33,6 @@ export class RegistroComponent {
         Validators.pattern(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,10}$/),
       ]),
       rol: new FormControl(null, [Validators.required]),
-      // username: new FormControl(null, [Validators.required]),
       password: new FormControl(null, [Validators.required]),
     });
   }
