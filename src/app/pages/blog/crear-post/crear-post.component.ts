@@ -13,11 +13,12 @@ export class CrearPostComponent {
   formData = new FormData();
   constructor() {
     this.formulario = new FormGroup({
+      //TODO REVISAR ORDEN DE LOS CAMPOS DEL FORMULARIO CON LA PETICIÓN DEL BACK
       titulo: new FormControl(),
       texto: new FormControl(),
-      autor: new FormControl(),
-      imagen: new FormControl(),
-      // fecha: new FormControl(),
+      autor: new FormControl(), // usuario_id
+      imagen: new FormControl(), //img_url
+      fecha: new FormControl(),
       categoria: new FormControl(),
     });
   }
@@ -25,7 +26,6 @@ export class CrearPostComponent {
   async onSubmit() {
     const response = await this.blogService.createPost(this.formulario.value);
   }
-//TODO REVISAR PETICIÓN AL BACK PARA SUBIR LA IMAGEN
   onFileSelected(event: any) {
     const file: File = event.target.files[0];
 
