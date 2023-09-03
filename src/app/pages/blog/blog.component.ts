@@ -27,7 +27,7 @@ export class BlogComponent {
   }
 
     async ngOnInit() {
-      this.categorias = await(await this.blogService.getAll()).map(
+      this.categorias = (await this.blogService.getAll()).map(
         (post) => post.categoria
       );
     this.getPosts();
