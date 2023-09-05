@@ -1,36 +1,4 @@
 <div class="container">
-  <!-- <div class="row">
-    <h3>BEBÉS</h3>
-<div class="imagen1 col-md-12">
-  <img
-    src="../../../../assets/images/BEBÉS/P1_FILES_EMMA_BATHMILK-5.jpg"
-    alt=""
-  />
-</div>
-</div>
-
-<div class="row">
-  <div class="texto col-md-12">
-  <p>
-    Durante el primer año de vida de un bebé van a haber cambios increíbles, sus
-    gestos, su cuerpo….Cuando te des cuenta incluso dará sus primeros pasos, y
-    para atesorar estos momentos tenemos diferentes tipos de sesiones para que
-    no nos perdamos ni uno de esos momentos únicos.
-  </p>
-
-  <p>
-    Especialmente me encanta cuando se sientan solitos y todavía no gatean,
-    entre los 6-8 meses, esta etapa es realmente especial y quedan preciosos con
-    sus gestos, es una sesión para morir de amor.
-  </p>
-</div>
-</div>
-<div class="row">
-<div class="imagen2 col-md-12">
-  <img src="../../../../assets/images/BEBÉS/ALEJANDRI_9M-43.jpg" alt="" />
-</div>
-</div> -->
-
   <div class="row">
     <h3>BEBÉS</h3>
     <div class="texto col-md-12">
@@ -41,7 +9,7 @@
         sesiones para que no nos perdamos ni uno de esos momentos únicos.
       </p>
     </div>
-    
+
     <div class="grid">
       <img
         *ngFor="let image of imagenes; let i = index"
@@ -51,7 +19,7 @@
         [src]="image.src"
       />
     </div>
-    <div class="lightbox" [ngClass]="{ isActive: lightboxActive }">
+    <div *ngIf="lightboxActive" class="lightbox" [ngClass]="{ isActive: lightboxActive }">
       <button (click)="lightboxBtnHandler()" class="lightbox__btn">
         <svg
           class="lightbox__svg"

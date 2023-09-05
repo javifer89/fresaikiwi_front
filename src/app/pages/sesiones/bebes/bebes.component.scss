@@ -1,25 +1,25 @@
 h3 {
-    text-align: center;
-    text-decoration: underline;
-    padding: 10px;
-    margin-bottom: 30px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+  text-align: center;
+  text-decoration: underline;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
 .texto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    & h3 {
-        position: absolute;
-        text-align: center;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  & h3 {
+    position: absolute;
+    text-align: center;
+  }
 
-    & p {
-        padding: 10px;
-    }
+  & p {
+    padding: 10px;
+  }
 }
 /* ESTILOS LIGHTBOX SCSS */
 
@@ -66,10 +66,13 @@ h3 {
   pointer-events: none;
   transition: all 0.5s ease;
 
+
   &.isActive {
     opacity: 1;
     pointer-events: auto;
+
   }
+
   &__btn {
     width: 3rem;
     cursor: pointer;
@@ -85,5 +88,14 @@ h3 {
     width: 80%;
     height: 70vh;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
+
+  }
+}
+@media (max-width: 1004px) {
+  .lightbox {
+    &__img {
+      width: 100%;
+      height: auto;
+    }
   }
 }
