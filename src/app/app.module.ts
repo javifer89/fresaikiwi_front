@@ -11,7 +11,6 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { ReservasComponent } from './pages/reservas/reservas.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { CalendarComponent } from './components/calendar/calendar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
@@ -41,7 +40,6 @@ import { CrearPostComponent } from './pages/blog/crear-post/crear-post.component
     ReservasComponent,
     ContactoComponent,
     MenuComponent,
-    CalendarComponent,
     NewbornComponent,
     ComunionComponent,
     EmbarazoComponent,
