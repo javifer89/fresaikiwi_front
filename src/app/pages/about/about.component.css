@@ -1,20 +1,45 @@
-.row{
- background-color: white;
-border: 1px solid var(--colorPrincipal);
-flex-wrap: nowrap;
+.container {
+  max-width: 1500px;
 }
-.texto p{
-    justify-content: center;
-    text-align: justify;
+.row {
+  background-color: white;
+  border: 1px solid var(--colorPrincipal);
+  display: flex;
+  flex-wrap: wrap;
+  height: 60vh;
 }
-
-.texto h2{
-    text-decoration: underline black;
-    text-align: center;
-    font-size: 38px;
-}
-
+/* TODO FALTA AJUSTAR TAMAÑOS DE IMAGEN Y TEXTO, EN RSPONSIVE OK */
+/* .imagen,
+.texto {
+  flex: none; /* Distribuir el espacio disponible de manera equitativa entre los elementos */
+/*padding: 10px; /* Añadir un espacio alrededor de los elementos (ajusta según tus necesidades) */
+/* box-sizing: border-box; /* Incluye el relleno en el ancho total */
+/*} */
 .imagen {
+  width: 50%;
+  height: auto;
+}
+.texto {
+  width: 50%;
+  height: auto;
+}
+.texto p {
+  /* justify-content: center; */
+  text-align: justify;
+}
+
+.texto h2 {
+  text-align: center;
+  font-size: 38px;
+  font-family: "Montserrat", sans-serif;
+}
+@media screen and (max-width: 768px) {
+  .row {
+    margin: 10px;
+    /* padding: 5px; */
+  }
+  .imagen,
+  .texto {
     width: 100%;
-    height: 100%;
+  }
 }
