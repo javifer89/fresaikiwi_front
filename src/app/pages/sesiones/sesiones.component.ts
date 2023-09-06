@@ -8,12 +8,11 @@ import { Router } from '@angular/router';
 })
 export class SesionesComponent {
 
-  sesiones1: Sesion[];
-  sesiones2: Sesion[];
+  sesiones: Sesion[];
 
   router: Router = inject(Router);
   constructor() {
-    this.sesiones1 = [
+    this.sesiones = [
       {
         title: 'Bebés',
         routes: ['/sesiones', 'bebes'],
@@ -34,12 +33,11 @@ export class SesionesComponent {
         routes: ['/sesiones', 'comunion'],
         img: 'assets/images/COMUNIONES/EDURNE_EXTERIORS-135 còpia.jpg',
       },
-    ];
-    this.sesiones2 = [
       {
         title: 'Navidad',
         routes: ['/sesiones', 'navidad'],
-        img: 'assets/images/NAVIDAD/',
+        // img: 'assets/images/NAVIDAD/',
+        img: 'assets/images/CUMPLE/EMMA_2-82.jpg'
       },
       {
         title: 'Cumples',
@@ -49,7 +47,8 @@ export class SesionesComponent {
       {
         title: 'Familia',
         routes: ['/sesiones', 'familia'],
-        img: 'assets/images/FAMILIA/',
+        img: 'assets/images/FAMILIA/PAM_FAMILY-50.jpg',
+
       },
       {
         title: 'Fine Art',
@@ -59,6 +58,7 @@ export class SesionesComponent {
     ];
   }
 }
+
 export interface Sesion {
   title: string;
   routes: string[];

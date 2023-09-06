@@ -1,27 +1,18 @@
-<!-- TODO AÑADIR SECCIONES CON TODAS LAS SESIONES COMO EN LA HOME QUE DIRIGAN A CADA RUTA DE SESION -->
+<!-- TODO SOLUCIONAR RUTAS A CADA SESION-->
 
-<!-- TODO MODIFICAR FUENTES DE LOS TEXTOS Y DECIDIR SI DEJARLO EN COLUMNA O HACER FILAS CON IMAGENES (EN CADA SESIÓN)-->
 <div class="container">
-    <div class="row">
-      <h3>Capturando mágicos recuerdos</h3>
-      <section class="sesiones1">
-        <article *ngFor="let sesion of sesiones1"(click)="router.navigate([sesion.routes])">
-          <div class="section-title">
-            <span>{{sesion.title}}</span>
-          </div>
-          <img class="img-fluid" [src]="sesion.img" alt="{{sesion.title}}">
-        </article>
-      </section>
-    </div>
-
-    <div class="row">
-      <section class="sesiones2">
-        <article *ngFor="let sesion of sesiones2"(click)="router.navigate([sesion.routes])">
-          <div class="section-title">
-            <span>{{sesion.title}}</span>
-          </div>
-          <img class="img-fluid" [src]="sesion.img" alt="{{sesion.title}}">
-        </article>
-      </section>
-    </div>
+  <div class="row">
+    <h3>Capturando mágicos recuerdos</h3>
+    <section class="sesiones">
+      <article
+        *ngFor="let sesion of sesiones"
+        (click)="router.navigate([sesion.routes])"
+      >
+        <img class="img-fluid" [src]="sesion.img" alt="{{ sesion.title }}" />
+        <div class="section-title">
+          <span>{{ sesion.title }}</span>
+        </div>
+      </article>
+    </section>
   </div>
+</div>
