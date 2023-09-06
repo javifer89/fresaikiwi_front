@@ -1,14 +1,15 @@
-import { Component, inject } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css'],
+  styleUrls: ['./menu.component.scss'],
 })
-export class MenuComponent {
+export class MenuComponent implements OnInit {
   usuariosService = inject(UsuariosService);
+  public active: boolean = false
 
   router: Router = inject(Router);
 
@@ -82,6 +83,11 @@ export class MenuComponent {
       ],
     },
   ];
+  ngOnInit(): void { }
+
+    setActive(): void {
+      this.active = !this.active
+    }
 
   //   onLogout(logOut: number) {
   //     localStorage.removeItem('token_front');
@@ -91,6 +97,7 @@ export class MenuComponent {
   //       this.router.navigate(['/usuarios', 'login']);
   //     }
   //   }
+
 }
 
 export interface MenuItem {
