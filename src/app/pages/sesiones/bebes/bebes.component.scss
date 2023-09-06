@@ -29,7 +29,7 @@ h3 {
   margin: 2rem auto;
   padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
   gap: 1rem;
   &__img {
     cursor: pointer;
@@ -66,11 +66,9 @@ h3 {
   pointer-events: none;
   transition: all 0.5s ease;
 
-
   &.isActive {
     opacity: 1;
     pointer-events: auto;
-
   }
 
   &__btn {
@@ -88,7 +86,6 @@ h3 {
     width: 80%;
     height: 70vh;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
-
   }
 }
 @media (max-width: 1004px) {
@@ -97,5 +94,8 @@ h3 {
       width: 100%;
       height: auto;
     }
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   }
 }

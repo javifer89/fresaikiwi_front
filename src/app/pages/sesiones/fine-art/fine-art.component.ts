@@ -22,6 +22,7 @@ export class FineArtComponent {
       { src: '/assets/images/FINE ART/AURO+LAIA-26.jpg', alt: 'imagen 0' },
       { src: '/assets/images/FINE ART/AURO+LAIA-26.jpg', alt: 'imagen 1' },
       { src: '/assets/images/FINE ART/AURO+LAIA-26.jpg', alt: 'imagen 2' },
+      { src: '/assets/images/FINE ART/AURO+LAIA-26.jpg', alt: 'imagen 3' },
     ];
   }
 }

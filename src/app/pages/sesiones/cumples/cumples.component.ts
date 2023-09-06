@@ -25,7 +25,7 @@ export class CumplesComponent {
       },
       { src: '/assets/images/CUMPLE/EMMA 1 copia.jpg', alt: 'imagen 1' },
       { src: '/assets/images/CUMPLE/ALEJANDRA copia.jpg', alt: 'imagen 2' },
-      { src: '/assets/images/CUMPLE/MELLIS_2-178.jpg', alt: 'imagen 3' },
+      { src: '/assets/images/CUMPLE/TRIANA_2AÑOS-153.jpg', alt: 'imagen 3' },
     ];
   }
 }

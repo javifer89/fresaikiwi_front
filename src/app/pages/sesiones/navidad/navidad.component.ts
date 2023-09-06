@@ -22,6 +22,7 @@ export class NavidadComponent {
       { src: '/assets/images/BEBÉS/P1_FILES_EMMA_BATHMILK-5.jpg', alt: 'imagen 0' },
       { src: '/assets/images/BEBÉS/ALEJANDRI_9M-43.jpg', alt: 'imagen 1' },
       { src: '/assets/images/BEBÉS/ALEJANDRI_9M-43.jpg', alt: 'imagen 2' },
+      { src: '/assets/images/BEBÉS/ALEJANDRI_9M-43.jpg', alt: 'imagen 3' },
     ];
   }
 }
