@@ -32,7 +32,7 @@ export class ListaReservasComponent {
         aceptada: 0,
       });
   }
-  
+
   async ngOnInit() {
     try {
       this.reservas = await this.reservasService.getAll();
@@ -41,62 +41,62 @@ export class ListaReservasComponent {
       console.log(error);
     }
   }
+// TODO INTENTAR CONECTAR LAS RESERVAS DE UPHLOW CON BBDD
+  // eliminarReserva(id_reserva: number) {
+  //   Swal.fire({
+  //     title: '¿Estás segur@?',
+  //     text: 'Una vez borrada la reserva no se puede recuperar',
+  //     icon: 'warning',
+  //     showCancelButton: true,
+  //     confirmButtonColor: '#0077B6',
+  //     cancelButtonColor: '#F3722C',
+  //     confirmButtonText: 'Sí, bórrala',
+  //   }).then(async (result) => {
+  //     if (result.isConfirmed) {
+  //       const response = await this.reservasService.deleteById(id_reserva);
 
-  eliminarReserva(id_reserva: number) {
-    Swal.fire({
-      title: '¿Estás segur@?',
-      text: 'Una vez borrada la reserva no se puede recuperar',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonColor: '#0077B6',
-      cancelButtonColor: '#F3722C',
-      confirmButtonText: 'Sí, bórrala',
-    }).then(async (result) => {
-      if (result.isConfirmed) {
-        const response = await this.reservasService.deleteById(id_reserva);
+  //       Swal.fire({
+  //         icon: 'success',
+  //         title: 'Reserva borrada',
+  //         showConfirmButton: false,
+  //         timer: 2500,
+  //         width: 500,
+  //         padding: '3em',
+  //         color: '#333333',
+  //         background: '#0077B6',
+  //       });
 
-        Swal.fire({
-          icon: 'success',
-          title: 'Reserva borrada',
-          showConfirmButton: false,
-          timer: 2500,
-          width: 500,
-          padding: '3em',
-          color: '#333333',
-          background: '#0077B6',
-        });
+  //       // recargar la pagina
+  //       this.reservas = await this.reservasService.getAll();
+  //     }
+  //   });
+  // }
 
-        // recargar la pagina
-        this.reservas = await this.reservasService.getAll();
-      }
-    });
-  }
+  // async aceptarReserva(reserva: any) {
+  //   try {
+  //     reserva.aceptada = 1;
+  //     const response = await this.reservasService.aceptarById(
+  //       reserva.id_reserva,
+  //       reserva.aceptada
+  //     );
+  //     console.log(response);
+  //     if (response) {
+  //       Swal.fire({
+  //         icon: 'success',
+  //         title: 'Reserva aceptada',
+  //         showConfirmButton: false,
+  //         timer: 2500,
+  //         width: 500,
+  //         padding: '3em',
+  //         color: '#333333',
+  //         background: '#0077B6',
+  //       });
 
-  async aceptarReserva(reserva: any) {
-    try {
-      reserva.aceptada = 1;
-      const response = await this.reservasService.aceptarById(
-        reserva.id_reserva,
-        reserva.aceptada
-      );
-      console.log(response);
-      if (response) {
-        Swal.fire({
-          icon: 'success',
-          title: 'Reserva aceptada',
-          showConfirmButton: false,
-          timer: 2500,
-          width: 500,
-          padding: '3em',
-          color: '#333333',
-          background: '#0077B6',
-        });
-
-        // Recargar la lista de reservas actualizada
-        this.reservas = await this.reservasService.getAll();
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  //       // Recargar la lista de reservas actualizada
+  //       this.reservas = await this.reservasService.getAll();
+  //     }
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
 }
