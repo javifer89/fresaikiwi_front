@@ -1,6 +1,8 @@
+/* NO SE UTILIZA CSS PARA LA HOME, ESTA CON SCSS */
+
+
 
 /* TODO REVISAR MENU NAV EN MOBILE (logo se corta en mobile)*/
-
 .container {
     justify-content: space-between;
     align-items: center;
@@ -69,20 +71,3 @@
     border-radius: 15px;
 }
 
-/* .navbar-nav {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-} */
-
-/* ul.navbar-nav {
-    flex-direction: row;
-} */
-
-/* li.nav-item.dropdown:last-child a.nav-link.dropdown-toggle {
-    padding: 7px;
-}
-.navbar-toggler {
-    display: none;
-} */

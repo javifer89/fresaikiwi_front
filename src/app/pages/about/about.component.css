@@ -6,26 +6,40 @@
   border: 1px solid var(--colorPrincipal);
   display: flex;
   flex-wrap: wrap;
-  height: 60vh;
+  height: auto;
+  max-height: 80vh;
+  width: 100%;
 }
-/* TODO FALTA AJUSTAR TAMAÑOS DE IMAGEN Y TEXTO, EN RSPONSIVE OK */
-/* .imagen,
-.texto {
-  flex: none; /* Distribuir el espacio disponible de manera equitativa entre los elementos */
-/*padding: 10px; /* Añadir un espacio alrededor de los elementos (ajusta según tus necesidades) */
-/* box-sizing: border-box; /* Incluye el relleno en el ancho total */
-/*} */
+/* TODO FALTA AJUSTAR TAMAÑO/POSICION DE IMAGEN Y TEXTO, EN RESPONSIVE OK */
 .imagen {
   width: 50%;
+  max-height: 50vh;
+  padding: 20px;
+
+}
+.imagen img{
+   width: 100%;
   height: auto;
+  max-height: 55vh;
+  border-radius: 20px;
 }
 .texto {
+  margin-top: 50px;
+  padding: 20px;
   width: 50%;
-  height: auto;
+  max-height: 80vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
+
 .texto p {
-  /* justify-content: center; */
+  margin-top: 10px;
+  justify-content: center;
   text-align: justify;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
 }
 
 .texto h2 {
@@ -35,8 +49,13 @@
 }
 @media screen and (max-width: 768px) {
   .row {
-    margin: 10px;
+    margin: 10px 0 10px 0;
     /* padding: 5px; */
+    height: auto;
+    max-height: 100vh;
+  }
+  .imagen {
+    margin-bottom: 40px;
   }
   .imagen,
   .texto {

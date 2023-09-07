@@ -31,7 +31,7 @@
 /*Animación fadeinOut para slider*/
 .elementToFadeInAndOut {
     animation: fadeInOut 5s linear forwards;
-    animation-iteration-count: infinite
+    animation-iteration-count: infinite;
 }
 
 @keyframes fadeInOut {
@@ -40,7 +40,7 @@
     }
 
     25% {
-        opacity: 0.5;
+        opacity: 0.75;
     }
 
     50% {
@@ -48,7 +48,7 @@
     }
 
     75% {
-        opacity: 0.5;
+        opacity: 1;
     }
 
     100% {
@@ -85,79 +85,9 @@
 
 
 /* Sección SESIONES */
-/* TODO RECOLOCAR despues de haber aplicado los estilos en el css del componente */
-h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 48px;
-    position: relative;
-        top: 100vh;
-        margin-bottom: 20px;
-}
-.container{
-    top: 100vh;
-}
-.sesiones1 article img {
-    width: 300px;
-    border-radius: 100px;
-}
-.sesiones1 {
-    width: 100%;
-    height: 20vh;
-    border: solid 2px var(--colorPrincipal);
-    border-radius: 10px 10px 0px 0px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: none;
-    position: relative;
-    top: 100vh;
-}
-.sesiones1 article {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-}
-.sesiones1 article .section-title {
-    max-width: 120px;
-    margin-bottom: 15px;
-}
-/* TODO FALTA COLOCAR BIEN LOS SPAN */
-.sesiones1 article .section-title span {
-    background-color: var(--colorPrincipal);
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
+/* TODO RECOLOCAR .sesiones - ELIMINAR SCROLL HORIZONTAL, PROBLEMA CON MAX-WIDTH EN .ROW*/
+.sesiones {
+width: 100vw;
 }
 
-
-.sesiones2 article img {
-    width: 300px;
-    border-radius: 100px;
-}
-.sesiones2 {
-    width: 100%;
-    height: 20vh;
-    border: solid 2px var(--colorPrincipal);
-    border-radius: 0px 0px 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    border-top: none;
-    position: relative;
-        top: 100vh;
-}
-.sesiones2 article {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-}
-.sesiones2 article .section-title {
-    max-width: 120px;
-    margin-bottom: 15px;
-}
-.sesiones2 article .section-title span {
-    background-color: var(--colorPrincipal);
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
+/* TODO empujar un poco más hacia bajo en mobile */

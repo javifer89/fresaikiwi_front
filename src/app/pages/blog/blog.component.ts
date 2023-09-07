@@ -20,12 +20,12 @@ export class BlogComponent {
         texto: '',
         autor: '',
         imagen: '',
-        fecha: '',
+        fecha: new Date(),
         categoria: '',
       },
     ];
   }
-
+// TODO REVISAR FILTRADO
     async ngOnInit() {
       this.categorias = (await this.blogService.getAll()).map(
         (post) => post.categoria

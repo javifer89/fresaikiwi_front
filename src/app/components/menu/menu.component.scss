@@ -1,3 +1,8 @@
+.logo img {
+  height: 11.25em;
+  width: 18.75em;
+}
+
 .header {
   width: 100%;
   background-color: transparent;
@@ -60,7 +65,7 @@
     }
   }
 
-  //TODO CORREGIR DROPDOWN
+  //TODO CORREGIR DROPDOWN -- NO aparecen los elementos del menu dropdown.
   &__li {
     margin: 0 0.5em;
     border-radius: 10px;
@@ -78,8 +83,9 @@
   }
   &__li--dropdown-menu {
     display: none;
-    // color: #333;
+    color: #333;
     background-color: var(--blanco);
+    transition: display 0.5s ease-in-out;
   }
   &__li--dropdown-menu:hover {
     display:block;
@@ -89,25 +95,18 @@
     color: #333;
   }
   &__li--nav-link:hover {
-    display:block;
+
 }
   &__li--dropdown-item {
     color: #333;
     padding: 8px 16px;
-    display: block;
-
+    display:block;
   }
   &__li--dropdown-item:hover {
-   display:block;
     background-color: var(--colorPrincipal);
     border-radius: 15px;
   }
   @media screen and (max-width: 943px) {
     padding: 0;
   }
-}
-
-.logo img {
-  height: 11.25em;
-  width: 18.75em;
 }
