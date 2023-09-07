@@ -23,36 +23,82 @@ h3 {
     padding: 10px;
 }
 
-.imagen1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.texto p:last-child {
+
+    padding: 0;
 }
 
-.imagen1 img {
+/* ESTILOS LIGHTBOX CSS */
+
+.grid {
+    width: 90%;
+    max-width: 56.25rem;
+    margin: 2rem auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    gap: 1rem;
+}
+
+.grid__img {
+    cursor: pointer;
+    transition: all .5s ease;
+    box-shadow: .5rem .5rem 1rem #cecece,
+        -.5rem -.5rem 1rem #f2f2f2;
+}
+
+.grid__img:hover {
+    transform: scale(.9);
+}
+
+.grid__img:active {
+    transform: scale(1.1);
+}
+
+
+.lightbox {
     width: 100%;
     height: 100%;
-}
+    background-color: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(2rem);
+    position: fixed;
+    top: 0;
+    left: 0;
 
+    color: white;
 
-.imagen2 {
     display: flex;
-    align-items: center;
+    flex-flow: column nowrap;
     justify-content: center;
-}
-
-.imagen2 img {
-    width: 100%;
-    height: 100%;
-}
-
-.imagen3 {
-    display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 1rem;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease;
 }
 
-.imagen3 img {
-    width: 100%;
-    height: 100%;
+.lightbox.isActive {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.lightbox__btn {
+    width: 3rem;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.lightbox__btn:hover {
+    transform: scale(.9);
+}
+
+.lightbox__btn:active {
+    transform: scale(1.1);
+}
+
+.lightbox__img {
+    width: 80%;
+    height: 70vh;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .4);
 }

@@ -1,20 +1,64 @@
-.row{
- background-color: white;
-border: 1px solid var(--colorPrincipal);
-flex-wrap: nowrap;
+.container {
+  max-width: 1500px;
 }
-.texto p{
-    justify-content: center;
-    text-align: justify;
+.row {
+  background-color: white;
+  border: 1px solid var(--colorPrincipal);
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  max-height: 80vh;
+  width: 100%;
 }
-
-.texto h2{
-    text-decoration: underline black;
-    text-align: center;
-    font-size: 38px;
-}
-
+/* TODO FALTA AJUSTAR TAMAÑO/POSICION DE IMAGEN Y TEXTO, EN RESPONSIVE OK */
 .imagen {
+  width: 50%;
+  max-height: 50vh;
+  padding: 20px;
+
+}
+.imagen img{
+   width: 100%;
+  height: auto;
+  max-height: 55vh;
+  border-radius: 20px;
+}
+.texto {
+  margin-top: 50px;
+  padding: 20px;
+  width: 50%;
+  max-height: 80vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.texto p {
+  margin-top: 10px;
+  justify-content: center;
+  text-align: justify;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+}
+
+.texto h2 {
+  text-align: center;
+  font-size: 38px;
+  font-family: "Montserrat", sans-serif;
+}
+@media screen and (max-width: 768px) {
+  .row {
+    margin: 10px 0 10px 0;
+    /* padding: 5px; */
+    height: auto;
+    max-height: 100vh;
+  }
+  .imagen {
+    margin-bottom: 40px;
+  }
+  .imagen,
+  .texto {
     width: 100%;
-    height: 100%;
+  }
 }

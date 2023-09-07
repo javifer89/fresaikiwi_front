@@ -105,17 +105,18 @@ export class BlogService {
   getById(id_post: number | any) {
     return firstValueFrom(this.httpClient.get<Post>(
       `${this.arrPost}/${id_post}`));
-    }
-
+  }
+  
+// TODO REVISAR FILTRADO
     // getByCategory(categoria: string): Post | undefined {
     //   return this.arrPost.find((post) => post.categoria === categoria)
     // }
-  getByCategory(categoria: string): Promise<Post[]> | undefined {
+  getByCategory(categoria: string): Promise<Post[]> {
     return firstValueFrom(this.httpClient.get<Post[]>(
       `${this.arrPost}/${categoria}`));
   }
 
-  create(formValue: any) {
+  createPost(formValue: any) {
     return firstValueFrom(this.httpClient.post<Post>(
         `${this.arrPost}`, formValue));
   }
@@ -149,7 +150,5 @@ export class BlogService {
   //   this.arrPost.push($event), this.saveLocalStorage(this.arrPost);
   // }
 
-  // saveLocalStorage(data: any) {
-  //   localStorage.setItem('post', JSON.stringify(data))!;
-  // }
+
 }

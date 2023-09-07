@@ -41,6 +41,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
+/sesiones
+/shared
 
 /assets/images
 src/assets/images/BEBÉS/ALEJANDRI_9M-43.jpg

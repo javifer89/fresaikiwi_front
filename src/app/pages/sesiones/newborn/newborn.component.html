@@ -1,25 +1,48 @@
 <div class="container">
   <div class="row">
     <h3>NEWBORN</h3>
-    <div class="imagen1 col-md-12">
-      <img src="../../../../assets/images/NEWBORN/SOFÍA_NB-13 copia.jpg" alt=""/>
+    <div class="texto col-md-12">
+      <p>
+        Sin lugar a duda uno de los momentos más felices y bonito que vivirás en
+        tu vida será cuando nazca tu bebé, y con la fotografía de recién nacido
+        ese momento será eterno. No sólo podrás verlo una y otra vez, también
+        podrás recordar esos primeros momentos siempre. Seguro que incluso podrás
+        recordar su olor o esos ruiditos que hacen, además de poder acariciar sus
+        plieguecitos, sus manos y pies, su piel, su pequeña nariz…
+      </p>
     </div>
-  <div class="texto col-md-12">
-    <p>
-      Sin lugar a duda uno de los momentos más felices y bonito que vivirás en
-      tu vida será cuando nazca tu bebé, y con la fotografía de recién nacido
-      ese momento será eterno. No sólo podrás verlo una y otra vez, también
-      podrás recordar esos primeros momentos siempre. Seguro que incluso podrás
-      recordar su olor o esos ruiditos que hacen, además de poder acariciar sus
-      plieguecitos, sus manos y pies, su piel, su pequeña nariz…
-    </p>
-  </div>
- </div>
+    <div class="grid">
+      <img
+        *ngFor="let image of imagenes; let i = index"
+        (click)="gridImgHandler(i)"
+        class="grid__img"
+        [alt]="image.alt"
+        [src]="image.src"
+      />
+    </div>
+    <div class="lightbox" [ngClass]="{ isActive: lightboxActive }">
+      <button (click)="lightboxBtnHandler()" class="lightbox__btn">
+        <svg
+          class="lightbox__svg"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+          />
+        </svg>
+      </button>
+      <img
+        [src]="imagenes[imgIndex].src"
+        alt="imagen lightbox"
+        class="lightbox__img"
+      />
+    </div>
+    </div>
 
   <div class="row">
-    <div class="imagen2 col-md-12">
-      <img src="../../../../assets/images/NEWBORN/SOFÍA_NB-15 (1) copia 2.jpg" alt="" />
-    </div>
+
     <div class="texto col-md-12">
       <p>
         Por eso no pierdas la oportunidad de tener el recuerdo más bonito y
@@ -30,10 +53,6 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="imagen1 col-md-12">
-      <img src="../../../../assets/images/NEWBORN/EIRE-35 copia.jpg" alt=""/>
-    </div>
     <div class="texto col-md-12">
       <p>
         Estas sesiones las realizo en los primeros 15 días de vida del bebé, y
@@ -44,4 +63,3 @@
       </p>
     </div>
   </div>
-</div>

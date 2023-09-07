@@ -11,7 +11,6 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { ReservasComponent } from './pages/reservas/reservas.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { CalendarComponent } from './components/calendar/calendar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
@@ -29,7 +28,6 @@ import { ListaUsuariosComponent } from './pages/usuarios/lista-usuarios/lista-us
 import { EditarUsuariosComponent } from './pages/usuarios/editar-usuarios/editar-usuarios.component';
 import { PanelUsuariosComponent } from './pages/usuarios/panel-usuarios/panel-usuarios.component';
 import { ListaReservasComponent } from './pages/reservas/lista-reservas/lista-reservas.component';
-import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CrearPostComponent } from './pages/blog/crear-post/crear-post.component';
 
 @NgModule({
@@ -42,7 +40,6 @@ import { CrearPostComponent } from './pages/blog/crear-post/crear-post.component
     ReservasComponent,
     ContactoComponent,
     MenuComponent,
-    CalendarComponent,
     NewbornComponent,
     ComunionComponent,
     EmbarazoComponent,

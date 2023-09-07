@@ -102,20 +102,6 @@
             La dirección de e-mail no tiene un formato válido
           </p>
 
-          <!-- <div class="input-group mb-3">
-            <span class="input-group-text">Usuario</span>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Escribe tu nombre de usuario"
-              formControlName="username"
-            />
-          </div>
-
-          <p class="error" *ngIf="checkError('usuario', 'required')">
-            El usuario es obligatorio
-          </p>-->
-
           <div class="input-group mb-3">
             <span class="input-group-text">Password</span>
             <input
@@ -129,7 +115,7 @@
           <p class="error" *ngIf="checkError('password', 'required')">
             La contraseña es obligatoria
           </p>
-
+<!-- TODO REVISAR .VALID , NO FUNCIONA -->
           <input
             type="submit"
             value="Enviar"
@@ -138,7 +124,7 @@
           />
 
           <p>
-            ¿Ya eres miembro?
+            ¿Ya estás registrado/a?
             <strong [routerLink]="['/usuarios', 'login']"
               >Inicia sesión.</strong
             >
@@ -146,22 +132,5 @@
         </form>
       </div>
     </div>
-
-    <!-- <div class="texto col-12 col-md-6 p-4">
-            <h5 class="mb-4"><strong>Bienvenido a AppChachi</strong></h5>
-
-            <p>En Fresaikiwi Fotografia podrás encontrar diferentes tipos de sesiones fotográficas para guardar tus momentos y tener un maravilloso recuerdo.</p>
-
-            <p>El <strong>alquiler de espacios por horas</strong> es una solución muy útil para aquellos
-                profesionales, empresas o
-                particulares que no encuentran el espacio adecuado para llevar a cabo su actividad.</p>
-
-            <p>Una vez te registres, podrás <strong [routerLink]="['/usuarios', 'login']">iniciar sesión</strong> y
-                descubrir todas las sesiones y horas disponibles para hacer tu reserva.</p>
-
-            <p>Si ya estás registrado y  quieres iniciar sesión puedes hacerlo directamente
-                <strong [routerLink]="['/usuarios', 'login']">aquí</strong>.
-            </p>
-        </div>-->
   </div>
 </div>

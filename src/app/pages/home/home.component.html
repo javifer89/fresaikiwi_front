@@ -1,22 +1,20 @@
-<div class="container mt-5 mb-5">
-  <div class="row">
-    <div class="seccionInicial col-md-12">
-      <!-- Carousel -->
-      <div class="carousel">
-        <img
-          class="elementToFadeInAndOut"
-          [src]="images[imagenSeleccionada].url"
-          [alt]="'slider'"
-        />
-      </div>
-    </div>
+<div class="seccionInicial col-md-12">
+  <!-- Carousel -->
+  <div class="carousel">
+    <img
+      class="elementToFadeInAndOut"
+      [src]="images[imagenSeleccionada].url"
+      [alt]="'slider'"
+    />
   </div>
+</div>
+<div class="container mt-5 mb-5">
+
 
   <div class="row">
     <div class="seccionWelcome col-md-12 col-sm-12">
       <h1 class="mb-3">FRESAIKIWI FOTOGRAFIA</h1>
-      <!-- TODO REVISAR TEXTO (hablar de estudio, exterior, detallar sesiones interior o exterior.
-    Falta decidir si reservamos aqui on uphlow)-->
+      <!-- TODO REVISAR TEXTO (hablar de estudio, exterior, detallar sesiones interior o exterior.-->
 
       <h6 class="mb-3">
         Bienvenidos a nuestro estudio de fotografía, capturamos los momentos más
@@ -48,33 +46,14 @@
         encargamos de todo!
       </p>
     </div>
+
+    <div class="sesiones">
+      <app-sesiones></app-sesiones>
+    </div>
   </div>
 
-  <!-- Titulo, texto y seccion con las sesiones -->
-  <div class="container">
 
-    <div class="row">
-      <h3>Capturando recuerdos mágicos</h3>
-      <section class="sesiones1">
-        <article *ngFor="let sesion of sesiones1"(click)="router.navigate([sesion.routes])">
-          <div class="section-title">
-            <span>{{sesion.title}}</span>
-          </div>
-          <img class="img-fluid" [src]="sesion.img" alt="{{sesion.title}}">
-        </article>
-      </section>
-    </div>
 
-    <div class="row">
-      <section class="sesiones2">
-        <article *ngFor="let sesion of sesiones2"(click)="router.navigate([sesion.routes])">
-          <div class="section-title">
-            <span>{{sesion.title}}</span>
-          </div>
-          <img class="img-fluid" [src]="sesion.img" alt="{{sesion.title}}">
-        </article>
-      </section>
-    </div>
 
-  </div>
+
 </div>

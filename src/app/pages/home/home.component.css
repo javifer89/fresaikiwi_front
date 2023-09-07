@@ -1,3 +1,15 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+.seccionIncial{
+    background-color: red;
+    width: 100%;
+    min-width: 400px;
+    min-height: 900px;
+}
 /* Sección SLIDER */
 .carousel {
     /* Configura el slider para que ocupe todo el ancho y alto de la ventana */
@@ -19,7 +31,7 @@
 /*Animación fadeinOut para slider*/
 .elementToFadeInAndOut {
     animation: fadeInOut 5s linear forwards;
-    animation-iteration-count: infinite
+    animation-iteration-count: infinite;
 }
 
 @keyframes fadeInOut {
@@ -28,7 +40,7 @@
     }
 
     25% {
-        opacity: 0.5;
+        opacity: 0.75;
     }
 
     50% {
@@ -36,7 +48,7 @@
     }
 
     75% {
-        opacity: 0.5;
+        opacity: 1;
     }
 
     100% {
@@ -49,6 +61,7 @@
 /* TODO FALTA COLOCAR BAJO DEL SLIDER */
 .seccionWelcome {
     position: relative;
+    top: 100vh;
     z-index: 1;
     display: flex;
     text-align: justify;
@@ -56,6 +69,7 @@
     justify-content: center;
     /* align-items: center; */
     font-family: 'Roboto Flex', sans-serif;
+    margin-bottom: 30px;
 }
 .seccionWelcome h6 {
     font-size: 20px;
@@ -71,69 +85,9 @@
 
 
 /* Sección SESIONES */
-h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-style: italic;
-    font-weight: 300;
-    font-size: 48px;
-}
-/* TODO FALTA COLOCAR BIEN LOS SPAN */
-
-.sesiones1 article img {
-    width: 300px;
-    border-radius: 100px;
-}
-.sesiones1 {
-    width: 100%;
-    height: 20vh;
-    border: solid 2px var(--colorPrincipal);
-    border-radius: 10px 10px 0px 0px;
-    display: flex;
-    justify-content: space-between;
-    border-bottom: none;
-}
-.sesiones1 article {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-}
-.sesiones1 article .section-title {
-    max-width: 120px;
-    margin-bottom: 15px;
-}
-.sesiones1 article .section-title span {
-    background-color: var(--colorPrincipal);
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
+/* TODO RECOLOCAR .sesiones - ELIMINAR SCROLL HORIZONTAL, PROBLEMA CON MAX-WIDTH EN .ROW*/
+.sesiones {
+width: 100vw;
 }
 
-
-.sesiones2 article img {
-    width: 300px;
-    border-radius: 100px;
-}
-.sesiones2 {
-    width: 100%;
-    height: 20vh;
-    border: solid 2px var(--colorPrincipal);
-    border-radius: 0px 0px 10px 10px;
-    display: flex;
-    justify-content: space-between;
-    border-top: none;
-}
-.sesiones2 article {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-}
-.sesiones2 article .section-title {
-    max-width: 120px;
-    margin-bottom: 15px;
-}
-.sesiones2 article .section-title span {
-    background-color: var(--colorPrincipal);
-    color: white;
-    padding: 10px;
-    border-radius: 10px;
-}
+/* TODO empujar un poco más hacia bajo en mobile */

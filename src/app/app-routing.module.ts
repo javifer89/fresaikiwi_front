@@ -16,12 +16,17 @@ import { NavidadComponent } from './pages/sesiones/navidad/navidad.component';
 import { NewbornComponent } from './pages/sesiones/newborn/newborn.component';
 import { RegistroComponent } from './pages/usuarios/registro/registro.component';
 import { LoginComponent } from './pages/usuarios/login/login.component';
+import { CrearPostComponent } from './pages/blog/crear-post/crear-post.component';
+import { PanelUsuariosComponent } from './pages/usuarios/panel-usuarios/panel-usuarios.component';
+import { LoginGuard } from './guards';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
 
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
+
+  {path: 'sesionestest', loadChildren: () => import('./sesiones/sesiones.module').then(m => m.SesionesModule)},
 
   { path: 'sesiones', component: SesionesComponent },
   { path: 'sesiones/bebes', component: BebesComponent },
@@ -33,11 +38,13 @@ const routes: Routes = [
   { path: 'sesiones/navidad', component: NavidadComponent },
   { path: 'sesiones/newborn', component: NewbornComponent },
 
-  { path: 'reservas', component: ReservasComponent },
+  { path: 'reservas', component: ReservasComponent, canActivate: [LoginGuard] },
   { path: 'blog', component: BlogComponent },
+  { path: 'blog/crear-post', component: CrearPostComponent, canActivate: [LoginGuard] },
   { path: 'contacto', component: ContactoComponent },
   { path: 'usuarios/login', component: LoginComponent },
-  { path: 'usuarios/registro', component: RegistroComponent},
+  { path: 'usuarios/registro', component: RegistroComponent },
+  { path: 'panelUsuarios', component: PanelUsuariosComponent, canActivate: [LoginGuard] },
 
   { path: '**', redirectTo: '/home' },
 ];
