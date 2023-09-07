@@ -34,7 +34,7 @@ i {
     width: 25%;
 }
 .titulo h5{
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 @media (max-width: 576px) {
