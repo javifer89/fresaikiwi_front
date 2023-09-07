@@ -39,12 +39,12 @@ const routes: Routes = [
   { path: 'sesiones/newborn', component: NewbornComponent },
 
   { path: 'reservas', component: ReservasComponent, canActivate: [LoginGuard] },
-  { path: 'blog', component: BlogComponent },
-  { path: 'blog/crear-post', component: CrearPostComponent, canActivate: [LoginGuard] },
+  // { path: 'blog', component: BlogComponent },
+  // { path: 'blog/crear-post', component: CrearPostComponent, canActivate: [LoginGuard] },
   { path: 'contacto', component: ContactoComponent },
-  { path: 'usuarios/login', component: LoginComponent },
-  { path: 'usuarios/registro', component: RegistroComponent },
-  { path: 'panelUsuarios', component: PanelUsuariosComponent, canActivate: [LoginGuard] },
+  // { path: 'usuarios/login', component: LoginComponent },
+  // { path: 'usuarios/registro', component: RegistroComponent },
+  // { path: 'panelUsuarios', component: PanelUsuariosComponent, canActivate: [LoginGuard] },
 
   { path: '**', redirectTo: '/home' },
 ];
