@@ -10,8 +10,8 @@ export class SesionesComponent {
 
   sesiones: Sesion[];
 
-  router: Router = inject(Router);
-  constructor() {
+  // router: Router = inject(Router);
+  constructor(private router: Router) {
     this.sesiones = [
       {
         title: 'Bebés',
@@ -42,7 +42,6 @@ export class SesionesComponent {
         title: 'Familia',
         routes: ['/sesiones', 'familia'],
         img: 'assets/images/FAMILIA/PAM_FAMILY-50.jpg',
-
       },
       {
         title: 'Navidad',
@@ -56,6 +55,10 @@ export class SesionesComponent {
       },
     ];
   }
+  navigateToSesion(routes: string[]) {
+    this.router.navigate(routes);
+  }
+
 }
 
 export interface Sesion {
