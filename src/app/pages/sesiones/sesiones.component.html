@@ -1,13 +1,11 @@
-<!-- TODO SOLUCIONAR RUTAS A CADA SESION-->
-
 <div class="container">
   <div class="row">
     <h3>Capturando mágicos recuerdos</h3>
     <section class="sesiones">
       <article
         *ngFor="let sesion of sesiones"
-        (click)="router.navigate([sesion.routes])"
-      >
+        (click)="navigateToSesion(sesion.routes)"
+        >
         <img class="img-fluid" [src]="sesion.img" alt="{{ sesion.title }}" />
         <div class="section-title">
           <span>{{ sesion.title }}</span>
@@ -16,3 +14,5 @@
     </section>
   </div>
 </div>
+
+<!-- (click)="router.navigate([sesion.routes])" -->

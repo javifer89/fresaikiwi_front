@@ -77,9 +77,9 @@
 }
 .seccionWelcome h1 {
     text-align: center;
-    text-decoration: underline;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-size: 80px;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-weight: 400;
 }
 
 

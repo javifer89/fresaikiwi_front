@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @charset "UTF-8";
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300;1,400&family=Roboto+Flex:opsz,wght@8..144,200;8..144,400;8..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,400;1,300;1,400&family=Roboto+Flex:opsz,wght@8..144,200;8..144,400;8..144,700&display=swap');
+
+
 
 * {
     box-sizing: border-box;
@@ -25,22 +27,9 @@ body {
     padding-top: 50px;
 }
 
-.fondo {
-    min-height: calc(100vh - 56px - 230px);
-}
 
 
-/*
-
-  Con este reset vamos a resolver:
-    👉 Unificar el uso de Custom Properties
-    👉 Problemas de box-model más generales
-    👉 Problemas con imagenes, vídeos e iconos svg
-    👉 Problemas con tipografías y etiquetas input en formularios
-    👉 Unificar la tipografía de todas las etiquetas de una web
-
-*/
-/* Aquí definimos las Custom properties */
+/* Custom properties */
 :root {
     --negro: #393939;
     /* Tipografía */
@@ -48,7 +37,7 @@ body {
     --tipo-secundaria: Verdana;
 }
 
-/* Las adaptamos al modo oscuro */
+/* modo oscuro */
 @media (prefers-color-scheme: dark) {
     :root {
         --negro: #ececec;
@@ -141,6 +130,15 @@ em {
     color: inherit;
 }
 
+/*FUENTES GENERALES*/
+h3,h1,h2{
+    font-family: 'Great Vibes', cursive;
+}
+h4,h5,h6, p, span, form, input, a, :placeholder-shown {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
 /* Evitamos problemas con los pseudoelementos de quotes */
 blockquote:before,
 blockquote:after,
@@ -197,11 +195,6 @@ svg {
     fill: currentColor;
 }
 
-/* (Probándolo, no usar en producción) En el caso de añadir una  */
-/* p svg{
-  display: inline;
-  width: initial;
-} */
 /* Configuramos la tipografía para toda la web */
 body {
     min-height: 100vh;

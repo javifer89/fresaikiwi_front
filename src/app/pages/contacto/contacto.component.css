@@ -9,7 +9,9 @@
     border: 1px solid white;
     color: white;
 }
-
+h3{
+    font-size: 70px;
+}
 p,a {
     font-size: larger;
 }

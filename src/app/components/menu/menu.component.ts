@@ -60,28 +60,28 @@ export class MenuComponent implements OnInit {
       title: 'Reservar',
       routes: ['/reservas'],
     },
-    {
-      title: 'Blog',
-      routes: ['/blog'],
-    },
+    // {
+    //   title: 'Blog',
+    //   routes: ['/blog'],
+    // },
     {
       title: 'Contacto',
       routes: ['/contacto'],
     },
-    {
-      title: 'Acceso Usuarios',
-      routes: [],
-      childItems: [
-        {
-          title: 'Login Usuarios',
-          routes: ['/usuarios', 'login'],
-        },
-        {
-          title: 'Registro Usuarios',
-          routes: ['/usuarios', 'registro'],
-        },
-      ],
-    },
+    // {
+    //   title: 'Acceso Usuarios',
+    //   routes: [],
+    //   childItems: [
+    //     {
+    //       title: 'Login Usuarios',
+    //       routes: ['/usuarios', 'login'],
+    //     },
+    //     {
+    //       title: 'Registro Usuarios',
+    //       routes: ['/usuarios', 'registro'],
+    //     },
+    //   ],
+    // },
   ];
   ngOnInit(): void { }
 

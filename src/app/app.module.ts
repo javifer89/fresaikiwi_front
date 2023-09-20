@@ -29,6 +29,7 @@ import { EditarUsuariosComponent } from './pages/usuarios/editar-usuarios/editar
 import { PanelUsuariosComponent } from './pages/usuarios/panel-usuarios/panel-usuarios.component';
 import { ListaReservasComponent } from './pages/reservas/lista-reservas/lista-reservas.component';
 import { CrearPostComponent } from './pages/blog/crear-post/crear-post.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { CrearPostComponent } from './pages/blog/crear-post/crear-post.component
     PanelUsuariosComponent,
     ListaReservasComponent,
     CrearPostComponent,
+    FooterComponent,
 
   ],
   imports: [

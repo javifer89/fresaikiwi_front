@@ -7,58 +7,68 @@
   display: flex;
   flex-wrap: wrap;
   height: auto;
-  max-height: 80vh;
+  max-height: 100vh;
   width: 100%;
 }
 /* TODO FALTA AJUSTAR TAMAÑO/POSICION DE IMAGEN Y TEXTO, EN RESPONSIVE OK */
 .imagen {
   width: 50%;
-  max-height: 50vh;
+  height: auto;
+  max-height: 65vh;
   padding: 20px;
 
 }
 .imagen img{
-   width: 100%;
+  width: 100%;
   height: auto;
   max-height: 55vh;
   border-radius: 20px;
 }
 .texto {
-  margin-top: 50px;
+  /* margin-top: 50px; */
   padding: 20px;
   width: 50%;
-  max-height: 80vh;
+  height: 100%;
+  max-height: 55vh;
   text-align: center;
   justify-content: center;
   align-items: center;
 }
-
+.texto br {
+  margin: 10px;
+}
 .texto p {
   margin-top: 10px;
+  padding: 10px;
+
   justify-content: center;
   text-align: justify;
   align-items: center;
-  height: 50vh;
+  /* height: 50vh; */
   width: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .texto h2 {
   text-align: center;
-  font-size: 38px;
-  font-family: "Montserrat", sans-serif;
+  font-size: 70px;
+  /* font-family: "Montserrat", sans-serif; */
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1100px) {
   .row {
-    margin: 10px 0 10px 0;
-    /* padding: 5px; */
-    height: auto;
-    max-height: 100vh;
-  }
-  .imagen {
-    margin-bottom: 40px;
+    margin: 0 0 0 0;
+    height: 120vh;
+    max-height: 200vh;
   }
   .imagen,
   .texto {
     width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0 0 0 0;
   }
+  .imagen {
+        max-height: 500px;
+  }
+  
 }

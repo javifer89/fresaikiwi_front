@@ -10,8 +10,8 @@ export class SesionesComponent {
 
   sesiones: Sesion[];
 
-  router: Router = inject(Router);
-  constructor() {
+  // router: Router = inject(Router);
+  constructor(private router: Router) {
     this.sesiones = [
       {
         title: 'Bebés',
@@ -34,12 +34,6 @@ export class SesionesComponent {
         img: 'assets/images/COMUNIONES/EDURNE_EXTERIORS-135 còpia.jpg',
       },
       {
-        title: 'Navidad',
-        routes: ['/sesiones', 'navidad'],
-        // img: 'assets/images/NAVIDAD/',
-        img: 'assets/images/CUMPLE/EMMA_2-82.jpg'
-      },
-      {
         title: 'Cumples',
         routes: ['/sesiones', 'cumples'],
         img: 'assets/images/CUMPLE/EMMA_2-82.jpg',
@@ -48,7 +42,11 @@ export class SesionesComponent {
         title: 'Familia',
         routes: ['/sesiones', 'familia'],
         img: 'assets/images/FAMILIA/PAM_FAMILY-50.jpg',
-
+      },
+      {
+        title: 'Navidad',
+        routes: ['/sesiones', 'navidad'],
+        img: 'assets/images/NAVIDAD/PROBA_DECORAT-33_WEB.jpg',
       },
       {
         title: 'Fine Art',
@@ -57,6 +55,10 @@ export class SesionesComponent {
       },
     ];
   }
+  navigateToSesion(routes: string[]) {
+    this.router.navigate(routes);
+  }
+
 }
 
 export interface Sesion {
