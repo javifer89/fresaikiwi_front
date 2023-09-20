@@ -27,22 +27,9 @@ body {
     padding-top: 50px;
 }
 
-.fondo {
-    min-height: calc(100vh - 56px - 230px);
-}
 
 
-/*
-
-  Con este reset vamos a resolver:
-    👉 Unificar el uso de Custom Properties
-    👉 Problemas de box-model más generales
-    👉 Problemas con imagenes, vídeos e iconos svg
-    👉 Problemas con tipografías y etiquetas input en formularios
-    👉 Unificar la tipografía de todas las etiquetas de una web
-
-*/
-/* Aquí definimos las Custom properties */
+/* Custom properties */
 :root {
     --negro: #393939;
     /* Tipografía */
@@ -50,7 +37,7 @@ body {
     --tipo-secundaria: Verdana;
 }
 
-/* Las adaptamos al modo oscuro */
+/* modo oscuro */
 @media (prefers-color-scheme: dark) {
     :root {
         --negro: #ececec;
@@ -208,11 +195,6 @@ svg {
     fill: currentColor;
 }
 
-/* (Probándolo, no usar en producción) En el caso de añadir una  */
-/* p svg{
-  display: inline;
-  width: initial;
-} */
 /* Configuramos la tipografía para toda la web */
 body {
     min-height: 100vh;
