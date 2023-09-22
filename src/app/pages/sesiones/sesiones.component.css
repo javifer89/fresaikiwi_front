@@ -34,9 +34,12 @@ h3 {
 }
 
 .sesiones img {
-  width: 100%;
+  /* width: 100%;
   height: 28vh;
-  max-height: 40vh;
+  max-height: 40vh; */
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
   /* max-width: 100%; */
   border-radius: 50%;
   object-fit: cover;
@@ -84,7 +87,10 @@ h3 {
   } */
   /* TODO RETOCAR EN RESPONSIVE PARA QUE NO SE HAGAN HUEVOS */
   .sesiones img {
-    height: 36vh;
-    max-height: 40vh;
+    /* height: 36vh;
+    max-height: 40vh; */
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
   }
 }

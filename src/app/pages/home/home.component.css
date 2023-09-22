@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-
+    position: relative;
+    /* top: 70vh; */
 }
 .seccionIncial{
     background-color: red;
@@ -60,7 +61,7 @@
 /* Sección Bienvenida */
 /* TODO FALTA COLOCAR BAJO DEL SLIDER */
 .seccionWelcome {
-    position: relative;
+    /* position: relative; */
     top: 100vh;
     z-index: 1;
     display: flex;

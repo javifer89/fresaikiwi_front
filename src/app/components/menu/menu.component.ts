@@ -8,12 +8,33 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
-  usuariosService = inject(UsuariosService);
-  public active: boolean = false
-
+  usuariosService: UsuariosService = inject(UsuariosService);
   router: Router = inject(Router);
 
-  menuItems: MenuItem[] = [
+  public active: boolean = false;
+  public imagenSeleccionada: number = 0;
+  public interval: any;
+
+  public images: any[] = [
+    {
+      nombre: 'Newborn',
+      url: '../../../assets/images/NEWBORN/EIRE-35 copia.jpg',
+    },
+    {
+      nombre: 'Comunión',
+      url: '../../../assets/images/COMUNIONES/EDURNE-74 copia.jpg',
+    },
+    {
+      nombre: 'Cumpleaños',
+      url: '../../../assets/images/CUMPLE/CARLOTA_2ANYS-147 còpia copia.jpg',
+    },
+    {
+      nombre: 'Bebés',
+      url: '../../../assets/images/BEBÉS/ALEJANDRI_9M-43.jpg',
+    },
+  ];
+
+  public menuItems: MenuItem[] = [
     {
       title: 'Sobre mí',
       routes: ['/about'],
@@ -83,11 +104,26 @@ export class MenuComponent implements OnInit {
     //   ],
     // },
   ];
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.startInterval();
 
-    setActive(): void {
-      this.active = !this.active
+  }
+
+  setActive(): void {
+    this.active = !this.active;
+  }
+
+  cambiaImagen() {
+    this.imagenSeleccionada++;
+    if (this.imagenSeleccionada >= this.images.length) {
+      this.imagenSeleccionada = 0;
     }
+  }
+  startInterval() {
+    this.interval = setInterval(() => {
+      this.cambiaImagen();
+    }, 5000);
+  }
 
   //   onLogout(logOut: number) {
   //     localStorage.removeItem('token_front');
@@ -97,7 +133,6 @@ export class MenuComponent implements OnInit {
   //       this.router.navigate(['/usuarios', 'login']);
   //     }
   //   }
-
 }
 
 export interface MenuItem {
@@ -106,5 +141,5 @@ export interface MenuItem {
   childItems?: MenuChildItem[];
 }
 export interface MenuChildItem extends MenuItem {
-  id?: number
+  id?: number;
 }
