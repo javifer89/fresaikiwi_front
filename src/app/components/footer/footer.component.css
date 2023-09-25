@@ -28,18 +28,23 @@ color: white;
 }
 .titulo p {
     cursor: pointer;
-    /* display: flex;
-    flex-direction: column; */
-    /* TODO SOLUCIONAR EL AREA CLICKEABLE DEL MAPA WEB */
 }
 
+
+.rrss-icons{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
 .rrss a {
     width: 25%;
+
 }
 
-h5{
+/* h5{
     text-decoration: underline;
-}
+} */
 i {
     font-size: 40px;
     color: #ffffff;
