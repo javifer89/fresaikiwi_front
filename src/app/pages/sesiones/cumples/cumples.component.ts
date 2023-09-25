@@ -20,12 +20,12 @@ export class CumplesComponent {
   constructor() {
     this.imagenes = [
       {
-        src: '/assets/images/CUMPLE/SANTOS-214.jpg',
+        src: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592833/fresaikiwi/cumples/bmnofeswolwchazsxtnb.jpg',
         alt: 'imagen 0',
       },
-      { src: '/assets/images/CUMPLE/EMMA 1 copia.jpg', alt: 'imagen 1' },
-      { src: '/assets/images/CUMPLE/ALEJANDRA copia.jpg', alt: 'imagen 2' },
-      { src: '/assets/images/CUMPLE/TRIANA_2AÑOS-153.jpg', alt: 'imagen 3' },
+      { src: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592833/fresaikiwi/cumples/xy96eu1tbfg7z6dnt4fe.jpg', alt: 'imagen 1' },
+      { src: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592833/fresaikiwi/cumples/c11cnmlojiwoaypepuhr.jpg', alt: 'imagen 2' },
+      { src: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592833/fresaikiwi/cumples/n5swllh8h9piynq69w8f.jpg', alt: 'imagen 3' },
     ];
   }
 }

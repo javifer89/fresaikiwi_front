@@ -20,12 +20,12 @@ export class FamiliaComponent {
   constructor() {
     this.imagenes = [
       {
-        src: '/assets/images/FAMILIA/PAM_FAMILY-6.jpg',
+        src: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592917/fresaikiwi/familia/sahci7wbvfq5e6qof2cx.jpg',
         alt: 'imagen 0',
       },
-      { src: '/assets/images/FAMILIA/PAM_FAMILY-50.jpg', alt: 'imagen 1' },
-      { src: '/assets/images/FAMILIA/PAM_FAMILY-231.jpg', alt: 'imagen 2' },
-      { src: '/assets/images/FAMILIA/PAM_FAMILY-227.jpg', alt: 'imagen 3' },
+      { src: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592917/fresaikiwi/familia/c331gabfkqrmur8qrzzi.jpg', alt: 'imagen 1' },
+      { src: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592918/fresaikiwi/familia/kgytggvtllvyagltlo0s.jpg', alt: 'imagen 2' },
+      { src: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592917/fresaikiwi/familia/ttsbbxkprnopjqtc9hfm.jpg', alt: 'imagen 3' },
     ];
   }
 }

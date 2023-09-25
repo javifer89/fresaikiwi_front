@@ -19,10 +19,10 @@ export class FineArtComponent {
   }
   constructor() {
     this.imagenes = [
-      { src: '/assets/images/FINE ART/AURO+LAIA-26.jpg', alt: 'imagen 0' },
-      { src: '/assets/images/FINE ART/AURO+LAIA-26.jpg', alt: 'imagen 1' },
-      { src: '/assets/images/FINE ART/AURO+LAIA-26.jpg', alt: 'imagen 2' },
-      { src: '/assets/images/FINE ART/AURO+LAIA-26.jpg', alt: 'imagen 3' },
+      { src: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695591750/fresaikiwi/fine-art/dxnkurmxttyytdzn2ivu.jpg', alt: 'imagen 0' },
+      // { src: '/assets/images/FINE ART/AURO+LAIA-26.jpg', alt: 'imagen 1' },
+      // { src: '/assets/images/FINE ART/AURO+LAIA-26.jpg', alt: 'imagen 2' },
+      // { src: '/assets/images/FINE ART/AURO+LAIA-26.jpg', alt: 'imagen 3' },
     ];
   }
 }
