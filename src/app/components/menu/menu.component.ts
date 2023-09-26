@@ -18,19 +18,23 @@ export class MenuComponent implements OnInit {
   public images: any[] = [
     {
       nombre: 'Newborn',
-      url: '../../../assets/images/NEWBORN/EIRE-35 copia.jpg',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695593005/fresaikiwi/newborn/keykx1efzjtmuu7fz5ag.jpg',
     },
     {
       nombre: 'Comunión',
-      url: '../../../assets/images/COMUNIONES/EDURNE-74 copia.jpg',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592257/fresaikiwi/comuniones/txdd0wl8fjegett8criy.jpg',
     },
     {
       nombre: 'Cumpleaños',
-      url: '../../../assets/images/CUMPLE/CARLOTA_2ANYS-147 còpia copia.jpg',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592833/fresaikiwi/cumples/wzeoeemgq24wrysgr1zx.jpg',
     },
     {
       nombre: 'Bebés',
-      url: '../../../assets/images/BEBÉS/ALEJANDRI_9M-43.jpg',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592240/fresaikiwi/beb%C3%A9s/kxpv1awj7pdj21jss5fr.jpg',
+    },
+    {
+      nombre: 'Embarazo',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592852/fresaikiwi/embarazo/fy8a3twdk9rudxffasoh.jpg',
     },
   ];
 
@@ -104,9 +108,9 @@ export class MenuComponent implements OnInit {
     //   ],
     // },
   ];
+
   ngOnInit(): void {
     this.startInterval();
-
   }
 
   setActive(): void {
