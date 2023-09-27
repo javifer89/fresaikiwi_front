@@ -27,7 +27,10 @@ body {
     padding-top: 50px;
 }
 
+::ng-deep .mat-form-field-appearance-fill.mat-form-field-can-float .mat-form-field-underline {
+    background-color: var(--colorPrincipal);
 
+}
 
 /* Custom properties */
 :root {
@@ -215,3 +218,6 @@ body {
     /* opcional */
     -moz-osx-font-smoothing: grayscale;
 }
+
+html, body { height: 100%; }
+/* body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
