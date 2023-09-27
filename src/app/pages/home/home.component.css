@@ -2,13 +2,15 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-
+    position: relative;
+    /* top: 70vh; */
 }
 .seccionIncial{
     background-color: red;
     width: 100%;
     min-width: 400px;
     min-height: 900px;
+
 }
 /* Sección SLIDER */
 .carousel {
@@ -60,7 +62,7 @@
 /* Sección Bienvenida */
 /* TODO FALTA COLOCAR BAJO DEL SLIDER */
 .seccionWelcome {
-    position: relative;
+    /* position: relative; */
     top: 100vh;
     z-index: 1;
     display: flex;
@@ -69,6 +71,7 @@
     justify-content: center;
     /* align-items: center; */
     font-family: 'Roboto Flex', sans-serif;
+    margin-top: 370px;
     margin-bottom: 30px;
 }
 .seccionWelcome h6 {
@@ -88,6 +91,7 @@
 /* TODO RECOLOCAR .sesiones - ELIMINAR SCROLL HORIZONTAL, PROBLEMA CON MAX-WIDTH EN .ROW*/
 .sesiones {
 width: 100vw;
+margin-top: -350px;
 }
 
 /* TODO empujar un poco más hacia bajo en mobile */

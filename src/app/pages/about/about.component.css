@@ -1,5 +1,7 @@
 .container {
   max-width: 1500px;
+  margin-top: 370px;
+  margin-bottom: 30px;
 }
 .row {
   background-color: white;
@@ -64,11 +66,11 @@
   .texto {
     width: 100%;
     height: auto;
-    padding: 0;
+    padding: 10px;
     margin: 0 0 0 0;
   }
   .imagen {
         max-height: 500px;
   }
-  
+
 }

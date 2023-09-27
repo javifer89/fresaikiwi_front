@@ -8,12 +8,37 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   styleUrls: ['./menu.component.scss'],
 })
 export class MenuComponent implements OnInit {
-  usuariosService = inject(UsuariosService);
-  public active: boolean = false
-
+  usuariosService: UsuariosService = inject(UsuariosService);
   router: Router = inject(Router);
 
-  menuItems: MenuItem[] = [
+  public active: boolean = false;
+  public imagenSeleccionada: number = 0;
+  public interval: any;
+
+  public images: any[] = [
+    {
+      nombre: 'Newborn',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695593005/fresaikiwi/newborn/keykx1efzjtmuu7fz5ag.jpg',
+    },
+    {
+      nombre: 'Comunión',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592257/fresaikiwi/comuniones/txdd0wl8fjegett8criy.jpg',
+    },
+    {
+      nombre: 'Cumpleaños',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592833/fresaikiwi/cumples/wzeoeemgq24wrysgr1zx.jpg',
+    },
+    {
+      nombre: 'Bebés',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592240/fresaikiwi/beb%C3%A9s/kxpv1awj7pdj21jss5fr.jpg',
+    },
+    {
+      nombre: 'Embarazo',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592852/fresaikiwi/embarazo/fy8a3twdk9rudxffasoh.jpg',
+    },
+  ];
+
+  public menuItems: MenuItem[] = [
     {
       title: 'Sobre mí',
       routes: ['/about'],
@@ -83,11 +108,26 @@ export class MenuComponent implements OnInit {
     //   ],
     // },
   ];
-  ngOnInit(): void { }
 
-    setActive(): void {
-      this.active = !this.active
+  ngOnInit(): void {
+    this.startInterval();
+  }
+
+  setActive(): void {
+    this.active = !this.active;
+  }
+
+  cambiaImagen() {
+    this.imagenSeleccionada++;
+    if (this.imagenSeleccionada >= this.images.length) {
+      this.imagenSeleccionada = 0;
     }
+  }
+  startInterval() {
+    this.interval = setInterval(() => {
+      this.cambiaImagen();
+    }, 5000);
+  }
 
   //   onLogout(logOut: number) {
   //     localStorage.removeItem('token_front');
@@ -97,7 +137,6 @@ export class MenuComponent implements OnInit {
   //       this.router.navigate(['/usuarios', 'login']);
   //     }
   //   }
-
 }
 
 export interface MenuItem {
@@ -106,5 +145,5 @@ export interface MenuItem {
   childItems?: MenuChildItem[];
 }
 export interface MenuChildItem extends MenuItem {
-  id?: number
+  id?: number;
 }

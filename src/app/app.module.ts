@@ -12,7 +12,6 @@ import { ReservasComponent } from './pages/reservas/reservas.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { FullCalendarModule } from '@fullcalendar/angular';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { NewbornComponent } from './pages/sesiones/newborn/newborn.component';
 import { ComunionComponent } from './pages/sesiones/comunion/comunion.component';
@@ -30,7 +29,9 @@ import { PanelUsuariosComponent } from './pages/usuarios/panel-usuarios/panel-us
 import { ListaReservasComponent } from './pages/reservas/lista-reservas/lista-reservas.component';
 import { CrearPostComponent } from './pages/blog/crear-post/crear-post.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from "@angular/material/input";
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,11 +65,13 @@ import { FooterComponent } from './components/footer/footer.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FullCalendarModule,
+    NoopAnimationsModule,
+    MatInputModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

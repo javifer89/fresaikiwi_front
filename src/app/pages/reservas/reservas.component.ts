@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit, inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Sesion } from 'src/app/interfaces/sesion.interface';
@@ -11,7 +11,7 @@ import { SesionesService } from 'src/app/services/sesiones.service';
   templateUrl: './reservas.component.html',
   styleUrls: ['./reservas.component.css'],
 })
-export class ReservasComponent {
+export class ReservasComponent implements AfterViewInit {
   formulario: FormGroup;
   calendarService = inject(CalendarService);
   sesionService = inject(SesionesService);
@@ -23,6 +23,8 @@ export class ReservasComponent {
 
   sesionSeleccionada!: Sesion;
 
+  @ViewChild('componentToScrollTo') componentToScrollTo!: ElementRef;
+  scrollToComponent = true; // Variable para controlar el scroll
   constructor() {
     this.formulario = new FormGroup({
       titulo: new FormControl(null, [Validators.required]),
@@ -43,7 +45,16 @@ export class ReservasComponent {
     };
     this.sesionId = 0;
   }
-
+  ngAfterViewInit() {
+    if (this.scrollToComponent) {
+      const containerElement = document.getElementById('containerToScrollTo');
+      if (containerElement) {
+        containerElement.scrollIntoView({
+          behavior: 'smooth', 
+        });
+      }
+    }
+  }
   // async ngOnInit() {
   //   const { sesionId } = this.activatedRoute.snapshot.params;
   //   try {

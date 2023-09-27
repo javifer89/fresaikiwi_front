@@ -71,3 +71,54 @@
     border-radius: 15px;
 }
 
+.carousel {
+  /* Configura el slider para que ocupe todo el ancho y alto de la ventana */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60vh;
+  z-index: -1;
+  /* Coloca el slider detrás del contenido */
+  display: flex;
+}
+/* Ajusta el estilo de las slides para que se ajusten al tamaño del slider */
+.carousel img {
+  width: 100vw;
+  object-fit: cover;
+  /* Ajusta la imagen para que cubra todo el espacio */
+}
+
+.elementToFadeInAndOut {
+  animation: fadeInOut 5s linear forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+      opacity: 0;
+  }
+
+  25% {
+      opacity: 0.75;
+  }
+
+  50% {
+      opacity: 1;
+  }
+
+  75% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
+
+.seccionIncial{
+  background-color: red;
+  width: 100%;
+  min-width: 400px;
+  min-height: 900px;
+}

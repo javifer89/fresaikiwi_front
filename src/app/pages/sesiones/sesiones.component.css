@@ -6,12 +6,15 @@ h3 {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .container {
   max-width: 1500px;
 
   margin: 0 auto;
 
   padding: 20px;
+  margin-top: 370px;
+  margin-bottom: 30px;
 }
 
 .sesiones {
@@ -34,13 +37,17 @@ h3 {
 }
 
 .sesiones img {
-  width: 100%;
+  /* width: 100%;
   height: 28vh;
-  max-height: 40vh;
+  max-height: 40vh; */
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
   /* max-width: 100%; */
   border-radius: 50%;
   object-fit: cover;
 }
+
 .sesiones article .section-title {
   max-width: 120px;
   padding-bottom: 45px;
@@ -50,6 +57,7 @@ h3 {
   align-items: center;
   justify-content: center;
 }
+
 .sesiones article .section-title span {
   background-color: var(--colorPrincipal);
   position: absolute;
@@ -76,15 +84,20 @@ h3 {
   .sesiones article {
     width: 100%;
   }
+
   .sesiones article .section-title {
     margin-top: 10px;
   }
+
   /* .sesiones article img {
     max-height: 25vh;
   } */
   /* TODO RETOCAR EN RESPONSIVE PARA QUE NO SE HAGAN HUEVOS */
   .sesiones img {
-    height: 36vh;
-    max-height: 40vh;
+    /* height: 36vh;
+    max-height: 40vh; */
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
   }
 }

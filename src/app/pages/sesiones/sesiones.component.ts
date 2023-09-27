@@ -1,4 +1,7 @@
-import { Component, inject } from '@angular/core';
+// import { Component, inject } from '@angular/core';
+// import { Router } from '@angular/router';
+
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +9,10 @@ import { Router } from '@angular/router';
   templateUrl: './sesiones.component.html',
   styleUrls: ['./sesiones.component.css'],
 })
-export class SesionesComponent {
+// export class SesionesComponent {
+export class SesionesComponent implements AfterViewInit {
+  @ViewChild('componentToScrollTo') componentToScrollTo!: ElementRef;
+  scrollToComponent = true; // Variable para controlar el scroll
 
   sesiones: Sesion[];
 
@@ -29,14 +35,14 @@ export class SesionesComponent {
         img: 'assets/images/EMBARAZO/LAURA-1 copia.jpg',
       },
       {
-        title: 'Comunión',
-        routes: ['/sesiones', 'comunion'],
-        img: 'assets/images/COMUNIONES/EDURNE_EXTERIORS-135 còpia.jpg',
-      },
-      {
         title: 'Cumples',
         routes: ['/sesiones', 'cumples'],
         img: 'assets/images/CUMPLE/EMMA_2-82.jpg',
+      },
+      {
+        title: 'Comunión',
+        routes: ['/sesiones', 'comunion'],
+        img: 'assets/images/COMUNIONES/EDURNE_EXTERIORS-135 còpia.jpg',
       },
       {
         title: 'Familia',
@@ -54,6 +60,16 @@ export class SesionesComponent {
         img: 'assets/images/FINE ART/AURO+LAIA-26.jpg',
       },
     ];
+  }
+  ngAfterViewInit() {
+    if (this.scrollToComponent) {
+      const containerElement = document.getElementById('containerToScrollTo');
+      if (containerElement) {
+        containerElement.scrollIntoView({
+          behavior: 'smooth', 
+        });
+      }
+    }
   }
   navigateToSesion(routes: string[]) {
     this.router.navigate(routes);
