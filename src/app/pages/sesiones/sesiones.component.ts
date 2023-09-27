@@ -22,42 +22,42 @@ export class SesionesComponent implements AfterViewInit {
       {
         title: 'Bebés',
         routes: ['/sesiones', 'bebes'],
-        img: 'assets/images/BEBÉS/P1_FILES_EMMA_BATHMILK-5.jpg',
+        img: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592240/fresaikiwi/beb%C3%A9s/yk3aa2su6hycxcripl8b.jpg',
       },
       {
         title: 'Newborn',
         routes: ['/sesiones', 'newborn'],
-        img: 'assets/images/NEWBORN/SOFÍA_NB-13 copia.jpg',
+        img: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695593008/fresaikiwi/newborn/x1tqausviurqtqgkq4ot.jpg',
       },
       {
         title: 'Embarazo',
         routes: ['/sesiones', 'embarazo'],
-        img: 'assets/images/EMBARAZO/LAURA-1 copia.jpg',
+        img: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592851/fresaikiwi/embarazo/t2vtbcngm3vsrlrxtsy9.jpg',
       },
       {
         title: 'Cumples',
         routes: ['/sesiones', 'cumples'],
-        img: 'assets/images/CUMPLE/EMMA_2-82.jpg',
+        img: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592833/fresaikiwi/cumples/xfgrg379dfmupmiipyo8.jpg',
       },
       {
         title: 'Comunión',
         routes: ['/sesiones', 'comunion'],
-        img: 'assets/images/COMUNIONES/EDURNE_EXTERIORS-135 còpia.jpg',
+        img: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592258/fresaikiwi/comuniones/qc9upzc2etknfofweee3.jpg',
       },
       {
         title: 'Familia',
         routes: ['/sesiones', 'familia'],
-        img: 'assets/images/FAMILIA/PAM_FAMILY-50.jpg',
+        img: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592917/fresaikiwi/familia/c331gabfkqrmur8qrzzi.jpg',
       },
       {
         title: 'Navidad',
         routes: ['/sesiones', 'navidad'],
-        img: 'assets/images/NAVIDAD/PROBA_DECORAT-33_WEB.jpg',
+        img: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592954/fresaikiwi/navidad/wgolcbgcz410qucubxrb.jpg',
       },
       {
         title: 'Fine Art',
         routes: ['/sesiones', 'fine-art'],
-        img: 'assets/images/FINE ART/AURO+LAIA-26.jpg',
+        img: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695591750/fresaikiwi/fine-art/dxnkurmxttyytdzn2ivu.jpg',
       },
     ];
   }
@@ -66,7 +66,7 @@ export class SesionesComponent implements AfterViewInit {
       const containerElement = document.getElementById('containerToScrollTo');
       if (containerElement) {
         containerElement.scrollIntoView({
-          behavior: 'smooth', 
+          behavior: 'smooth',
         });
       }
     }
