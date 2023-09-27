@@ -10,6 +10,7 @@
     width: 100%;
     min-width: 400px;
     min-height: 900px;
+
 }
 /* Sección SLIDER */
 .carousel {
@@ -70,6 +71,7 @@
     justify-content: center;
     /* align-items: center; */
     font-family: 'Roboto Flex', sans-serif;
+    margin-top: 370px;
     margin-bottom: 30px;
 }
 .seccionWelcome h6 {
@@ -89,6 +91,7 @@
 /* TODO RECOLOCAR .sesiones - ELIMINAR SCROLL HORIZONTAL, PROBLEMA CON MAX-WIDTH EN .ROW*/
 .sesiones {
 width: 100vw;
+margin-top: -350px;
 }
 
 /* TODO empujar un poco más hacia bajo en mobile */
