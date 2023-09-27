@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-fine-art',
@@ -10,6 +10,10 @@ export class FineArtComponent {
   lightboxActive: boolean = false;
   imgIndex: number = 0;
 
+  @HostListener('document:keydown.escape', ['$event'])
+  handleEscapeKey(event: KeyboardEvent) {
+    this.lightboxActive = false;
+  }
   gridImgHandler(index: number) {
     this.lightboxActive = true;
     this.imgIndex = index
@@ -24,6 +28,11 @@ export class FineArtComponent {
       // { src: '/assets/images/FINE ART/AURO+LAIA-26.jpg', alt: 'imagen 2' },
       // { src: '/assets/images/FINE ART/AURO+LAIA-26.jpg', alt: 'imagen 3' },
     ];
+  }
+  closeLightboxOnClick(event: Event) {
+    if (event.target === event.currentTarget) {
+      this.lightboxActive = false;
+    }
   }
 }
 

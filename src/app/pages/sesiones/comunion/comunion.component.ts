@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-comunion',
@@ -10,6 +10,10 @@ export class ComunionComponent {
   lightboxActive: boolean = false;
   imgIndex: number = 0;
 
+  @HostListener('document:keydown.escape', ['$event'])
+  handleEscapeKey(event: KeyboardEvent) {
+    this.lightboxActive = false;
+  }
   gridImgHandler(index: number) {
     this.lightboxActive = true;
     this.imgIndex = index
@@ -35,7 +39,13 @@ export class ComunionComponent {
       },
     ];
   }
+  closeLightboxOnClick(event: Event) {
+    if (event.target === event.currentTarget) {
+      this.lightboxActive = false;
+    }
+  }
 }
+// TODO FALTA REVISAR FOOTER PARA LIGHTBOX
 
 interface GridImg{
   src: string,

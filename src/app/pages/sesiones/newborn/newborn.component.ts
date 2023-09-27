@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-newborn',
@@ -10,6 +10,10 @@ export class NewbornComponent {
   lightboxActive: boolean = false;
   imgIndex: number = 0;
 
+  @HostListener('document:keydown.escape', ['$event'])
+  handleEscapeKey(event: KeyboardEvent) {
+    this.lightboxActive = false;
+  }
   gridImgHandler(index: number) {
     this.lightboxActive = true;
     this.imgIndex = index;
@@ -30,6 +34,11 @@ export class NewbornComponent {
         alt: 'imagen 2',
       },
     ];
+  }
+  closeLightboxOnClick(event: Event) {
+    if (event.target === event.currentTarget) {
+      this.lightboxActive = false;
+    }
   }
 }
 

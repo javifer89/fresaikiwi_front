@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-navidad',
@@ -10,6 +10,10 @@ export class NavidadComponent {
   lightboxActive: boolean = false;
   imgIndex: number = 0;
 
+  @HostListener('document:keydown.escape', ['$event'])
+  handleEscapeKey(event: KeyboardEvent) {
+    this.lightboxActive = false;
+  }
   gridImgHandler(index: number) {
     this.lightboxActive = true;
     this.imgIndex = index
@@ -26,6 +30,11 @@ export class NavidadComponent {
       // { src: '/assets/images/NAVIDAD/MITIAMOLA_NADAL-138.jpg', alt: 'imagen 3' },
       { src: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592956/fresaikiwi/navidad/ztvwku2zfh1ubrku6aue.jpg', alt: 'imagen 3' },
     ];
+  }
+  closeLightboxOnClick(event: Event) {
+    if (event.target === event.currentTarget) {
+      this.lightboxActive = false;
+    }
   }
 }
 

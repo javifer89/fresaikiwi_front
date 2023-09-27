@@ -20,7 +20,7 @@
         [src]="image.src"
       />
     </div>
-    <div class="lightbox" [ngClass]="{ isActive: lightboxActive }">
+    <div class="lightbox" [ngClass]="{ isActive: lightboxActive }" (click)="closeLightboxOnClick($event)">
       <button (click)="lightboxBtnHandler()" class="lightbox__btn">
         <svg
           class="lightbox__svg"

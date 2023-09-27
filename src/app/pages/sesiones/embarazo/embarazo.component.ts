@@ -13,7 +13,6 @@ export class EmbarazoComponent {
   @HostListener('document:keydown.escape', ['$event'])
   handleEscapeKey(event: KeyboardEvent) {
     this.lightboxActive = false;
-
   }
   gridImgHandler(index: number) {
     this.lightboxActive = true;
@@ -36,7 +35,7 @@ export class EmbarazoComponent {
       },
     ];
   }
-  // TODO REVISAR AREA del FONDO CLICKABLE PARA SALIR de la imagen
+  // TODO REVISAR AREA del FONDO CLICKABLE PARA SALIR de la imagen (VERTICAL)
   closeLightboxOnClick(event: Event) {
     if (event.target === event.currentTarget) {
       this.lightboxActive = false;
