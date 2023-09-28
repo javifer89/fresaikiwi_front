@@ -60,16 +60,13 @@
 
 
 /* Sección Bienvenida */
-/* TODO FALTA COLOCAR BAJO DEL SLIDER */
 .seccionWelcome {
-    /* position: relative; */
     top: 100vh;
     z-index: 1;
     display: flex;
     text-align: justify;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     font-family: 'Roboto Flex', sans-serif;
     margin-top: 370px;
     margin-bottom: 30px;

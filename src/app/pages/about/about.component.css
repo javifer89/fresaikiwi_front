@@ -12,7 +12,7 @@
   max-height: 100vh;
   width: 100%;
 }
-/* TODO FALTA AJUSTAR TAMAÑO/POSICION DE IMAGEN Y TEXTO, EN RESPONSIVE OK */
+
 .imagen {
   width: 50%;
   height: auto;
@@ -27,7 +27,6 @@
   border-radius: 20px;
 }
 .texto {
-  /* margin-top: 50px; */
   padding: 20px;
   width: 50%;
   height: 100%;
@@ -54,7 +53,6 @@
 .texto h2 {
   text-align: center;
   font-size: 70px;
-  /* font-family: "Montserrat", sans-serif; */
 }
 @media screen and (max-width: 1100px) {
   .row {
