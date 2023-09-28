@@ -18,7 +18,7 @@ import { NewbornComponent } from './pages/sesiones/newborn/newborn.component';
 // import { LoginComponent } from './pages/usuarios/login/login.component';
 // import { CrearPostComponent } from './pages/blog/crear-post/crear-post.component';
 // import { PanelUsuariosComponent } from './pages/usuarios/panel-usuarios/panel-usuarios.component';
-import { LoginGuard } from './guards';
+// import { LoginGuard } from './guards';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },

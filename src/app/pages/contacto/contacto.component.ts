@@ -52,7 +52,7 @@
 //   }
 // }
 import { HttpClient } from '@angular/common/http';
-import { Component, ViewChild, ElementRef, AfterViewInit, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -71,13 +71,10 @@ import Swal from 'sweetalert2';
   templateUrl: './contacto.component.html',
   styleUrls: ['./contacto.component.css'],
 })
-export class ContactoComponent implements OnInit, AfterViewInit {
+export class ContactoComponent  {
   //   contactService = inject(ContactService)
   //   formulario: FormGroup;
   // router: Router = new Router();
-  @ViewChild('componentToScrollTo') componentToScrollTo!: ElementRef;
-  scrollToComponent = true; // Variable para controlar el scroll
-
   form: FormGroup;
   name: FormControl = new FormControl('', [Validators.required]);
   lastname: FormControl = new FormControl('', [Validators.required]);
@@ -104,17 +101,7 @@ export class ContactoComponent implements OnInit, AfterViewInit {
     });
   }
   ngOnInit(): void { }
-  ngAfterViewInit() {
 
-    if (this.scrollToComponent) {
-      const containerElement = document.getElementById('containerToScrollTo');
-      if (containerElement) {
-        containerElement.scrollIntoView({
-          behavior: 'smooth',
-        });
-      }
-    }
-  }
   onSubmit() {
     if (this.form.valid && this.honeypot.value == '') {
       this.form.disable(); // disable the form if it's valid to disable multiple submissions

@@ -4,7 +4,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin-top: 370px;
+	/* margin-top: 370px; */
 	margin-bottom: 30px;
 }
 
@@ -156,7 +156,6 @@ button:hover:enabled {
 	.container {
 		flex-direction: column;
 		width: 100%;
-		margin-top: 250px;
 	}
 	.titulos {
 		margin: 0 auto;

@@ -32,7 +32,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from "@angular/material/input";
-import { Sesiones2Component } from './components/sesiones2/sesiones2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,8 +57,7 @@ import { Sesiones2Component } from './components/sesiones2/sesiones2.component';
     PanelUsuariosComponent,
     ListaReservasComponent,
     CrearPostComponent,
-    FooterComponent,
-    Sesiones2Component,
+    FooterComponent
 
   ],
   imports: [

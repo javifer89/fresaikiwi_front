@@ -3,8 +3,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 370px;
-        margin-bottom: 30px;
+    /* margin-top: 370px; */
+    margin-bottom: 30px;
 }
 
 .container h3 {
@@ -27,6 +27,7 @@ iframe {
     border-radius: 15px;
     border: solid 5px var(--colorPrincipal)
 }
+
 /*
 .bordecito {
     background-color: white;
