@@ -26,24 +26,18 @@ h3 {
   padding: 15px;
 }
 
-/* TODO AJUSTAR PADDING Y DECIDIR SI: CON BORDER O SIN  */
+
 .sesiones article {
   text-align: center;
-  /* padding: 10px; */
-  /* border: 1px solid #ccc; */
-  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
+  padding: 10px;
   border-radius: 20px;
   cursor: pointer;
 }
 
 .sesiones img {
-  /* width: 100%;
-  height: 28vh;
-  max-height: 40vh; */
   height: 300px;
   width: 300px;
   margin: 0 auto;
-  /* max-width: 100%; */
   border-radius: 50%;
   object-fit: cover;
 }
@@ -89,15 +83,4 @@ h3 {
     margin-top: 10px;
   }
 
-  /* .sesiones article img {
-    max-height: 25vh;
-  } */
-  /* TODO RETOCAR EN RESPONSIVE PARA QUE NO SE HAGAN HUEVOS */
-  .sesiones img {
-    /* height: 36vh;
-    max-height: 40vh; */
-    height: 300px;
-    width: 300px;
-    margin: 0 auto;
-  }
 }
