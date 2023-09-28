@@ -65,6 +65,7 @@ import { Router } from '@angular/router';
 // import { ContactService } from 'src/app/services/contact.service';
 import Swal from 'sweetalert2';
 
+// TODO NO FUNCIONA EL ENVIO DEL FORMULARIO
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
@@ -109,13 +110,13 @@ export class ContactoComponent implements OnInit, AfterViewInit {
       const containerElement = document.getElementById('containerToScrollTo');
       if (containerElement) {
         containerElement.scrollIntoView({
-          behavior: 'smooth', 
+          behavior: 'smooth',
         });
       }
     }
   }
   onSubmit() {
-    if (this.form.status == 'VALID' && this.honeypot.value == '') {
+    if (this.form.valid && this.honeypot.value == '') {
       this.form.disable(); // disable the form if it's valid to disable multiple submissions
       let formData: any = new FormData();
       formData.append('name', this.form.get('name')!.value);
@@ -126,7 +127,7 @@ export class ContactoComponent implements OnInit, AfterViewInit {
       this.submitted = false; // hide the response message on multiple submits
       this.http
         .post(
-          'https://script.google.com/macros/s/AKfycbwyNKcW7ylNDnf6_tztUdHShOCVu97hPZm_va_qZGmeilLfAcNcrN9mcGM9WTgs1nHo/exec',
+          'https://script.google.com/macros/s/AKfycbzwJkPGNIHgZgB3lZtQBNT-wtCHLd1FiOFDPQXSSO19mL1p1WJwkUnCPMF_R56YblY8SQ/exec',
           formData
         )
         .pipe(
