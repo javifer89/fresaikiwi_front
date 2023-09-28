@@ -1,21 +1,18 @@
 // import { Component, inject } from '@angular/core';
 // import { Router } from '@angular/router';
 
-import { Component, ViewChild, ElementRef, AfterViewInit,} from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, ViewChild, ElementRef, AfterViewInit, OnInit, inject } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-sesiones',
-  templateUrl: './sesiones.component.html',
-  styleUrls: ['./sesiones.component.css'],
+  selector: 'app-sesiones2',
+  templateUrl: './sesiones2.component.html',
+  styleUrls: ['./sesiones2.component.css'],
 })
 // export class SesionesComponent {
-export class SesionesComponent implements AfterViewInit {
-  @ViewChild('componentToScrollTo') componentToScrollTo!: ElementRef;
-  scrollToComponent = true; // Variable para controlar el scroll
+export class Sesiones2Component {
 
   sesiones: Sesion[];
-
   // router: Router = inject(Router);
 
   constructor(private router: Router) {
@@ -64,16 +61,6 @@ export class SesionesComponent implements AfterViewInit {
     ];
   }
 
-  ngAfterViewInit() {
-    if (this.scrollToComponent) {
-      const containerElement = document.getElementById('containerToScrollTo');
-      if (containerElement) {
-        containerElement.scrollIntoView({
-          behavior: 'smooth',
-        });
-      }
-    }
-  }
   navigateToSesion(routes: string[]) {
     this.router.navigate(routes);
   }

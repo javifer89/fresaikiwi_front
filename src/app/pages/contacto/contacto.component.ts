@@ -65,6 +65,7 @@ import { Router } from '@angular/router';
 // import { ContactService } from 'src/app/services/contact.service';
 import Swal from 'sweetalert2';
 
+// TODO NO FUNCIONA EL ENVIO DEL FORMULARIO
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
@@ -109,7 +110,7 @@ export class ContactoComponent implements OnInit, AfterViewInit {
       const containerElement = document.getElementById('containerToScrollTo');
       if (containerElement) {
         containerElement.scrollIntoView({
-          behavior: 'smooth', 
+          behavior: 'smooth',
         });
       }
     }

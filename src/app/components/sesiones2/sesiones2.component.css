@@ -1,0 +1,86 @@
+/* Sección SESIONES */
+
+h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 80px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1500px;
+
+    margin: 0 auto;
+
+    padding: 20px;
+    margin-top: 370px;
+    margin-bottom: 30px;
+}
+
+.sesiones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    grid-gap: 20px;
+    border-radius: 20px;
+    border: solid 2px var(--colorPrincipal);
+    padding: 15px;
+}
+
+
+.sesiones article {
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.sesiones img {
+    height: 300px;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sesiones article .section-title {
+    max-width: 120px;
+    padding-bottom: 45px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.sesiones article .section-title span {
+    background-color: var(--colorPrincipal);
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@media (max-width: 968px) {
+    h3 {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sesiones article {
+        width: 100%;
+    }
+
+    .sesiones article .section-title {
+        margin-top: 10px;
+    }
+
+}

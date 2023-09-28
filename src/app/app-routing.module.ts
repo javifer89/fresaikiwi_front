@@ -23,12 +23,12 @@ import { LoginGuard } from './guards';
 const routes: Routes = [
   { path: '', component: HomeComponent },
 
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent},
   { path: 'about', component: AboutComponent },
 
   // {path: 'sesionestest', loadChildren: () => import('./sesiones/sesiones.module').then(m => m.SesionesModule)},
 
-  { path: 'sesiones', component: SesionesComponent },
+  { path: 'sesiones', component: SesionesComponent},
   { path: 'sesiones/bebes', component: BebesComponent },
   { path: 'sesiones/comunion', component: ComunionComponent },
   { path: 'sesiones/cumples', component: CumplesComponent },

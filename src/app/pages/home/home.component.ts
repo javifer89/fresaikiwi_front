@@ -7,19 +7,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-// export class HomeComponent implements OnInit {
+  // export class HomeComponent implements OnInit {
   // images: any[];
   // imagenSeleccionada: number = 0;
   // interval: any;
-  // TODO SOLUCIONAR SCROLL (NO HACER SCROLL EN LA HOME)
-scrollToComponent= false
+
   router: Router = inject(Router)
   // sesionesComponent: any;
 
+
   constructor() {
-    // Establece scrollToComponent en false para evitar el scroll en la ruta Home
-    // this.sesionesComponent.scrollToComponent = false;
-    
+
+
     // this.images = [
     //   {
     //     nombre: 'Newborn',
@@ -43,7 +42,6 @@ scrollToComponent= false
     //   },
     // ];
   }
-
   // ngOnInit(): void {
   //   this.startInterval();
   // }
@@ -59,12 +57,12 @@ scrollToComponent= false
   //     this.cambiaImagen();
   //   }, 5000);
   // }
-}
+
   // stopInterval() {
   //   clearInterval(this.interval);
   //   this.interval = null;
-// }
-
+  // }
+}
 
 export interface Image{
   nombre: string;
