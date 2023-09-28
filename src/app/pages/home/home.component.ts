@@ -17,8 +17,6 @@ export class HomeComponent {
 
 
   constructor() {
-
-
     // this.images = [
     //   {
     //     nombre: 'Newborn',

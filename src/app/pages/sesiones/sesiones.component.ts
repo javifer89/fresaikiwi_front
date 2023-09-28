@@ -1,7 +1,7 @@
 // import { Component, inject } from '@angular/core';
 // import { Router } from '@angular/router';
 
-import { Component, ViewChild, ElementRef, AfterViewInit,} from '@angular/core';
+import { Component} from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,9 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./sesiones.component.css'],
 })
 // export class SesionesComponent {
-export class SesionesComponent implements AfterViewInit {
-  @ViewChild('componentToScrollTo') componentToScrollTo!: ElementRef;
-  scrollToComponent = true; // Variable para controlar el scroll
+export class SesionesComponent {
+
 
   sesiones: Sesion[];
 
@@ -64,16 +63,6 @@ export class SesionesComponent implements AfterViewInit {
     ];
   }
 
-  ngAfterViewInit() {
-    if (this.scrollToComponent) {
-      const containerElement = document.getElementById('containerToScrollTo');
-      if (containerElement) {
-        containerElement.scrollIntoView({
-          behavior: 'smooth',
-        });
-      }
-    }
-  }
   navigateToSesion(routes: string[]) {
     this.router.navigate(routes);
   }
