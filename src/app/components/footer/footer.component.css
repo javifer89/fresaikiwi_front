@@ -8,9 +8,7 @@
     color: white;
     text-align: center;
     padding: 15px;
-    /* TODO SOLUCIONAR FOOTER */
     position: sticky;
-    /* bottom: -100px; */
 }
 
 .contacto p {
@@ -30,21 +28,17 @@ color: white;
     cursor: pointer;
 }
 
-
 .rrss-icons{
     display:flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 .rrss a {
     width: 25%;
 
 }
 
-/* h5{
-    text-decoration: underline;
-} */
 i {
     font-size: 40px;
     color: #ffffff;
@@ -53,5 +47,10 @@ i {
 @media (max-width: 576px) {
     .titulo i {
         font-size: 30px;
+    }
+}
+@media (max-width: 876px) {
+    .rrss-icons {
+        justify-content: space-between;
     }
 }

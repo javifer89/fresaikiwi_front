@@ -1,15 +1,9 @@
-/* NO SE UTILIZA CSS PARA LA HOME, ESTA CON SCSS */
-
-
-
-/* TODO REVISAR MENU NAV EN MOBILE (logo se corta en mobile)*/
 .container {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-
-
 }
+
 .navbar {
     background-color: transparent;
     color: #333;
@@ -18,7 +12,6 @@
     display:flex;
     width: 100%;
     justify-content: space-between;
-
 }
 
 .logo img {
@@ -28,13 +21,11 @@
 
 .navbar-collapse {
     display: flex;
-    /* float: right; */
     width: 100%;
 }
 .navbar-collapse ul {
     margin: 0;
      padding: 0px 10px;
-
 }
 .nav-item {
     display: inline-block;
