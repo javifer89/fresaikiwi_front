@@ -1,0 +1,104 @@
+.container{
+  margin-top: 370px;
+  margin-bottom: 150px;
+}
+h3 {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-size: 70px;
+  font-weight: 400;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  & h3 {
+    position: absolute;
+    text-align: center;
+  }
+
+  & p {
+    padding: 10px;
+  }
+}
+/* ESTILOS LIGHTBOX SCSS */
+
+.grid {
+  width: 90%;
+  max-width: 56.25rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+  gap: 1rem;
+  &__img {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    box-shadow: 0.5rem 0.5rem 1rem #cecece, -0.5rem -0.5rem 1rem #f2f2f2;
+    &:hover {
+      transform: scale(0.9);
+    }
+
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.lightbox {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(2rem);
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  color: white;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+
+  &.isActive {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &__btn {
+    width: 3rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    &:hover {
+      transform: scale(0.9);
+    }
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+  &__img {
+    width: 80%;
+    height: 70vh;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
+  }
+}
+@media (max-width: 1004px) {
+  .lightbox {
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+}

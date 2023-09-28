@@ -1,0 +1,94 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+    /* top: 70vh; */
+}
+.seccionIncial{
+    background-color: red;
+    width: 100%;
+    min-width: 400px;
+    min-height: 900px;
+
+}
+/* Sección SLIDER */
+.carousel {
+    /* Configura el slider para que ocupe todo el ancho y alto de la ventana */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    /* Coloca el slider detrás del contenido */
+    display: flex;
+}
+/* Ajusta el estilo de las slides para que se ajusten al tamaño del slider */
+.carousel img {
+    width: 100vw;
+    object-fit: cover;
+    /* Ajusta la imagen para que cubra todo el espacio */
+}
+/*Animación fadeinOut para slider*/
+.elementToFadeInAndOut {
+    animation: fadeInOut 5s linear forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.75;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* Sección Bienvenida */
+.seccionWelcome {
+    top: 100vh;
+    z-index: 1;
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Roboto Flex', sans-serif;
+    margin-top: 370px;
+    margin-bottom: 30px;
+}
+.seccionWelcome h6 {
+    font-size: 20px;
+    font-weight: 500;
+}
+.seccionWelcome h1 {
+    text-align: center;
+    font-size: 80px;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-weight: 400;
+}
+
+
+
+/* Sección SESIONES */
+/* TODO RECOLOCAR .sesiones - ELIMINAR SCROLL HORIZONTAL, PROBLEMA CON MAX-WIDTH EN .ROW*/
+.sesiones {
+width: 100vw;
+margin-top: -350px;
+}
+
+/* TODO empujar un poco más hacia bajo en mobile */

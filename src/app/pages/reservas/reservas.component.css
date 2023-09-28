@@ -1,0 +1,76 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 370px;
+        margin-bottom: 30px;
+}
+
+.container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 75px;
+    font-weight: 400;
+    /* font-family: 'Montserrat', sans-serif; */
+
+}
+
+
+iframe {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 900px;
+    padding: 20px;
+    /* background-color: #f0f0f0; */
+    background-color: #b2b2b2;
+    border-radius: 15px;
+    border: solid 5px var(--colorPrincipal)
+}
+/*
+.bordecito {
+    background-color: white;
+    border: 1px solid var(--colorPrincipal);
+}
+
+.btn {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.btn:hover {
+    background-color: var(--colorPrincipal);
+    border: 1px solid white;
+    color: white;
+}
+
+.error {
+    text-align: left;
+    font-size: small;
+    color: red;
+}
+
+.form {
+    height: 96%;
+} */
+
+/* estilos imagen pantalla completa
+.section-reservas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-image: url('http://localhost:4200/assets/images/CUMPLE/CARLOTA_2ANYS-147 còpia copia.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+
+/* .calendario {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */

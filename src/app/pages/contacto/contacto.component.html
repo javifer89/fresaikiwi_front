@@ -1,0 +1,99 @@
+<div class="container" id="containerToScrollTo">
+  <div class="titulos">
+    <h3 class="text-center mb-2">¿Tienes alguna duda?</h3>
+    <h6 class="text-center mb-3">¡Contacta con nosotros y te responderemos lo antes posible!</h6>
+  </div>
+  <div class="contacto">
+    <div class="formulario">
+      <!-- formulario contacto redireccionado -->
+      <form class="contact" id="mi-formulario" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
+        <mat-form-field class="custom-input">
+          <mat-label>Nombre</mat-label>
+          <input matInput [formControl]="name" placeholder="Tu nombre" required />
+          <mat-error *ngIf="name.invalid">Por favor, introduce tu nombre y apellidos</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Apellidos</mat-label>
+          <input matInput [formControl]="lastname" placeholder="Tus apellidos" required />
+          <mat-error *ngIf="lastname.invalid">Por favor, introduce tus apellidos</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput [formControl]="email" placeholder="email@example.com" required />
+          <mat-error *ngIf="email.invalid">Por favor, introduce un e-mail válido</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Mensaje</mat-label>
+          <textarea matInput [formControl]="message" maxlength="999" rows="10" placeholder="Estoy interesad@ en..."
+            required></textarea>
+          <mat-hint align="end"> {{ message.value?.length || 0 }}/999</mat-hint>
+          <mat-error *ngIf="message.invalid">Por favor, escribe un mensaje</mat-error>
+        </mat-form-field>
+        <button [disabled]="isLoading" class="btn submit" type="submit">
+          Enviar
+        </button>
+        <input [formControl]="honeypot" class="hidden" type="text" />
+        <div [ngClass]="!submitted ? 'hidden' : 'visible'" class="center-text">
+          <span>{{ responseMessage }}</span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="location">
+    <div class="info-contacto">
+      <h5>Dónde encontrarnos</h5>
+      <p>Av. de Benidorm, 1, Edif. Matinal, Local 7, 03570 La Vila Joiosa, Alicante</p>
+    <h5></h5>
+      <p>📱(+34) 672 62 12 91</p>
+      <a href="mailto:info@fresaikiwifotografia.com">📩info@fresaikiwifotografia.com</a>
+    </div>
+    <div class="mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d780.5141874383626!2d-0.22865619416759586!3d38.509402042862526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd62191ee4c716fd%3A0xc21e2879ce5b91cc!2sFresaikiwi%20Fotografia!5e0!3m2!1ses!2ses!4v1691015586674!5m2!1ses!2ses"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>
+
+
+<!-- formulario original-->
+<!-- <div class="col-12 col-md-6 order-md.2">
+      <div class="p-3 mt-3">
+        <h5 class="mb-3">Formulario de contacto.</h5>
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+          <div class="input-group mb-3">
+            <span class="input-group-text">Nombre</span>
+            <input type="text" class="form-control" placeholder="Escribe tu nombre" formControlName="nombre">
+
+          </div>
+          <p class="error" *ngIf="checkError('nombre', 'required')">
+            El nombre es obligatorio.
+          </p>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text">Email</span>
+            <input type="text" class="form-control" placeholder="Introduce un correo electrónico"
+              formControlName="email">
+
+          </div>
+          <p class="error" *ngIf="checkError('email', 'required')">
+            La dirección e-mail es obligatoria.
+          </p>
+          <p class="error" *ngIf="checkError('email', 'pattern')">
+            La dirección e-mail no tiene un formato válido.
+          </p>
+          <div class="input-group mb-3">
+            <span class="input-group-text">Mensaje</span>
+            <textarea type="text" class="form-control" rows="3" placeholder="Escribe aquí tu mensaje"
+              formControlName="mensaje"></textarea>
+
+          </div>
+
+          <p class="error" *ngIf="checkError('mensaje', 'required')">
+            Tienes que escribir un mensaje.
+          </p>
+          <input type="submit" value="Enviar" class="btn">
+
+        </form> -->

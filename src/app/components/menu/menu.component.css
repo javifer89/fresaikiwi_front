@@ -1,0 +1,115 @@
+.container {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar {
+    background-color: transparent;
+    color: #333;
+    padding: 10px;
+    flex-wrap: nowrap;
+    display:flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 180px;
+    width: 300px;
+}
+
+.navbar-collapse {
+    display: flex;
+    width: 100%;
+}
+.navbar-collapse ul {
+    margin: 0;
+     padding: 0px 10px;
+}
+.nav-item {
+    display: inline-block;
+    margin: 0 10px;
+}
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    border-radius: 15px;
+    justify-content: space-evenly;
+    padding: 7px;
+}
+.nav-link:hover {
+    background-color: var(--colorPrincipal);
+}
+.dropdown-menu {
+    display: none;
+    color: #333;
+    background-color: var(--blanco);
+    position: absolute;
+}
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-item {
+    color: #333;
+    padding: 8px 16px;
+    display: block;
+    text-decoration: none;
+}
+.dropdown-item:hover {
+    background-color: var(--colorPrincipal);
+    border-radius: 15px;
+}
+
+.carousel {
+  /* Configura el slider para que ocupe todo el ancho y alto de la ventana */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 60vh;
+  z-index: -1;
+  /* Coloca el slider detrás del contenido */
+  display: flex;
+}
+/* Ajusta el estilo de las slides para que se ajusten al tamaño del slider */
+.carousel img {
+  width: 100vw;
+  object-fit: cover;
+  /* Ajusta la imagen para que cubra todo el espacio */
+}
+
+.elementToFadeInAndOut {
+  animation: fadeInOut 5s linear forwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+      opacity: 0;
+  }
+
+  25% {
+      opacity: 0.75;
+  }
+
+  50% {
+      opacity: 1;
+  }
+
+  75% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
+
+.seccionIncial{
+  background-color: red;
+  width: 100%;
+  min-width: 400px;
+  min-height: 900px;
+}

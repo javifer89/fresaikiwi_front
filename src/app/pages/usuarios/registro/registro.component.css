@@ -1,0 +1,34 @@
+ /* .formulario {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+} */
+.bordecito {
+    background-color: white;
+    border: 1px solid var(--colorPrincipal);
+}
+
+.btn {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.btn:hover {
+    background-color: var(--colorPrincipal);
+    border: 1px solid white;
+    color: white;
+}
+
+p {
+    font-size: larger;
+}
+
+.error {
+    text-align: left;
+    font-size: small;
+    color: red;
+}
+p strong {
+    cursor: pointer;
+}

@@ -1,0 +1,50 @@
+
+<div class="container">
+
+  <div class="row">
+    <h3>Fine art</h3>
+    <div class="row">
+      <div class="texto col-md-12">
+        <p>
+          Estas sesiones, además de todo el trabajo que tienen para nuestros peques
+          que se preparan para su gran día, también son un reflejo del final de una
+          etapa, de la niñez. Se captan esos momentos de inocencia, de felicidad y de
+          ser como son sin importarles nada más.
+        </p>
+      </div>
+  <div class="grid">
+    <img
+        *ngFor="let image of imagenes; let i = index"
+        (click)="gridImgHandler(i)"
+        class="grid__img"
+        [alt]="image.alt"
+        [src]="image.src"
+      />
+    </div>
+    <div class="lightbox" [ngClass]="{ isActive: lightboxActive }" (click)="closeLightboxOnClick($event)">
+      <button (click)="lightboxBtnHandler()" class="lightbox__btn">
+        <svg
+          class="lightbox__svg"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+          />
+        </svg>
+      </button>
+      <img
+        [src]="imagenes[imgIndex].src"
+        alt="imagen lightbox"
+        class="lightbox__img"
+      />
+    </div>
+  </div>
+
+  <!-- TODO FALTA AÑADIR TEXTOS FINE ART -->
+
+
+  </div>
+
+</div>
