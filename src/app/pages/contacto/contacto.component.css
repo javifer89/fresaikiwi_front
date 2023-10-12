@@ -21,7 +21,7 @@
 .contacto {
 	width: 50%;
 	height: 800px;
-	border: solid 2px var(--colorPrincipal);
+	/* border: solid 2px var(--colorPrincipal); */
 	border-radius: 10px 0 0 10px;
 	border-right: none;
 	margin-bottom: 10px;
@@ -42,7 +42,7 @@ form.contact {
 	padding: 20px;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 60px;
+	/* margin-top: 60px; */
 	margin-bottom: 30px;
 	border: solid 2px var(--colorPrincipal);
 	border-radius: 10px;
@@ -72,10 +72,10 @@ form.contact {
 .location {
 	width: 50%;
 	height: 800px;
-	border: solid 2px var(--colorPrincipal);
+	/* border: solid 2px var(--colorPrincipal); */
 	border-radius: 0 10px 10px 0;
 	border-left: none;
-	padding-top: 50px;
+	padding-top: 30px;
 	align-items: center;
 	text-align: center;
 	padding-right: 20px;
