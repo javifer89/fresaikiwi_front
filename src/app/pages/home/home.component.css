@@ -11,49 +11,6 @@
     min-height: 900px;
 
 }
-/* Sección SLIDER */
-.carousel {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    display: flex;
-}
-
-.carousel img {
-    width: 100vw;
-    object-fit: cover;
-}
-
-.elementToFadeInAndOut {
-    animation: fadeInOut 5s linear forwards;
-    animation-iteration-count: infinite;
-}
-
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 0.75;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
 /* Sección Bienvenida */
 .seccionWelcome {
     top: 100vh;
@@ -63,7 +20,7 @@
     flex-direction: column;
     justify-content: center;
     font-family: 'Roboto Flex', sans-serif;
-    margin-top: 370px;
+     /* margin-top:370px; */
     margin-bottom: 30px;
 }
 .seccionWelcome h6 {
@@ -79,18 +36,61 @@
 
 /* Sección SESIONES */
 .sesiones {
-width: 100vw;
-margin-top:20px;
+    width: 100vw;
+    margin-top:20px;
 }
 
 /* TODO REVISAR EN MOBILE */
 @media (max-width: 1200px) {
-.sesiones{
-    margin-top: 50px;
+    .sesiones{
+        margin-top: 50px;
 }
 .seccionWelcome {
     top: 0;
-    margin-top: 300px;
+    margin-top: 5px;
     margin-bottom: 30px;
 }
 }
+
+        /* Sección SLIDER */
+        /* .carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            display: flex;
+        }
+
+        .carousel img {
+            width: 100vw;
+            object-fit: cover;
+        }
+
+        .elementToFadeInAndOut {
+            animation: fadeInOut 5s linear forwards;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 0.75;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        } */
