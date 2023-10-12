@@ -58,20 +58,24 @@
   font-size: 70px;
 }
 @media screen and (max-width: 1100px) {
-
+/* TODO SOLUCIONAR FOOTER */
   .container{
     width: 100%;
     /* margin-top: 370px; */
-    margin-bottom: 150px;
-    min-height: 0;
+    /* margin-bottom: 250px; */
+    min-height: 100vh;
     height: 100vh;
-    margin: 15px;
-    padding: 0px;
+    margin: 15px 0 15px 0;
+    padding: 10px;
+    /* position: relative; */
+    /* top: 0;
+    left: 0; */
 
   }.row {
     margin: 0 0 0 0;
-    height: 200vh;
-    max-height: 200vh;
+    /* margin-bottom: 15px; */
+    height: 250vh;
+    max-height: 250vh;
   }
   .imagen,
   .texto {
