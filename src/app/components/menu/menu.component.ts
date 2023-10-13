@@ -17,10 +17,6 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   public images: any[] = [
     {
-      nombre: 'Newborn',
-      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695593005/fresaikiwi/newborn/keykx1efzjtmuu7fz5ag.jpg',
-    },
-    {
       nombre: 'Comunión',
       url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592257/fresaikiwi/comuniones/txdd0wl8fjegett8criy.jpg',
     },
@@ -35,6 +31,10 @@ export class MenuComponent implements OnInit, OnDestroy {
     {
       nombre: 'Embarazo',
       url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592852/fresaikiwi/embarazo/fy8a3twdk9rudxffasoh.jpg',
+    },
+    {
+      nombre: 'Newborn',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695593005/fresaikiwi/newborn/keykx1efzjtmuu7fz5ag.jpg',
     },
   ];
 
@@ -111,16 +111,16 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.startInterval();
-    // TODO COMPROBAR QUE FUNCIONA O BUSCAR OTRA SOLUCIÓN
-    // Forzar recarga de la página al volver a la página de inicio
-    if (this.router.url === '/home') {
-      this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() => {
-        this.router.navigate(['/home']);
-      });
-    }
+    // // TODO COMPROBAR QUE FUNCIONA O BUSCAR OTRA SOLUCIÓN
+    // // Forzar recarga de la página al volver a la página de inicio
+    // if (this.router.url === '/home') {
+    //   this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() => {
+    //     this.router.navigate(['/home']);
+    //   });
+    // }
   }
   ngOnDestroy(): void {
-    clearInterval(this.interval);
+     clearInterval(this.interval);
   }
   setActive(): void {
     this.active = !this.active;

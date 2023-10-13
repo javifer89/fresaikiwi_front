@@ -2,14 +2,16 @@
   max-width: 1500px;
   /* margin-top: 370px; */
   margin-bottom: 30px;
+  min-height: 600px;
+  margin: 15px;
 }
 .row {
   background-color: white;
   border: 1px solid var(--colorPrincipal);
   display: flex;
   flex-wrap: wrap;
-  height: auto;
-  max-height: 100vh;
+  height: 100vh;
+  /* max-height: 100vh; */
   width: 100%;
 }
 
@@ -22,8 +24,9 @@
 }
 .imagen img{
   width: 100%;
-  height: auto;
-  max-height: 55vh;
+  height: 100vh;
+  margin-top: 20px;
+  max-height: 90vh;
   border-radius: 20px;
 }
 .texto {
@@ -54,23 +57,31 @@
   text-align: center;
   font-size: 70px;
 }
-/* TODO AJUSTAR TAMAÑOS EN MOBILE, DESBORDA TEXTO Y HAY DEMASIADO ESPACIO ENTRE FOTO Y TEXTO
-REHACER MEDIAQUERY */
+/* TODO AJUSTAR TAMAÑOS EN MOBILE, DESBORDA TEXTO Y HAY DEMASIADO ESPACIO ENTRE FOTO Y TEXTO */
 @media screen and (max-width: 1100px) {
+/* TODO SOLUCIONAR FOOTER */
   .container{
-        width: 100%;
-  }
-  .row {
-background-color: red;
-    margin: 0 0 0 0;
-    height: 160vh;
-    max-height: 200vh;
+    width: 100%;
+    /* margin-top: 370px; */
+    /* margin-bottom: 250px; */
+    min-height: 100vh;
+    height: 100vh;
+    margin: 15px 0 15px 0;
+    padding: 10px;
+    /* position: relative; */
+    /* top: 0;
+    left: 0; */
 
+  }.row {
+    margin: 0 0 0 0;
+    /* margin-bottom: 15px; */
+    height: 250vh;
+    max-height: 250vh;
   }
   .imagen,
   .texto {
     width: 100%;
-    height: 160vh;
+    height: 100vh;
     padding: 10px;
     margin: 0 0 0 0;
   }
@@ -78,5 +89,7 @@ background-color: red;
         max-height: 600px;
         margin-bottom: 0;
   }
-
+.texto {
+  margin-top: 120px;
+}
 }

@@ -142,16 +142,12 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
-  /* Coloca el slider detrás del contenido */
+  z-index: -1;  /* Coloca el slider detrás del contenido */
   display: flex;
 }
-
-/* Ajusta el estilo de las slides para que se ajusten al tamaño del slider */
 .carousel img {
   width: 100vw;
   object-fit: cover;
-  /* Ajusta la imagen para que cubra todo el espacio */
 }
 
 .elementToFadeInAndOut {
@@ -183,6 +179,7 @@
 
 .seccionInicial {
   width: 100%;
-  min-width: 400px;
-  min-height: 700px;
+  min-width: 25em;
+  // min-height: 43.75em;
+  min-height: 30em
 }
