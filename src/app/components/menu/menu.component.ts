@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
@@ -7,7 +7,7 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent implements OnInit, OnDestroy {
   usuariosService: UsuariosService = inject(UsuariosService);
   router: Router = inject(Router);
 
@@ -108,11 +108,20 @@ export class MenuComponent implements OnInit {
     //   ],
     // },
   ];
-  
+
   ngOnInit(): void {
     this.startInterval();
+    // TODO COMPROBAR QUE FUNCIONA O BUSCAR OTRA SOLUCIÓN
+    // Forzar recarga de la página al volver a la página de inicio
+    if (this.router.url === '/home') {
+      this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() => {
+        this.router.navigate(['/home']);
+      });
+    }
   }
-
+  ngOnDestroy(): void {
+    clearInterval(this.interval);
+  }
   setActive(): void {
     this.active = !this.active;
   }
@@ -124,6 +133,7 @@ export class MenuComponent implements OnInit {
     }
   }
   startInterval() {
+    console.log('Interval started');
     this.interval = setInterval(() => {
       this.cambiaImagen();
     }, 5000);

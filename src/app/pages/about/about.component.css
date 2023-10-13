@@ -54,21 +54,29 @@
   text-align: center;
   font-size: 70px;
 }
+/* TODO AJUSTAR TAMAÑOS EN MOBILE, DESBORDA TEXTO Y HAY DEMASIADO ESPACIO ENTRE FOTO Y TEXTO
+REHACER MEDIAQUERY */
 @media screen and (max-width: 1100px) {
+  .container{
+        width: 100%;
+  }
   .row {
+background-color: red;
     margin: 0 0 0 0;
-    height: 120vh;
+    height: 160vh;
     max-height: 200vh;
+
   }
   .imagen,
   .texto {
     width: 100%;
-    height: auto;
+    height: 160vh;
     padding: 10px;
     margin: 0 0 0 0;
   }
   .imagen {
-        max-height: 500px;
+        max-height: 600px;
+        margin-bottom: 0;
   }
 
 }

@@ -84,7 +84,7 @@ h3 {
       transform: scale(1.1);
     }
   }
-  
+
   &__img {
     max-width: 90%; /* Asegura que la imagen no se desborde */
     max-height: 90%; /* Asegura que la imagen no se desborde */
@@ -103,4 +103,8 @@ h3 {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   }
+  .container{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
 }

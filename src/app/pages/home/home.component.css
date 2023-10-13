@@ -89,14 +89,8 @@ margin-top:20px;
     margin-top: 50px;
 }
 .seccionWelcome {
-    top: 100vh;
-    z-index: 1;
-    display: flex;
-    text-align: justify;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Roboto Flex', sans-serif;
-    margin-top: 1000px;
+    top: 0;
+    margin-top: 300px;
     margin-bottom: 30px;
 }
 }
