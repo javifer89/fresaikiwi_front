@@ -5,12 +5,11 @@
     position: relative;
     /* top: 70vh; */
 }
-.seccionIncial{
+/* .seccionIncial{
     width: 100%;
     min-width: 400px;
     min-height: 900px;
-
-}
+} */
 /* Sección Bienvenida */
 .seccionWelcome {
     top: 100vh;
@@ -20,7 +19,8 @@
     flex-direction: column;
     justify-content: center;
     font-family: 'Roboto Flex', sans-serif;
-     /* margin-top:370px; */
+    /* margin-top:370px; */
+    margin-top: 740px;
     margin-bottom: 30px;
 }
 .seccionWelcome h6 {
@@ -39,6 +39,10 @@
     width: 100vw;
     margin-top:20px;
 }
+/* TODO SIGUEN HABIENDO ESPACIOS ENTRE SLIDER Y SECCION INICIAL */
+.row{
+
+}
 
 /* TODO REVISAR EN MOBILE */
 @media (max-width: 1200px) {
@@ -47,9 +51,21 @@
 }
 .seccionWelcome {
     top: 0;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     margin-bottom: 30px;
 }
+}
+/* HACER MEDIA QUERY PARA HEIGHT, PARA WIDTH CON 740PX FUNCIONA */
+@media (max-width: 500px) {
+    .sesiones {
+        margin-top: 50px;
+    }
+
+    .seccionWelcome {
+        top: 0;
+        /* margin-top: 5px; */
+        margin-bottom: 30px;
+    }
 }
 
         /* Sección SLIDER */
