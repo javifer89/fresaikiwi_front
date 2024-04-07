@@ -43,7 +43,8 @@
       display: flex;
       flex-flow: column nowrap;
       justify-content: space;
-      align-items: end;
+      align-items: flex-end;
+      /* cambiado por end, salia warning*/
       margin: 0;
       overflow: hidden;
       pointer-events: none;
@@ -69,7 +70,6 @@
     }
   }
 
-  //TODO CORREGIR DROPDOWN -- NO aparecen los elementos del menu dropdown.
   &__li {
     margin: 0 0.5em;
     border-radius: 10px;
@@ -80,7 +80,7 @@
     &:hover {
       .header__li--dropdown-menu {
         opacity: 1;
-        max-height: 200px;
+        //max-height: 300px;
       }
     }
 
@@ -95,32 +95,34 @@
 
   &__li--dropdown-menu {
     color: #333;
+    position: absolute;
+    background-color: var(--colorPrincipal);
+    border-radius: 20px;
+    margin-top: 7px;
     opacity: 0;
-    max-height: 0;
-    overflow: hidden;
+    height: auto;
+   // overflow: hidden;
     transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
   }
-    &__li--dropdown-menu:hover {
-    background-color: red;
-    }
 
   // &__li--dropdown-menu:hover {
-  //   display:block;
+  // background-color: red;
   // }
+
+
   &__li--nav-link {
     text-decoration: none;
     color: #333;
     font-size: 20px;
     text-align: center;
   }
+
   //   &__li--nav-link:hover {
   // }
 
   &__li--dropdown-item {
     color: #333;
-    // padding: 8px 16px;
-    display: block;
-    // background-color: red;
+    display: inline-block;
     text-decoration: none;
     padding: 5px;
   }
@@ -142,16 +144,18 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1;  /* Coloca el slider detrás del contenido */
+  z-index: -1;
+  /* Coloca el slider detrás del contenido */
   display: flex;
-}
+  }
+
 .carousel img {
   width: 100vw;
   object-fit: cover;
 }
 
 .elementToFadeInAndOut {
-  animation: fadeInOut 5s linear forwards;
+  animation: fadeInOut 4.9s linear forwards;
   animation-iteration-count: infinite;
 }
 
@@ -160,26 +164,37 @@
     opacity: 0;
   }
 
-  25% {
-    opacity: 0.75;
-  }
+ 20% {
+   opacity: 0.75; // Ajustado el porcentaje de opacidad
+ }
 
-  50% {
-    opacity: 1;
-  }
+ 40% {
+   opacity: 1; // Ajustado el porcentaje de opacidad
+ }
 
-  75% {
-    opacity: 1;
-  }
+ 60% {
+   opacity: 1; // Ajustado el porcentaje de opacidad
+ }
 
-  100% {
-    opacity: 0;
-  }
+ 80% {
+   opacity: 0.75; // Ajustado el porcentaje de opacidad
+ }
+
+ 100% {
+   opacity: 0;
+ }
 }
 
 .seccionInicial {
   width: 100%;
   min-width: 25em;
-  // min-height: 43.75em;
-  min-height: 30em
+  min-height: 43.75em;
+  // min-height: 30em
+}
+
+@media screen and (max-width: 943px) {
+  .seccionInicial {
+
+    min-height: 50em
+  }
 }

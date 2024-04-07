@@ -51,15 +51,16 @@
 //     );
 //   }
 // }
+
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
   FormControl,
   Validators,
 } from '@angular/forms';
-import { catchError, map, of, switchMap } from 'rxjs';
+import { catchError, of, switchMap } from 'rxjs';
 import { Router } from '@angular/router';
 // import {inject } from '@angular/core';
 // import { ContactService } from 'src/app/services/contact.service';
@@ -71,7 +72,7 @@ import Swal from 'sweetalert2';
   templateUrl: './contacto.component.html',
   styleUrls: ['./contacto.component.css'],
 })
-export class ContactoComponent  {
+export class ContactoComponent implements OnInit {
   //   contactService = inject(ContactService)
   //   formulario: FormGroup;
   // router: Router = new Router();
@@ -103,7 +104,7 @@ export class ContactoComponent  {
   ngOnInit(): void { }
 
   onSubmit() {
-    if (this.form.valid && this.honeypot.value == '') {
+    if (this.form.status == 'VALID' && this.honeypot.value == '') {
       this.form.disable(); // disable the form if it's valid to disable multiple submissions
       let formData: any = new FormData();
       formData.append('name', this.form.get('name')!.value);
@@ -114,7 +115,7 @@ export class ContactoComponent  {
       this.submitted = false; // hide the response message on multiple submits
       this.http
         .post(
-          'https://script.google.com/macros/s/AKfycbzwJkPGNIHgZgB3lZtQBNT-wtCHLd1FiOFDPQXSSO19mL1p1WJwkUnCPMF_R56YblY8SQ/exec',
+          'https://script.google.com/macros/s/AKfycbwsfCL91lZAQrk7v3BNJHpuHvV9XIg8YXy4dBbvPYulHqQctIiDxGwsADuMs3zQIvQghw/exec',
           formData
         )
         .pipe(
