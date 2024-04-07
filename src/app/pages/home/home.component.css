@@ -5,55 +5,11 @@
     position: relative;
     /* top: 70vh; */
 }
-.seccionIncial{
+/* .seccionIncial{
     width: 100%;
     min-width: 400px;
     min-height: 900px;
-
-}
-/* Sección SLIDER */
-.carousel {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    display: flex;
-}
-
-.carousel img {
-    width: 100vw;
-    object-fit: cover;
-}
-
-.elementToFadeInAndOut {
-    animation: fadeInOut 5s linear forwards;
-    animation-iteration-count: infinite;
-}
-
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-    }
-
-    25% {
-        opacity: 0.75;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    75% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
+} */
 /* Sección Bienvenida */
 .seccionWelcome {
     top: 100vh;
@@ -63,7 +19,8 @@
     flex-direction: column;
     justify-content: center;
     font-family: 'Roboto Flex', sans-serif;
-    margin-top: 370px;
+    /* margin-top:370px; */
+    margin-top: 740px;
     margin-bottom: 30px;
 }
 .seccionWelcome h6 {
@@ -79,24 +36,77 @@
 
 /* Sección SESIONES */
 .sesiones {
-width: 100vw;
-margin-top:20px;
+    width: 100vw;
+    margin-top:20px;
+}
+/* TODO SIGUEN HABIENDO ESPACIOS ENTRE SLIDER Y SECCION INICIAL */
+.row{
+
 }
 
 /* TODO REVISAR EN MOBILE */
 @media (max-width: 1200px) {
-.sesiones{
-    margin-top: 50px;
+    .sesiones{
+        margin-top: 50px;
 }
 .seccionWelcome {
-    top: 100vh;
-    z-index: 1;
-    display: flex;
-    text-align: justify;
-    flex-direction: column;
-    justify-content: center;
-    font-family: 'Roboto Flex', sans-serif;
-    margin-top: 1000px;
+    top: 0;
+    /* margin-top: 5px; */
     margin-bottom: 30px;
 }
 }
+/* HACER MEDIA QUERY PARA HEIGHT, PARA WIDTH CON 740PX FUNCIONA */
+@media (max-width: 500px) {
+    .sesiones {
+        margin-top: 50px;
+    }
+
+    .seccionWelcome {
+        top: 0;
+        /* margin-top: 5px; */
+        margin-bottom: 30px;
+    }
+}
+
+        /* Sección SLIDER */
+        /* .carousel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            display: flex;
+        }
+
+        .carousel img {
+            width: 100vw;
+            object-fit: cover;
+        }
+
+        .elementToFadeInAndOut {
+            animation: fadeInOut 5s linear forwards;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+
+            25% {
+                opacity: 0.75;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            75% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        } */

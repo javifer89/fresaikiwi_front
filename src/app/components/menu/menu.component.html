@@ -1,7 +1,8 @@
 <header class="header">
   <a class="header__a" [routerLink]="['/home']">
     <div class="logo">
-      <img src="https://res.cloudinary.com/dscycaajk/image/upload/v1695591497/fresaikiwi/oxh2ee5beops1mt6wje7.png" alt="Logo" />
+      <img src="https://res.cloudinary.com/dscycaajk/image/upload/v1695591497/fresaikiwi/oxh2ee5beops1mt6wje7.png"
+        alt="Logo" />
     </div>
   </a>
   <button (click)="setActive()" class="header__button">
@@ -15,10 +16,7 @@
   <nav class="header__nav" [ngClass]="{ 'header__nav--activo': active }">
     <ul class="header__ul">
       <li *ngFor="let item of menuItems" class="header__li">
-        <!-- TODO REVISAR DROPDOWN -->
-        <a [routerLink]="item.routes" class="header__li--nav-link">{{
-          item.title
-          }}</a>
+        <a [routerLink]="item.routes" class="header__li--nav-link">{{ item.title }}</a>
         <ul *ngIf="item.childItems" class="header__li--dropdown-menu">
           <li *ngFor="let childItem of item.childItems">
             <a [routerLink]="childItem.routes" class="header__li--dropdown-item">{{ childItem.title }}</a>
@@ -27,20 +25,15 @@
       </li>
     </ul>
   </nav>
+
+  <!-- Carousel -->
+
   <div class="seccionInicial col-md-12" *ngIf="router.url === '/home'">
-    <!-- Carousel -->
     <div class="carousel">
-      <img
-        class="elementToFadeInAndOut"
-        [src]="images[imagenSeleccionada].url"
-        [alt]="'slider'"
-      />
+      <img class="elementToFadeInAndOut" [src]="images[imagenSeleccionada].url" [alt]="'slider'" />
     </div>
   </div>
-
 </header>
-
-
 
 <!--
                 <li class="nav-item" *ngIf="usuariosService.isLoggedUsuario()">

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -32,46 +33,47 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from "@angular/material/input";
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    AboutComponent,
-    SesionesComponent,
-    BlogComponent,
-    ReservasComponent,
-    ContactoComponent,
-    MenuComponent,
-    NewbornComponent,
-    ComunionComponent,
-    EmbarazoComponent,
-    BebesComponent,
-    FamiliaComponent,
-    FineArtComponent,
-    NavidadComponent,
-    CumplesComponent,
-    RegistroComponent,
-    LoginComponent,
-    ListaUsuariosComponent,
-    EditarUsuariosComponent,
-    PanelUsuariosComponent,
-    ListaReservasComponent,
-    CrearPostComponent,
-    FooterComponent
 
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    NoopAnimationsModule,
-    MatInputModule,
-    BrowserAnimationsModule,
-  ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
-  ],
-  bootstrap: [AppComponent],
+@NgModule({
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        AboutComponent,
+        SesionesComponent,
+        BlogComponent,
+        ReservasComponent,
+        ContactoComponent,
+        MenuComponent,
+        NewbornComponent,
+        ComunionComponent,
+        EmbarazoComponent,
+        BebesComponent,
+        FamiliaComponent,
+        FineArtComponent,
+        NavidadComponent,
+        CumplesComponent,
+        RegistroComponent,
+        LoginComponent,
+        ListaUsuariosComponent,
+        EditarUsuariosComponent,
+        PanelUsuariosComponent,
+        ListaReservasComponent,
+        CrearPostComponent,
+        FooterComponent,
+    ],
+    providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    ],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        NoopAnimationsModule,
+        MatInputModule,
+        BrowserAnimationsModule,
+        RouterModule,
+    ]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
@@ -7,7 +7,7 @@ import { UsuariosService } from 'src/app/services/usuarios.service';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })
-export class MenuComponent implements OnInit {
+export class MenuComponent implements OnInit, OnDestroy {
   usuariosService: UsuariosService = inject(UsuariosService);
   router: Router = inject(Router);
 
@@ -16,10 +16,6 @@ export class MenuComponent implements OnInit {
   public interval: any;
 
   public images: any[] = [
-    {
-      nombre: 'Newborn',
-      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695593005/fresaikiwi/newborn/keykx1efzjtmuu7fz5ag.jpg',
-    },
     {
       nombre: 'Comunión',
       url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592257/fresaikiwi/comuniones/txdd0wl8fjegett8criy.jpg',
@@ -35,6 +31,10 @@ export class MenuComponent implements OnInit {
     {
       nombre: 'Embarazo',
       url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592852/fresaikiwi/embarazo/fy8a3twdk9rudxffasoh.jpg',
+    },
+    {
+      nombre: 'Newborn',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695593005/fresaikiwi/newborn/keykx1efzjtmuu7fz5ag.jpg',
     },
   ];
 
@@ -108,26 +108,87 @@ export class MenuComponent implements OnInit {
     //   ],
     // },
   ];
-  
-  ngOnInit(): void {
-    this.startInterval();
+
+  ngAfterViewInit(): void {
+
   }
 
+  ngOnInit(): void {
+    this.startInterval();
+    // TODO COMPROBAR QUE FUNCIONA O BUSCAR OTRA SOLUCIÓN
+    // Forzar recarga de la página al volver a la página de inicio
+    if (this.router.url === '/home') {
+      this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() => {
+        this.router.navigate(['/home']);
+      });
+    }
+  }
+  ngOnDestroy(): void {
+    clearInterval(this.interval);
+  }
   setActive(): void {
     this.active = !this.active;
   }
 
+
+  // startInterval() {
+  //   console.log('Interval started');
+  //   this.interval = setInterval(() => {
+  //     this.cambiaImagen();
+  //   }, 5000);
+  // }
+
+  startInterval() {
+    console.log('Interval started');
+    this.interval = setInterval(() => {
+      // Cambiar la imagen
+      this.cambiaImagen();
+
+      // Reiniciar el intervalo después de un breve retraso
+      clearInterval(this.interval); // Detener el intervalo actual
+      this.interval = setInterval(() => {
+        this.cambiaImagen();
+      }, 4900); // Reiniciar el intervalo después de 5 segundos
+    }, 4900); // Cambia la imagen cada 5 segundos
+  }
+  // startInterval(): void {
+  //   console.log('Intezrval started');
+  //   this.interval = setInterval(() => {
+  //     // Detener el intervalo
+  //     clearInterval(this.interval);
+  //     // Cambiar la imagen
+  //     this.cambiaImagen();
+  //     // Reiniciar el intervalo después de un breve retraso
+  //     setTimeout(() => {
+  //       this.startInterval();
+  //     }, 1000); // Espera 1 segundo antes de reiniciar el intervalo
+  //   }, 5000); // Cambia la imagen cada 5 segundos
+  // }
+
+  //       cambiaImagen() {
+  //         this.imagenSeleccionada++;
+  //         if (this.imagenSeleccionada >= this.images.length) {
+  //           this.imagenSeleccionada = 0;
+  //         }
+  // }
   cambiaImagen() {
+
+    // Cambiar la imagen
     this.imagenSeleccionada++;
     if (this.imagenSeleccionada >= this.images.length) {
       this.imagenSeleccionada = 0;
     }
   }
-  startInterval() {
-    this.interval = setInterval(() => {
-      this.cambiaImagen();
-    }, 5000);
-  }
+  //   }
+  //   // Detener el intervalo temporalmente para evitar superposiciones
+  //   clearInterval(this.interval);
+
+  //   // Reiniciar el intervalo después de un breve retraso
+  //   setTimeout(() => {
+  //     this.startInterval();
+  //   }, 1000); // Espera 1 segundo antes de reiniciar el intervalo
+  // }
+
 
   //   onLogout(logOut: number) {
   //     localStorage.removeItem('token_front');
