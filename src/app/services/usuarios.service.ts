@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Usuario } from '../interfaces/usuario.interface';
 import { firstValueFrom } from 'rxjs';
-import jwtDecode from 'jwt-decode';
+//import jwtDecode from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root',
@@ -25,7 +25,7 @@ export class UsuariosService {
     );
   }
 
-  
+
 
   update(usuarioId: number, FormValues: any): Promise<Usuario> {
     return firstValueFrom(
