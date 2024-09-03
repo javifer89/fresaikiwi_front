@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Fresaikiwi_fotografia:build:production"
+              "buildTarget": "Fresaikiwi_fotografia:build:production"
             },
             "development": {
-              "browserTarget": "Fresaikiwi_fotografia:build:development"
+              "buildTarget": "Fresaikiwi_fotografia:build:development"
             }
           },
           "defaultConfiguration": "development",
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Fresaikiwi_fotografia:build"
+            "buildTarget": "Fresaikiwi_fotografia:build"
           }
         },
         "test": {
