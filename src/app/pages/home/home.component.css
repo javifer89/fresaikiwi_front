@@ -20,7 +20,8 @@
     justify-content: center;
     font-family: 'Roboto Flex', sans-serif;
     /* margin-top:370px; */
-    margin-top: 740px;
+    /* margin-top: 740px; */
+    /* margin-top: 25px; */
     margin-bottom: 30px;
 }
 .seccionWelcome h6 {
@@ -39,7 +40,6 @@
     width: 100vw;
     margin-top:20px;
 }
-/* TODO SIGUEN HABIENDO ESPACIOS ENTRE SLIDER Y SECCION INICIAL */
 .row{
 
 }
@@ -68,6 +68,17 @@
     }
 }
 
+@media (max-height: 500px) {
+    .sesiones {
+        margin-top: 50px;
+    }
+
+    .seccionWelcome {
+        top: 0;
+        /* margin-top: 5px; */
+        margin-bottom: 30px;
+    }
+}
         /* Sección SLIDER */
         /* .carousel {
             position: absolute;

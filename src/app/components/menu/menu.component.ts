@@ -18,23 +18,28 @@ export class MenuComponent implements OnInit, OnDestroy {
   public images: any[] = [
     {
       nombre: 'Comunión',
-      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592257/fresaikiwi/comuniones/txdd0wl8fjegett8criy.jpg',
+      //url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592257/fresaikiwi/comuniones/txdd0wl8fjegett8criy.jpg',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1712527890/txdd0wl8fjegett8criy_iq6mni.avif'
     },
     {
       nombre: 'Cumpleaños',
-      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592833/fresaikiwi/cumples/wzeoeemgq24wrysgr1zx.jpg',
+      //url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592833/fresaikiwi/cumples/wzeoeemgq24wrysgr1zx.jpg',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1712527889/CARLOTA_2ANYS-147-c%C3%B2pia-copia_s5dera.avif'
     },
     {
       nombre: 'Bebés',
-      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592240/fresaikiwi/beb%C3%A9s/kxpv1awj7pdj21jss5fr.jpg',
+      //url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592240/fresaikiwi/beb%C3%A9s/kxpv1awj7pdj21jss5fr.jpg',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1712527889/ALEJANDRI_9M-43_cratx7.avif'
     },
     {
       nombre: 'Embarazo',
-      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592852/fresaikiwi/embarazo/fy8a3twdk9rudxffasoh.jpg',
+      //url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695592852/fresaikiwi/embarazo/fy8a3twdk9rudxffasoh.jpg',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1712527890/fy8a3twdk9rudxffasoh_qd5uqo.avif'
     },
     {
       nombre: 'Newborn',
-      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695593005/fresaikiwi/newborn/keykx1efzjtmuu7fz5ag.jpg',
+      //url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1695593005/fresaikiwi/newborn/keykx1efzjtmuu7fz5ag.jpg',
+      url: 'https://res.cloudinary.com/dscycaajk/image/upload/v1712527070/EIRE-35-copia_hndnxb.avif'
     },
   ];
 
@@ -114,6 +119,8 @@ export class MenuComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.preloadImages(this.images);
+
     this.startInterval();
     // TODO COMPROBAR QUE FUNCIONA O BUSCAR OTRA SOLUCIÓN
     // Forzar recarga de la página al volver a la página de inicio
@@ -129,28 +136,34 @@ export class MenuComponent implements OnInit, OnDestroy {
   setActive(): void {
     this.active = !this.active;
   }
-
-
-  // startInterval() {
-  //   console.log('Interval started');
-  //   this.interval = setInterval(() => {
-  //     this.cambiaImagen();
-  //   }, 5000);
-  // }
+  preloadImages(images: any[]) {
+    images.forEach(image => {
+      const img = new Image();
+      img.src = image.url;
+    });
+  }
 
   startInterval() {
     console.log('Interval started');
     this.interval = setInterval(() => {
-      // Cambiar la imagen
       this.cambiaImagen();
-
-      // Reiniciar el intervalo después de un breve retraso
-      clearInterval(this.interval); // Detener el intervalo actual
-      this.interval = setInterval(() => {
-        this.cambiaImagen();
-      }, 4900); // Reiniciar el intervalo después de 5 segundos
-    }, 4900); // Cambia la imagen cada 5 segundos
+    }, 5000);
   }
+
+  // startInterval() {
+  //   console.log('Interval started');
+  //   this.interval = setInterval(() => {
+  //     // Cambiar la imagen
+  //     this.cambiaImagen();
+
+  //     // Reiniciar el intervalo después de un breve retraso
+  //     clearInterval(this.interval); // Detener el intervalo actual
+  //     this.interval = setInterval(() => {
+  //       this.cambiaImagen();
+  //     }, 5000); // Reiniciar el intervalo después de 5 segundos
+  //   }, 5000); // Cambia la imagen cada 5 segundos
+  // }
+
   // startInterval(): void {
   //   console.log('Intezrval started');
   //   this.interval = setInterval(() => {
