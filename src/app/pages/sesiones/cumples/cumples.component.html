@@ -1,7 +1,7 @@
 <div class="container">
   <!-- TODO FALTA CAMBIAR TEXTOS -->
 
-   <div class="row">
+  <div class="row">
     <h3>Cumples</h3>
     <div class="texto col-md-12">
       <p>
@@ -12,13 +12,14 @@
       </p>
     </div>
     <div class="grid">
-      <img
-        *ngFor="let image of imagenes; let i = index"
-        (click)="gridImgHandler(i)"
-        class="grid__img"
-        [alt]="image.alt"
-        [src]="image.src"
-      />
+      @for (image of imagenes; track image; let i = $index) {
+        <img
+          (click)="gridImgHandler(i)"
+          class="grid__img"
+          [alt]="image.alt"
+          [src]="image.src"
+          />
+      }
     </div>
     <div class="lightbox" [ngClass]="{ isActive: lightboxActive }" (click)="closeLightboxOnClick($event)">
       <button (click)="lightboxBtnHandler()" class="lightbox__btn">
@@ -27,37 +28,37 @@
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
           viewBox="0 0 16 16"
-        >
+          >
           <path
             d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+            />
+          </svg>
+        </button>
+        <img
+          [src]="imagenes[imgIndex].src"
+          alt="imagen lightbox"
+          class="lightbox__img"
           />
-        </svg>
-      </button>
-      <img
-        [src]="imagenes[imgIndex].src"
-        alt="imagen lightbox"
-        class="lightbox__img"
-      />
-    </div>
-  </div>
+        </div>
+      </div>
 
-  <div class="row">
-    <div class="texto col-md-12">
-      <p>
-        Me encanta conectar con ellos, que me cuenten lo que les apetezca y
-        hacerlos sentir a gusto para que las fotografías queden con una
-        naturalidad infinita, para que tengan un recuerdo precioso de esta
-        etapa.
-      </p>
-    </div>
+      <div class="row">
+        <div class="texto col-md-12">
+          <p>
+            Me encanta conectar con ellos, que me cuenten lo que les apetezca y
+            hacerlos sentir a gusto para que las fotografías queden con una
+            naturalidad infinita, para que tengan un recuerdo precioso de esta
+            etapa.
+          </p>
+        </div>
 
-    <div class="texto col-md-12">
-      <p>
-        Tanto en estudio como en exterior realizaremos la sesión sin mucho
-        atrezzo, ya que lo importante son ellos, y así conseguiremos un estilo
-        neutro y atemporal para que siempre puedan ver este recuerdo como si
-        fuese ayer.
-      </p>
+        <div class="texto col-md-12">
+          <p>
+            Tanto en estudio como en exterior realizaremos la sesión sin mucho
+            atrezzo, ya que lo importante son ellos, y así conseguiremos un estilo
+            neutro y atemporal para que siempre puedan ver este recuerdo como si
+            fuese ayer.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</div>

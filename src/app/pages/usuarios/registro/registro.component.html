@@ -12,125 +12,139 @@
               class="form-control"
               placeholder="Escribe tu nombre"
               formControlName="nombre"
-            />
-          </div>
+              />
+            </div>
 
-          <p class="error" *ngIf="checkError('nombre', 'required')">
-            El nombre es obligatorio
-          </p>
+            @if (checkError('nombre', 'required')) {
+              <p class="error">
+                El nombre es obligatorio
+              </p>
+            }
 
-          <div class="input-group mb-3">
-            <span class="input-group-text">Apellidos</span>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Escribe tus apellidos"
-              formControlName="apellidos"
-            />
-          </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text">Apellidos</span>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Escribe tus apellidos"
+                formControlName="apellidos"
+                />
+              </div>
 
-          <p class="error" *ngIf="checkError('nombre', 'required')">
-            Los apellidos son obligatorios
-          </p>
+              @if (checkError('nombre', 'required')) {
+                <p class="error">
+                  Los apellidos son obligatorios
+                </p>
+              }
 
-          <!-- <div class="input-group mb-3">
-            <span class="input-group-text">Documento de identificación</span>
-            <select class="form-select" id="inputGroupSelect01">
-              <option value="dni">DNI</option>
-              <option value="nie">NIE</option>
-            </select>
-            <input
-              type="text"
-              aria-label="First name"
-              class="form-control"
-              placeholder="Escribe tu DNI"
-              formControlName="dni"
-            />
-          </div>
+              <!-- <div class="input-group mb-3">
+              <span class="input-group-text">Documento de identificación</span>
+              <select class="form-select" id="inputGroupSelect01">
+                <option value="dni">DNI</option>
+                <option value="nie">NIE</option>
+              </select>
+              <input
+                type="text"
+                aria-label="First name"
+                class="form-control"
+                placeholder="Escribe tu DNI"
+                formControlName="dni"
+                />
+              </div>
 
-          <p class="error" *ngIf="checkError('dni', 'required')">
-            El documento es obligatorio
-          </p>
+              <p class="error" *ngIf="checkError('dni', 'required')">
+                El documento es obligatorio
+              </p>
 
-          <p class="error" *ngIf="checkError('dni', 'dnivalidator')">
-            El documento es incorrecto
-          </p> -->
+              <p class="error" *ngIf="checkError('dni', 'dnivalidator')">
+                El documento es incorrecto
+              </p> -->
 
-          <div class="input-group mb-3">
-            <span class="input-group-text">Teléfono</span>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Escribe tu numero de teléfono"
-              formControlName="telefono"
-            />
-          </div>
+              <div class="input-group mb-3">
+                <span class="input-group-text">Teléfono</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Escribe tu numero de teléfono"
+                  formControlName="telefono"
+                  />
+                </div>
 
-          <p class="error" *ngIf="checkError('telefono', 'required')">
-            El teléfono es obligatorio
-          </p>
+                @if (checkError('telefono', 'required')) {
+                  <p class="error">
+                    El teléfono es obligatorio
+                  </p>
+                }
 
-          <div class="input-group mb-3">
-            <span class="input-group-text">Dirección</span>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Escribe tu direccion"
-              formControlName="direccion"
-            />
-          </div>
+                <div class="input-group mb-3">
+                  <span class="input-group-text">Dirección</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Escribe tu direccion"
+                    formControlName="direccion"
+                    />
+                  </div>
 
-          <p class="error" *ngIf="checkError('direccion', 'required')">
-            La dirección es obligatoria
-          </p>
+                  @if (checkError('direccion', 'required')) {
+                    <p class="error">
+                      La dirección es obligatoria
+                    </p>
+                  }
 
-          <div class="input-group mb-3">
-            <span class="input-group-text">E-mail</span>
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Introduce un correo electrónico válido"
-              formControlName="email"
-            />
-          </div>
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">E-mail</span>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Introduce un correo electrónico válido"
+                      formControlName="email"
+                      />
+                    </div>
 
-          <p class="error" *ngIf="checkError('email', 'required')">
-            La dirección e-mail es obligatoria
-          </p>
+                    @if (checkError('email', 'required')) {
+                      <p class="error">
+                        La dirección e-mail es obligatoria
+                      </p>
+                    }
 
-          <p class="error" *ngIf="checkError('email', 'pattern')">
-            La dirección de e-mail no tiene un formato válido
-          </p>
+                    @if (checkError('email', 'pattern')) {
+                      <p class="error">
+                        La dirección de e-mail no tiene un formato válido
+                      </p>
+                    }
 
-          <div class="input-group mb-3">
-            <span class="input-group-text">Password</span>
-            <input
-              type="password"
-              class="form-control"
-              placeholder="Escoge una contraseña segura"
-              formControlName="password"
-            />
-          </div>
+                    <div class="input-group mb-3">
+                      <span class="input-group-text">Password</span>
+                      <input
+                        type="password"
+                        class="form-control"
+                        placeholder="Escoge una contraseña segura"
+                        formControlName="password"
+                        />
+                      </div>
 
-          <p class="error" *ngIf="checkError('password', 'required')">
-            La contraseña es obligatoria
-          </p>
-<!-- TODO REVISAR .VALID , NO FUNCIONA -->
-          <input
-            type="submit"
-            value="Enviar"
-            class="btn mb-3"
-            [disabled]="!formulario.valid"
-          />
+                      @if (checkError('password', 'required')) {
+                        <p class="error">
+                          La contraseña es obligatoria
+                        </p>
+                      }
+                      <!-- TODO REVISAR .VALID , NO FUNCIONA -->
+                      <input
+                        type="submit"
+                        value="Enviar"
+                        class="btn mb-3"
+                        [disabled]="!formulario.valid"
+                        />
 
-          <p>
-            ¿Ya estás registrado/a?
-            <strong [routerLink]="['/usuarios', 'login']"
-              >Inicia sesión.</strong
-            >
-          </p>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+                        <p>
+                          ¿Ya estás registrado/a?
+                          <strong [routerLink]="['/usuarios', 'login']"
+                            >Inicia sesión.</strong
+                            >
+                          </p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>

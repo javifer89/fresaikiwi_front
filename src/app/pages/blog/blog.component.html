@@ -1,31 +1,33 @@
 <h2>Blog Fresaikiwi Fotografia</h2>
 <div class="crear-post">
-      <button class="btn btn-info"[routerLink]="['/blog', 'crear-post']">Crear un nuevo post</button>
+  <button class="btn btn-info"[routerLink]="['/blog', 'crear-post']">Crear un nuevo post</button>
 </div>
 <div class="row d-flex justify-content-between m-4">
-  <div class="card mb-3 col-12 col-md-6 " style="width: 24rem" *ngFor="let post of postOrdenados">
-    <div class="card-body">
-      <h3 class="card-title">{{ post.titulo }}</h3>
-      <p class="card-text">{{ post.texto }}</p>
-      <h5>Creado por {{ post.autor }}</h5>
-      <img [src]="post.imagen" alt="" />
-
-
-      <p>{{ post.fecha }}</p>
-      <h5>Categoria: {{ post.categoria }}</h5>
+  @for (post of postOrdenados; track post) {
+    <div class="card mb-3 col-12 col-md-6 " style="width: 24rem">
+      <div class="card-body">
+        <h3 class="card-title">{{ post.titulo }}</h3>
+        <p class="card-text">{{ post.texto }}</p>
+        <h5>Creado por {{ post.autor }}</h5>
+        <img [src]="post.imagen" alt="" />
+        <p>{{ post.fecha }}</p>
+        <h5>Categoria: {{ post.categoria }}</h5>
+      </div>
     </div>
-  </div>
+  }
 </div>
 
 <!-- TODO FALTA RETOCAR ESTILOS DEL BLOG -->
 
 <h4>FILTRAR POR CATEGORIA</h4>
 <h3>Pulsa un botón</h3>
-<div class="filtrado" *ngFor="let categoria of categorias">
-  <button class="btn btn-secondary" (click)="onGetByCategory(categoria)">
-    Filtrar por {{ categoria }}
-  </button>
-</div>
+@for (categoria of categorias; track categoria) {
+  <div class="filtrado">
+    <button class="btn btn-secondary" (click)="onGetByCategory(categoria)">
+      Filtrar por {{ categoria }}
+    </button>
+  </div>
+}
 
 <h3>Selecciona la categoría</h3>
 <div class="row">

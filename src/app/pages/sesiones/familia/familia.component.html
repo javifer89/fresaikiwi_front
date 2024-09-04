@@ -3,30 +3,31 @@
     <h3>Família</h3>
     <div class="texto col-md-12">
       <P>
-        Las sesiones de familia son perfectas para pasar un rato divertido todos
-        juntos. Crearemos momentos divertidos, tiernos e inolvidables para que
-        quede vuestra esencia impregnada en cada sesión.
-      </P>
-    </div>
-    <div class="grid">
+      Las sesiones de familia son perfectas para pasar un rato divertido todos
+      juntos. Crearemos momentos divertidos, tiernos e inolvidables para que
+      quede vuestra esencia impregnada en cada sesión.
+    </P>
+  </div>
+  <div class="grid">
+    @for (image of imagenes; track image; let i = $index) {
       <img
-        *ngFor="let image of imagenes; let i = index"
         (click)="gridImgHandler(i)"
         class="grid__img"
         [alt]="image.alt"
         [src]="image.src"
-      />
-    </div>
-    <div class="lightbox" [ngClass]="{ isActive: lightboxActive }" (click)="closeLightboxOnClick($event)">
-      <button (click)="lightboxBtnHandler()" class="lightbox__btn">
-        <svg
-          class="lightbox__svg"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 16 16"
+        />
+    }
+  </div>
+  <div class="lightbox" [ngClass]="{ isActive: lightboxActive }" (click)="closeLightboxOnClick($event)">
+    <button (click)="lightboxBtnHandler()" class="lightbox__btn">
+      <svg
+        class="lightbox__svg"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 16 16"
         >
-          <path
-            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
+        <path
+          d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"
           />
         </svg>
       </button>
@@ -34,21 +35,21 @@
         [src]="imagenes[imgIndex].src"
         alt="imagen lightbox"
         class="lightbox__img"
-      />
-    </div>
+        />
+      </div>
     </div>
 
 
 
-  <div class="row">
-        <div class="texto col-md-12">
-      <p>
-        Tanto en estudio, donde las fotografías serán sencillas, neutras. solo
-        estaréis vosotros, nada más. Un precioso recuerdo para poder regalar o
-        poner en todos los rincones de casa.
-      </p>
+    <div class="row">
+      <div class="texto col-md-12">
+        <p>
+          Tanto en estudio, donde las fotografías serán sencillas, neutras. solo
+          estaréis vosotros, nada más. Un precioso recuerdo para poder regalar o
+          poner en todos los rincones de casa.
+        </p>
+      </div>
     </div>
-  </div>
 
     <div class="texto col-md-12">
       <p>
@@ -58,4 +59,4 @@
       </p>
       <p>¡Y haremos foto de los papis, de los peques...de todos!</p>
     </div>
-</div>
+  </div>
