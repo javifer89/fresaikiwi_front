@@ -1,13 +1,43 @@
-import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { AfterViewInit, CUSTOM_ELEMENTS_SCHEMA, Component, ElementRef, NO_ERRORS_SCHEMA, OnDestroy, OnInit, ViewChild, effect, inject, input, signal, viewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsuariosService } from 'src/app/services/usuarios.service';
+import { SwiperContainer } from 'swiper/element';
+import { SwiperOptions } from 'swiper/types/swiper-options';
+import { RouterLink } from '@angular/router';
+import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel'
+
+
+// Importar Swiper y los módulos directamente desde 'swiper'
+import Swiper from 'swiper';
+import SwiperCore from 'swiper';
+//import 'swiper/swiper-bundle.css'; // Para estilos generales
+//import '../../../../node_modules/swiper/modules/navigation.css'; // Para estilos del módulo de navegación
+//import '../../../../node_modules/swiper/modules/pagination.css'; // Para estilos del módulo de paginación
+//import '../../../../node_modules/swiper/modules/effect-fade.css'; // Para estilos del módulo de efecto de desvanecimiento
+//import Autoplay from 'swiper';
+// import Pagination from 'swiper';
+// import Navigation from 'swiper';
+// import EffectFade from 'swiper';
+
+// Habilitar los módulos que vas a usar
+// SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
+
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
+  standalone: true,
+  imports: [CommonModule, RouterLink],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
+
 })
-export class MenuComponent implements OnInit, OnDestroy {
+export class MenuComponent implements OnInit, OnDestroy, AfterViewInit {
+
+
+
   usuariosService: UsuariosService = inject(UsuariosService);
   router: Router = inject(Router);
 
@@ -114,12 +144,10 @@ export class MenuComponent implements OnInit, OnDestroy {
     // },
   ];
 
-  ngAfterViewInit(): void {
 
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    this.preloadImages(this.images);
 
     this.startInterval();
     // TODO COMPROBAR QUE FUNCIONA O BUSCAR OTRA SOLUCIÓN
@@ -129,6 +157,9 @@ export class MenuComponent implements OnInit, OnDestroy {
         this.router.navigate(['/home']);
       });
     }
+  }
+  ngAfterViewInit(): void {
+
   }
   ngOnDestroy(): void {
     clearInterval(this.interval);
@@ -150,40 +181,6 @@ export class MenuComponent implements OnInit, OnDestroy {
     }, 5000);
   }
 
-  // startInterval() {
-  //   console.log('Interval started');
-  //   this.interval = setInterval(() => {
-  //     // Cambiar la imagen
-  //     this.cambiaImagen();
-
-  //     // Reiniciar el intervalo después de un breve retraso
-  //     clearInterval(this.interval); // Detener el intervalo actual
-  //     this.interval = setInterval(() => {
-  //       this.cambiaImagen();
-  //     }, 5000); // Reiniciar el intervalo después de 5 segundos
-  //   }, 5000); // Cambia la imagen cada 5 segundos
-  // }
-
-  // startInterval(): void {
-  //   console.log('Intezrval started');
-  //   this.interval = setInterval(() => {
-  //     // Detener el intervalo
-  //     clearInterval(this.interval);
-  //     // Cambiar la imagen
-  //     this.cambiaImagen();
-  //     // Reiniciar el intervalo después de un breve retraso
-  //     setTimeout(() => {
-  //       this.startInterval();
-  //     }, 1000); // Espera 1 segundo antes de reiniciar el intervalo
-  //   }, 5000); // Cambia la imagen cada 5 segundos
-  // }
-
-  //       cambiaImagen() {
-  //         this.imagenSeleccionada++;
-  //         if (this.imagenSeleccionada >= this.images.length) {
-  //           this.imagenSeleccionada = 0;
-  //         }
-  // }
   cambiaImagen() {
 
     // Cambiar la imagen
@@ -192,25 +189,6 @@ export class MenuComponent implements OnInit, OnDestroy {
       this.imagenSeleccionada = 0;
     }
   }
-  //   }
-  //   // Detener el intervalo temporalmente para evitar superposiciones
-  //   clearInterval(this.interval);
-
-  //   // Reiniciar el intervalo después de un breve retraso
-  //   setTimeout(() => {
-  //     this.startInterval();
-  //   }, 1000); // Espera 1 segundo antes de reiniciar el intervalo
-  // }
-
-
-  //   onLogout(logOut: number) {
-  //     localStorage.removeItem('token_front');
-  //     if (logOut === 0) {
-  //       this.router.navigate(['/loginStaff']);
-  //     } else {
-  //       this.router.navigate(['/usuarios', 'login']);
-  //     }
-  //   }
 }
 
 export interface MenuItem {
