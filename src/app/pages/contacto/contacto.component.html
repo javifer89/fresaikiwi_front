@@ -3,50 +3,97 @@
     <h3 class="text-center mb-2">¿Tienes alguna duda?</h3>
     <h6 class="text-center mb-3">¡Contacta con nosotros y te responderemos lo antes posible!</h6>
   </div>
-  <div class="contacto">
+  <!-- <div class="contacto">
     <div class="formulario">
-      <!-- formulario contacto redireccionado -->
-      <form class="contact" id="mi-formulario" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
-        <mat-form-field class="custom-input">
+      <form [formGroup]="form" class="contact" id="mi-formulario" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="fill" class="custom-input">
           <mat-label>Nombre</mat-label>
-          <input matInput [formControl]="name" placeholder="Tu nombre" required />
-          @if (name.invalid) {
-            <mat-error>Por favor, introduce tu nombre y apellidos</mat-error>
+          <input matInput formControlName="name" placeholder="Tu nombre" required />
+          @if (form.get('name')?.invalid && form.get('name')?.touched) {
+          <mat-error>Por favor, introduce tu nombre</mat-error>
           }
         </mat-form-field>
-        <mat-form-field>
+
+        <mat-form-field appearance="fill">
           <mat-label>Apellidos</mat-label>
-          <input matInput [formControl]="lastname" placeholder="Tus apellidos" required />
-          @if (lastname.invalid) {
-            <mat-error>Por favor, introduce tus apellidos</mat-error>
+          <input matInput formControlName="lastname" placeholder="Tus apellidos" required />
+          @if (form.get('lastname')?.invalid && form.get('lastname')?.touched) {
+          <mat-error>Por favor, introduce tus apellidos</mat-error>
           }
         </mat-form-field>
-        <mat-form-field>
+
+        <mat-form-field appearance="fill">
           <mat-label>Email</mat-label>
-          <input matInput [formControl]="email" placeholder="email@example.com" required />
-          @if (email.invalid) {
-            <mat-error>Por favor, introduce un e-mail válido</mat-error>
+          <input matInput formControlName="email" placeholder="email@example.com" required />
+          @if (form.get('email')?.invalid && form.get('email')?.touched) {
+          <mat-error>Por favor, introduce un e-mail válido</mat-error>
           }
         </mat-form-field>
-        <mat-form-field>
+
+        <mat-form-field appearance="fill">
           <mat-label>Mensaje</mat-label>
-          <textarea matInput [formControl]="message" maxlength="999" rows="10" placeholder="Estoy interesad@ en..."
-          required></textarea>
-          <mat-hint align="end"> {{ message.value?.length || 0 }}/999</mat-hint>
-          @if (message.invalid) {
-            <mat-error>Por favor, escribe un mensaje</mat-error>
+          <textarea matInput formControlName="message" maxlength="999" rows="10" placeholder="Estoy interesad@ en..."
+            required></textarea>
+          <mat-hint align="end">{{ form.get('message')?.value?.length || 0 }}/999</mat-hint>
+          @if (form.get('message')?.invalid && form.get('message')?.touched) {
+          <mat-error>Por favor, escribe un mensaje</mat-error>
           }
         </mat-form-field>
-        <button [disabled]="isLoading" class="btn submit" type="submit">
+
+        <button mat-raised-button color="primary" [disabled]="isLoading || form.invalid" class="btn submit"
+          type="submit">
           Enviar
         </button>
-        <input [formControl]="honeypot" class="hidden" type="text" />
-        <div [ngClass]="!submitted ? 'hidden' : 'visible'" class="center-text">
+
+        <input formControlName="honeypot" class="hidden" type="text" />
+
+        <div [@if]="submitted" class="center-text">
           <span>{{ responseMessage }}</span>
         </div>
       </form>
     </div>
+  </div> -->
+<div class="contacto">
+  <div class="formulario">
+    <form [formGroup]="form" id="mi-formulario" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="name" formControlName="name" placeholder="Tu nombre" />
+        <div *ngIf="form.get('name')?.invalid && form.get('name')?.touched" class="text-danger">
+          Por favor, introduce tu nombre
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="lastname" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" id="lastname" formControlName="lastname" placeholder="Tus apellidos" />
+        <div *ngIf="form.get('lastname')?.invalid && form.get('lastname')?.touched" class="text-danger">
+          Por favor, introduce tus apellidos
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email" placeholder="email@example.com" />
+        <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched" class="text-danger">
+          Por favor, introduce un e-mail válido
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="message" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="message" formControlName="message" rows="5" maxlength="999"
+          placeholder="Estoy interesad@ en..."></textarea>
+        <div *ngIf="form.get('message')?.invalid && form.get('message')?.touched" class="text-danger">
+          Por favor, escribe un mensaje
+        </div>
+        <small class="form-text text-end">{{ form.get('message')?.value?.length || 0 }}/999</small>
+      </div>
+
+      <button type="submit" class="btn btn-primary submit" [disabled]="isLoading || form.invalid">Enviar</button>
+    </form>
   </div>
+</div>
 
   <div class="location">
     <div class="info-contacto">

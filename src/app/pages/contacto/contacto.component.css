@@ -4,7 +4,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	/* margin-top: 370px; */
+	margin-top: -300px;
 	margin-bottom: 30px;
 }
 
@@ -19,17 +19,17 @@
 }
 
 .contacto {
-	width: 50%;
-	height: 800px;
-	/* border: solid 2px var(--colorPrincipal); */
-	border-radius: 10px 0 0 10px;
-	border-right: none;
+	width: 45%;
+	height: fit-content;
+	border: solid 2px var(--colorPrincipal);
+	border-radius: 10px;
+	padding: 10px;
 	margin-bottom: 10px;
 }
 
 .formulario {
 	width: 100%;
-	height: 700px;
+	height: auto;
 	margin-top: 20px;
 	margin-bottom: 140px;
 }
@@ -70,7 +70,7 @@ form.contact {
 }
 
 .location {
-	width: 50%;
+	width: 45%;
 	height: 800px;
 	/* border: solid 2px var(--colorPrincipal); */
 	border-radius: 0 10px 10px 0;
@@ -79,6 +79,10 @@ form.contact {
 	align-items: center;
 	text-align: center;
 	padding-right: 20px;
+
+	iframe {
+		border-radius: 10px
+	}
 }
 
 .mapa {
@@ -91,11 +95,6 @@ h3 {
 	font-size: 70px;
 	text-align: center;
 	align-items: center;
-}
-
-p,
-a {
-	font-size: larger;
 }
 
 a {
@@ -116,21 +115,12 @@ a {
 	display: block
 }
 
-/* TODO SOLUCIONAR INPUT UNDERLINE de MATERIAL */
-.custom-input {}
-
-#mi-formulario ::ng-deep .mat-form-field.mat-focused .mat-form-field-underline {
-	background-color: red;
-	/* Cambia el color aquí */
+label {
+	font-family: Montserrat, Arial, sans-serif;
+	color: var(--negroSuave);
 }
 
-/* Cambiar el color del indicador de etiqueta (label) cuando el campo está enfocado */
-#mi-formulario ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
-	color: red;
-	/* Cambia el color aquí */
-}
-
-button {
+button .submit {
 	margin-top: 10px;
 
 	background-color: transparent;
@@ -145,9 +135,15 @@ button {
 	font-family: Montserrat, sans-serif;
 }
 
+button:enabled {
+	background-color: var(--colorFresaikiwi);
+	border: 1px solid black;
+	color: white;
+}
+
 button:hover:enabled {
 	background-color: var(--colorPrincipal);
-	border: 2px solid transparent;
+	border-color: transparent;
 	color: white;
 }
 
@@ -157,6 +153,7 @@ button:hover:enabled {
 		flex-direction: column;
 		width: 100%;
 	}
+
 	.titulos {
 		margin: 0 auto;
 		align-items: center;
@@ -166,60 +163,60 @@ button:hover:enabled {
 		margin-top: 20px;
 		margin-bottom: 10px;
 	}
+
 	.contacto {
 		width: 100%;
 		height: auto;
 		border: none;
-		border-radius: 10px ;
+		border-radius: 10px;
 		margin-bottom: 0;
 	}
 
 	.formulario {
 		width: 100%;
-	height: auto;
-	margin-top: 0;
-	margin-bottom: 0;
-}
-form.contact {
-	display: flex;
-	flex-direction: column;
-	width: 95%;
-	height: auto;
-	/* padding: 20px;
-	margin-top: 10px;
-	margin-bottom: 30px; */
+		height: auto;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	form.contact {
+		display: flex;
+		flex-direction: column;
+		width: 95%;
+		height: auto;
+	}
+
+	.location {
+		width: 100%;
+		height: auto;
+		border-radius: 10px;
+		border: 2px var(--colorPrincipal);
+		margin-top: 10px;
+		padding: 10px;
+		padding-top: 15px;
+	}
+
+	.info-contacto {
+		width: 100%;
+		height: auto;
+		border: solid 2px var(--colorPrincipal);
+		border-radius: 10px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+
+	.info-contacto h5 {
+		font-size: 20px;
+	}
+
+	.mapa {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 
 }
-.location {
-	width: 100%;
-	height: auto;
-	border-radius: 10px;
-	border: 2px var(--colorPrincipal);
-	margin-top: 10px;
-	padding: 10px;
-	padding-top: 15px;
-}
-.info-contacto {
-	width: 100%;
-	height: auto;
-	border: solid 2px var(--colorPrincipal);
-	border-radius: 10px;
-	margin: 0 auto;
-	margin-bottom: 40px;
-}
 
-.info-contacto h5 {
-	font-size: 20px;
-}
-
-
-.mapa {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-}
 @media (max-width: 570px) {
 	.titulos {
 		margin-bottom: 80px;

@@ -53,7 +53,7 @@
 // }
 
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {
   FormBuilder,
   FormGroup,
@@ -65,12 +65,15 @@ import { Router } from '@angular/router';
 // import {inject } from '@angular/core';
 // import { ContactService } from 'src/app/services/contact.service';
 import Swal from 'sweetalert2';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 // TODO NO FUNCIONA EL ENVIO DEL FORMULARIO
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
   styleUrls: ['./contacto.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ContactoComponent implements OnInit {
   //   contactService = inject(ContactService)
@@ -93,35 +96,45 @@ export class ContactoComponent implements OnInit {
   responseMessage!: string; // the response message to show to the user
 
   constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) {
+    // this.form = this.formBuilder.group({
+    //   name: this.name,
+    //   lastname: this.lastname,
+    //   email: this.email,
+    //   message: this.message,
+    //   honeypot: this.honeypot,
+    // });
     this.form = this.formBuilder.group({
-      name: this.name,
-      lastname: this.lastname,
-      email: this.email,
-      message: this.message,
-      honeypot: this.honeypot,
+      name: ['', [Validators.required]],
+      lastname: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', [Validators.required, Validators.maxLength(999)]],
+      honeypot: [''],  // Campo anti-spam
     });
   }
-  ngOnInit(): void { }
+  ngOnInit(): void {
+
+      // Ocultar todos los asteriscos de los campos requeridos
+      const requiredMarkers = document.querySelectorAll('.mat-form-field-required-marker');
+      requiredMarkers.forEach(marker => marker.classList.add('hidden-required-marker'));
+    
+   }
 
   onSubmit() {
-    if (this.form.status == 'VALID' && this.honeypot.value == '') {
-      this.form.disable(); // disable the form if it's valid to disable multiple submissions
-      let formData: any = new FormData();
-      formData.append('name', this.form.get('name')!.value);
-      formData.append('lastname', this.form.get('lastname')!.value);
-      formData.append('email', this.form.get('email')!.value);
-      formData.append('message', this.form.get('message')!.value);
-      this.isLoading = true; // sending the post request async so it's in progress
-      this.submitted = false; // hide the response message on multiple submits
-      this.http
-        .post(
-          'https://script.google.com/macros/s/AKfycbwsfCL91lZAQrk7v3BNJHpuHvV9XIg8YXy4dBbvPYulHqQctIiDxGwsADuMs3zQIvQghw/exec',
-          formData
-        )
+    // Validamos que el formulario sea válido y el honeypot esté vacío
+    if (this.form.valid && this.form.get('honeypot')?.value === '') {
+      this.form.disable();  // Deshabilitamos el formulario para evitar múltiples envíos
+      const formData: any = new FormData();
+      formData.append('name', this.form.get('name')?.value);
+      formData.append('lastname', this.form.get('lastname')?.value);
+      formData.append('email', this.form.get('email')?.value);
+      formData.append('message', this.form.get('message')?.value);
+      this.isLoading = true;  // Mostramos que el envío está en progreso
+      this.submitted = false;  // Reiniciamos el mensaje de respuesta en caso de múltiples envíos
+
+      this.http.post('https://script.google.com/macros/s/AKfycbwsfCL91lZAQrk7v3BNJHpuHvV9XIg8YXy4dBbvPYulHqQctIiDxGwsADuMs3zQIvQghw/exec', formData)
         .pipe(
           switchMap((response: any) => {
-            if (response['result'] == 'success') {
-              // this.responseMessage = "Gracias por tu mensaje, me pondré en contacto contigo con la mayor brevedad posible";
+            if (response['result'] === 'success') {
               Swal.fire({
                 icon: 'success',
                 title: 'Mensaje enviado correctamente',
@@ -134,7 +147,6 @@ export class ContactoComponent implements OnInit {
                 background: '#0077B6',
               });
             } else {
-              // this.responseMessage = "Oops! Something went wrong... Reload the page and try again.";
               Swal.fire({
                 icon: 'error',
                 title: 'Oops...',
@@ -147,14 +159,12 @@ export class ContactoComponent implements OnInit {
                 background: '#0077B6',
               });
             }
-            this.form.enable();
+            this.form.enable();  // Volvemos a habilitar el formulario
             this.submitted = true;
             this.isLoading = false;
-            console.log(response);
-            return of(response); // You can modify this to return any relevant data
+            return of(response);
           }),
           catchError((error) => {
-            // this.responseMessage = "Oops! An error occurred... Reload the page and try again.";
             Swal.fire({
               icon: 'error',
               title: 'Oops...',
@@ -166,15 +176,14 @@ export class ContactoComponent implements OnInit {
               color: '#333333',
               background: '#0077B6',
             });
-            this.form.enable();
+            this.form.enable();  // Habilitamos el formulario en caso de error
             this.submitted = true;
             this.isLoading = false;
-            console.log(error);
-            return of(error); // You can modify this to return any relevant data
+            return of(error);
           })
         )
         .subscribe(() => {
-          this.router.navigate(['/home']);
+          this.router.navigate(['/home']);  // Redireccionamos tras el envío
         });
     }
   }
