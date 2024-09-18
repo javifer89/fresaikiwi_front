@@ -5,7 +5,12 @@
     flex-direction: column;
     margin-top: -70px;
     /*revisar responsive*/
+    margin-top: -70px;
+    /*revisar responsive*/
     margin-bottom: 30px;
+    @media (width <=680px) {
+            margin-top: 0rem;
+        }
     @media (width <=680px) {
             margin-top: 0rem;
         }
@@ -59,9 +64,6 @@ iframe {
 .form {
     height: 96%;
 }
-
-*/
-
 /* estilos imagen pantalla completa*/
 .section-reservas {
     position: absolute;

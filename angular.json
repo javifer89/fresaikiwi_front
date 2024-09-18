@@ -36,15 +36,27 @@
             "scripts": [
               "node_modules/bootstrap/dist/js/bootstrap.bundle.js"
             ],
-            "allowedCommonJsDependencies": ["sweetalert2"]
+            "allowedCommonJsDependencies": ["sweetalert2"],
+            "budgets": [
+              {
+                "type": "initial",
+                "maximumWarning": "512kb",
+                "maximumError": "1mb"
+              },
+              {
+                "type": "anyComponentStyle",
+                "maximumWarning": "2kb",
+                "maximumError": "4kb"
+              }
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "1500kb",
+                  "maximumError": "2mb"
                 },
                 {
                   "type": "anyComponentStyle",

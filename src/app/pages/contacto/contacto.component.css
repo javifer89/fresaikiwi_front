@@ -6,9 +6,12 @@
 	justify-content: space-between;
 	margin-top: -70px;
 	margin-bottom: 30px;
-	@media (width <=520px) {
-			margin-top: 1rem;
-		}
+}
+
+@media (max-width: 520px) {
+	.container {
+		margin-top: 1rem;
+	}
 }
 
 .titulos {
@@ -23,7 +26,8 @@
 
 .contacto {
 	width: 45%;
-	height: fit-content;
+	height: auto;
+	/* Cambiado a auto para evitar problemas con el tamaño del contenido */
 	border: solid 2px var(--colorPrincipal);
 	border-radius: 10px;
 	padding: 10px;
@@ -33,6 +37,7 @@
 .formulario {
 	width: 100%;
 	height: auto;
+	/* Cambiado a auto para evitar problemas con el tamaño del contenido */
 	margin-top: 20px;
 	margin-bottom: 140px;
 }
@@ -41,11 +46,11 @@ form.contact {
 	display: flex;
 	flex-direction: column;
 	width: 85%;
-	height: 95%;
+	height: auto;
+	/* Cambiado a auto para evitar problemas con el tamaño del contenido */
 	padding: 20px;
 	margin-left: auto;
 	margin-right: auto;
-	/* margin-top: 60px; */
 	margin-bottom: 30px;
 	border: solid 2px var(--colorPrincipal);
 	border-radius: 10px;
@@ -54,12 +59,12 @@ form.contact {
 
 .info-contacto {
 	width: 80%;
-	height: 200px;
+	height: auto;
+	/* Cambiado a auto para evitar problemas con el tamaño del contenido */
 	border: solid 2px var(--colorPrincipal);
 	border-radius: 10px;
 	align-items: center;
 	text-align: center;
-	/* margin-top: 10px; */
 	justify-content: center;
 	margin: 0 auto;
 	padding-top: 10px;
@@ -75,17 +80,16 @@ form.contact {
 .location {
 	width: 45%;
 	height: 800px;
-	/* border: solid 2px var(--colorPrincipal); */
 	border-radius: 0 10px 10px 0;
 	border-left: none;
 	padding-top: 19px;
 	align-items: center;
 	text-align: center;
 	padding-right: 20px;
+}
 
-	iframe {
-		border-radius: 10px
-	}
+.location iframe {
+	border-radius: 10px;
 }
 
 .mapa {
@@ -111,11 +115,11 @@ a {
 }
 
 .hidden {
-	display: none
+	display: none;
 }
 
 .visible {
-	display: block
+	display: block;
 }
 
 label {
@@ -123,14 +127,11 @@ label {
 	color: var(--negroSuave);
 }
 
-button .submit {
+button.submit {
 	margin-top: 10px;
-
 	background-color: transparent;
 	color: #333;
 	border: 2px solid var(--colorPrincipal);
-
-
 	padding: 4px 16px;
 	transition: 0.3s;
 	width: 100%;
@@ -149,7 +150,6 @@ button:hover:enabled {
 	border-color: transparent;
 	color: white;
 }
-
 
 @media (max-width: 1004px) {
 	.container {
@@ -183,8 +183,6 @@ button:hover:enabled {
 	}
 
 	form.contact {
-		display: flex;
-		flex-direction: column;
 		width: 95%;
 		height: auto;
 	}
@@ -217,7 +215,6 @@ button:hover:enabled {
 		height: 100%;
 		object-fit: cover;
 	}
-
 }
 
 @media (max-width: 570px) {

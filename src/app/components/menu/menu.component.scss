@@ -16,9 +16,6 @@
   align-items: center;
 
   color: #333;
-    // @media screen and (max-height: 1200px) {
-    //   margin-bottom:17rem;
-    // }
     @media screen and (max-width: 1200px){
             margin-bottom: 0rem;
     }
@@ -90,7 +87,6 @@
     &:hover {
       .header__li--dropdown-menu {
         opacity: 1;
-        //max-height: 300px;
       }
     }
 
@@ -115,20 +111,12 @@
     transition: opacity 0.5s ease-in-out, max-height 0.5s ease-in-out;
   }
 
-  // &__li--dropdown-menu:hover {
-  // background-color: red;
-  // }
-
-
   &__li--nav-link {
     text-decoration: none;
     color: #333;
     font-size: 20px;
     text-align: center;
   }
-
-  //   &__li--nav-link:hover {
-  // }
 
   &__li--dropdown-item {
     color: #333;
@@ -162,37 +150,6 @@
 .carousel img {
   width: 100vw;
   object-fit: cover;
-}
-
-.elementToFadeInAndOut {
-  animation: fadeInOut 5s linear forwards;
-  animation-iteration-count: infinite;
-}
-
-@keyframes fadeInOut {
-  0% {
-    opacity: 0;
-  }
-
- 20% {
-   opacity: 0.75; // Ajustado el porcentaje de opacidad
- }
-
- 40% {
-   opacity: 1; // Ajustado el porcentaje de opacidad
- }
-
- 60% {
-   opacity: 1; // Ajustado el porcentaje de opacidad
- }
-
- 80% {
-   opacity: 0.75; // Ajustado el porcentaje de opacidad
- }
-
- 100% {
-   opacity: 0;
- }
 }
 
 .seccionInicial {
