@@ -26,17 +26,13 @@ body {
     padding-top: 10px;
 }
 
-::ng-deep .mat-form-field-appearance-fill.mat-form-field-can-float .mat-form-field-underline {
-    background-color: var(--colorPrincipal);
-
-}
-
 /* Custom properties */
 :root {
     --negro: #393939;
     /* Tipografía */
     --tipo-principal: Helvetica, Arial, sans-serif;
     --tipo-secundaria: Verdana;
+    --tipo-fresaikiwi: 'Montserrat', Arial, sans-serif;
 }
 
 /* modo oscuro */

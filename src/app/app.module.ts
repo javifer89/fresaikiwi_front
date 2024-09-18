@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
@@ -32,7 +32,9 @@ import { CrearPostComponent } from './pages/blog/crear-post/crear-post.component
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule } from "@angular/material/input";
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 @NgModule({
     declarations: [
@@ -43,7 +45,6 @@ import { MatInputModule } from "@angular/material/input";
         BlogComponent,
         ReservasComponent,
         ContactoComponent,
-        MenuComponent,
         NewbornComponent,
         ComunionComponent,
         EmbarazoComponent,
@@ -59,10 +60,12 @@ import { MatInputModule } from "@angular/material/input";
         PanelUsuariosComponent,
         ListaReservasComponent,
         CrearPostComponent,
-        FooterComponent,
+        FooterComponent
+
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+        provideAnimationsAsync(),
     ],
     bootstrap: [AppComponent],
     imports: [
@@ -71,9 +74,12 @@ import { MatInputModule } from "@angular/material/input";
         ReactiveFormsModule,
         HttpClientModule,
         NoopAnimationsModule,
-        MatInputModule,
         BrowserAnimationsModule,
         RouterModule,
-    ]
+        MenuComponent,
+        FullCalendarModule
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
+
 })
 export class AppModule { }
