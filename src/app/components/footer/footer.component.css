@@ -11,12 +11,12 @@
     position: sticky;
 }
 
-.contacto p {
+.contactoFooter p {
     max-width: 80%;
     text-align: center;
     align-items: left;
 }
-.contacto a {
+.contactoFooter a {
 text-decoration: none;
 color: white;
 }

@@ -32,45 +32,32 @@
         </ul>
       </nav>
 
-      <!-- Carousel -->
-
-      <!-- @if (router.url === '/home') {
-        <div class="seccionInicial col-md-12">
-          <div class="carousel">
-            <img class="elementToFadeInAndOut" [src]="images[imagenSeleccionada].url" [alt]="'slider'" />
-          </div>
-        </div>
-      }
-    </header> -->
-
-
-
     <!-- Carousel BOOTSTRAP -->
     @if (router.url === '/home') {
-    <div class="carousel slide carousel-fade carousel-container" data-bs-wrap="true" data-bs-ride="carousel"
+    <div class="carousel slide carousel-fade carousel-container" #carousel data-bs-wrap="true" data-bs-ride="carousel"
       data-bs-touch="false">
       <div class="carousel-inner carousel-wrapper">
-        <!-- <div class="carousel-item active" *ngFor="let slide of images" data-bs-interval="4500">
+        <!-- <div class="carousel-item active" *ngFor="let slide of images" data-bs-interval="2500">
               <img [src]="slide.url" [alt]="slide.nombre" class="d-block w-100 slide-image">
             </div> -->
-        <div class="carousel-item active" data-bs-interval="4500">
+        <div class="carousel-item active" data-bs-interval="4000">
           <img src='https://res.cloudinary.com/dscycaajk/image/upload/v1712527890/txdd0wl8fjegett8criy_iq6mni.avif'
             class="d-block w-100" alt="Comunión">
         </div>
-        <div class="carousel-item" data-bs-interval="4500">
+        <div class="carousel-item" data-bs-interval="4000">
           <img
             src="https://res.cloudinary.com/dscycaajk/image/upload/v1712527889/CARLOTA_2ANYS-147-c%C3%B2pia-copia_s5dera.avif"
             class="d-block w-100" alt="Cumpleaños">
         </div>
-        <div class="carousel-item" data-bs-interval="4500">
+        <div class="carousel-item" data-bs-interval="4000">
           <img src="https://res.cloudinary.com/dscycaajk/image/upload/v1712527889/ALEJANDRI_9M-43_cratx7.avif"
             class="d-block w-100" alt="Bebés">
         </div>
-        <div class="carousel-item" data-bs-interval="4500">
+        <div class="carousel-item" data-bs-interval="4000">
           <img src="https://res.cloudinary.com/dscycaajk/image/upload/v1712527890/fy8a3twdk9rudxffasoh_qd5uqo.avif"
             class="d-block w-100" alt="Embarazo">
         </div>
-        <div class="carousel-item" data-bs-interval="4500">
+        <div class="carousel-item" data-bs-interval="4000">
           <img src="https://res.cloudinary.com/dscycaajk/image/upload/v1712527070/EIRE-35-copia_hndnxb.avif"
             class="d-block w-100" alt="Newborn">
         </div>

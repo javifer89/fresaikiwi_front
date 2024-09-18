@@ -1,28 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { AfterViewInit, CUSTOM_ELEMENTS_SCHEMA, Component, ElementRef, NO_ERRORS_SCHEMA, OnDestroy, OnInit, ViewChild, effect, inject, input, signal, viewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import { UsuariosService } from 'src/app/services/usuarios.service';
-import { SwiperContainer } from 'swiper/element';
-import { SwiperOptions } from 'swiper/types/swiper-options';
 import { RouterLink } from '@angular/router';
-import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
-import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel'
-
-
-// Importar Swiper y los módulos directamente desde 'swiper'
-import Swiper from 'swiper';
-import SwiperCore from 'swiper';
-//import 'swiper/swiper-bundle.css'; // Para estilos generales
-//import '../../../../node_modules/swiper/modules/navigation.css'; // Para estilos del módulo de navegación
-//import '../../../../node_modules/swiper/modules/pagination.css'; // Para estilos del módulo de paginación
-//import '../../../../node_modules/swiper/modules/effect-fade.css'; // Para estilos del módulo de efecto de desvanecimiento
-//import Autoplay from 'swiper';
-// import Pagination from 'swiper';
-// import Navigation from 'swiper';
-// import EffectFade from 'swiper';
-
-// Habilitar los módulos que vas a usar
-// SwiperCore.use([Autoplay, Pagination, Navigation, EffectFade]);
+import { filter } from 'rxjs';
+import * as bootstrap from 'bootstrap';
+import { Carousel } from 'bootstrap';
 
 
 @Component({
@@ -31,12 +14,12 @@ import SwiperCore from 'swiper';
   styleUrls: ['./menu.component.scss'],
   standalone: true,
   imports: [CommonModule, RouterLink],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
 })
 export class MenuComponent implements OnInit, OnDestroy, AfterViewInit {
-
-
+  @ViewChild('carousel') carouselElement!: ElementRef;
+  carouselInstance!: Carousel;
 
   usuariosService: UsuariosService = inject(UsuariosService);
   router: Router = inject(Router);
@@ -143,51 +126,52 @@ export class MenuComponent implements OnInit, OnDestroy, AfterViewInit {
     //   ],
     // },
   ];
-
-
+  
   constructor() { }
 
   ngOnInit(): void {
+    // Escuchar eventos de navegación para reiniciar el carousel
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe((event: NavigationEnd) => {
+      if (event.urlAfterRedirects === '/home') {
+        setTimeout(() => this.restartCarousel(), 0); // Asegura que se ejecute después de la navegación
+      }
+    });
+  }
+  ngAfterViewInit(): void {
+    // Inicializar el carousel
+    this.initializeCarousel();
+  }
 
-    this.startInterval();
-    // TODO COMPROBAR QUE FUNCIONA O BUSCAR OTRA SOLUCIÓN
-    // Forzar recarga de la página al volver a la página de inicio
-    if (this.router.url === '/home') {
-      this.router.navigateByUrl('/home', { skipLocationChange: true }).then(() => {
-        this.router.navigate(['/home']);
+  ngOnDestroy(): void {
+    clearInterval(this.interval);
+    // Limpiar el carousel cuando el componente se destruya
+    if (this.carouselInstance) {
+      this.carouselInstance.dispose();
+    }
+  }
+
+  initializeCarousel(): void {
+    if (this.carouselElement && this.carouselElement.nativeElement) {
+      this.carouselInstance = new Carousel(this.carouselElement.nativeElement, {
+        interval: 2500
       });
     }
   }
-  ngAfterViewInit(): void {
 
+  restartCarousel(): void {
+    if (this.carouselInstance) {
+      this.carouselInstance.dispose(); // Limpia la instancia anterior
+      this.initializeCarousel(); // Re-inicializa el carousel
+    } else {
+      this.initializeCarousel(); // Inicializa si no estaba inicializado
+    }
   }
-  ngOnDestroy(): void {
-    clearInterval(this.interval);
-  }
+
+  // Para manejar el flag active en el navbar
   setActive(): void {
     this.active = !this.active;
-  }
-  preloadImages(images: any[]) {
-    images.forEach(image => {
-      const img = new Image();
-      img.src = image.url;
-    });
-  }
-
-  startInterval() {
-    console.log('Interval started');
-    this.interval = setInterval(() => {
-      this.cambiaImagen();
-    }, 5000);
-  }
-
-  cambiaImagen() {
-
-    // Cambiar la imagen
-    this.imagenSeleccionada++;
-    if (this.imagenSeleccionada >= this.images.length) {
-      this.imagenSeleccionada = 0;
-    }
   }
 }
 

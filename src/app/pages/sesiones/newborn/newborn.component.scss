@@ -1,29 +1,32 @@
-.container{
-  margin-top: 370px;
+.container {
   margin-bottom: 150px;
+  margin-top: -.75rem;
 }
+
 h3 {
-    text-align: center;
-    padding: 10px;
-    margin-bottom: 30px;
-    font-size: 70px;
-    font-weight: 400;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-size: 70px;
+  font-weight: 400;
 }
 
 .texto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    & h3 {
-        position: absolute;
-        text-align: center;
-    }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
-    & p {
-        padding: 10px;
-    }
+  & h3 {
+    position: absolute;
+    text-align: center;
+  }
+
+  & p {
+    padding: 10px;
+  }
 }
+
 /* ESTILOS LIGHTBOX SCSS */
 
 .grid {
@@ -34,10 +37,12 @@ h3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
   gap: 1rem;
+
   &__img {
     cursor: pointer;
     transition: all 0.5s ease;
     box-shadow: 0.5rem 0.5rem 1rem #cecece, -0.5rem -0.5rem 1rem #f2f2f2;
+
     &:hover {
       transform: scale(0.9);
     }
@@ -73,20 +78,24 @@ h3 {
     opacity: 1;
     pointer-events: auto;
   }
+
   &__btn {
     width: 3rem;
     cursor: pointer;
     transition: all 0.5s ease;
+
     &:hover {
       transform: scale(0.9);
     }
+
     &:active {
       transform: scale(1.1);
     }
   }
+
   &__img {
     width: 80%;
-    height: 70vh;
+    height: 85vh;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.4);
   }
 }
@@ -98,11 +107,13 @@ h3 {
       height: auto;
     }
   }
+
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   }
-  .container{
-  margin-top: 50px;
-  margin-bottom: 50px;
-}
+
+  .container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
 }
