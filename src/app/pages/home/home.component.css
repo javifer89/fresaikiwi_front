@@ -3,7 +3,11 @@
     flex-direction: column;
     flex-wrap: nowrap;
     position: relative;
+    margin-top: 17rem;
     /* top: 70vh; */
+    @media (width <=540px) {
+        margin-top: 15rem;
+    }
 }
 /* .seccionIncial{
     width: 100%;
@@ -13,16 +17,75 @@
 /* Sección Bienvenida */
 .seccionWelcome {
     top: 100vh;
+    margin-top:29rem;
     z-index: 1;
     display: flex;
     text-align: justify;
     flex-direction: column;
     justify-content: center;
     font-family: 'Roboto Flex', sans-serif;
-    /* margin-top:370px; */
-    /* margin-top: 740px; */
-    /* margin-top: 25px; */
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+
+/*MEDIA QUERIES */
+    @media (width <=620px) {
+        margin-top: -4rem;
+    }
+
+    @media (width >=600px) {
+        margin-top: -2rem;
+    }
+
+    @media (width >=670px) {
+        margin-top: 0rem;
+    }
+
+    @media (width >=690px) {
+        margin-top: 4rem;
+    }
+
+    @media (width >=780px) {
+        margin-top: 10rem;
+    }
+
+    @media (width >=980px) {
+        margin-top: 12rem;
+    }
+
+    @media (width >=1002px) {
+        margin-top: 3rem;
+    }
+
+    @media (width >=1035px) {
+        margin-top: 14rem;
+    }
+
+    @media (width >=1066px) {
+        margin-top: 16rem;
+    }
+
+    @media (width >=1115px) {
+        margin-top: 18rem;
+    }
+
+    @media (width >=1165px) {
+        margin-top: 18rem;
+    }
+
+    @media (width >=1190px) {
+        margin-top: 22rem;
+    }
+
+    @media (width >=1260px) {
+        margin-top: 24rem;
+    }
+
+    @media (width >=1310px) {
+        margin-top: 26rem;
+    }
+
+    @media (width >=1360px) {
+        margin-top: 29rem;
+    }
 }
 .seccionWelcome h6 {
     font-size: 20px;
@@ -38,47 +101,12 @@
 /* Sección SESIONES */
 .sesiones {
     width: 100vw;
-    margin-top:20px;
-}
-.row{
-
+    margin-top:10px;
 }
 
-/* TODO REVISAR EN MOBILE */
-@media (max-width: 1200px) {
-    .sesiones{
-        margin-top: 50px;
-}
-.seccionWelcome {
-    top: 0;
-    /* margin-top: 5px; */
-    margin-bottom: 30px;
-}
-}
-/* HACER MEDIA QUERY PARA HEIGHT, PARA WIDTH CON 740PX FUNCIONA */
-@media (max-width: 500px) {
-    .sesiones {
-        margin-top: 50px;
-    }
 
-    .seccionWelcome {
-        top: 0;
-        /* margin-top: 5px; */
-        margin-bottom: 30px;
-    }
-}
 
-@media (max-height: 500px) {
-    .sesiones {
-        margin-top: 50px;
-    }
 
-    .seccionWelcome {
-        top: 0;
-        /* margin-top: 5px; */
-        margin-bottom: 30px;
-    }
-}
         /* Sección SLIDER */
         /* .carousel {
             position: absolute;

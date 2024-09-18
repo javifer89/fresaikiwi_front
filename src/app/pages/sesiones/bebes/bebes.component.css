@@ -1,6 +1,7 @@
-h3{
+h3 {
     text-align: center;
 }
+
 /* ESTILOS LIGHTBOX CSS */
 
 .grid {
@@ -12,24 +13,27 @@ h3{
     grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
     gap: 1rem;
 }
+
 .grid__img {
     cursor: pointer;
     transition: all .5s ease;
     box-shadow: .5rem .5rem 1rem #cecece,
-            -.5rem -.5rem 1rem #f2f2f2;
+        -.5rem -.5rem 1rem #f2f2f2;
 }
+
 .grid__img:hover {
-transform: scale(.9);
+    transform: scale(.9);
 }
+
 .grid__img:active {
-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 
-.lightbox{
+.lightbox {
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0, 0, 0, .4);
     backdrop-filter: blur(2rem);
     position: fixed;
     top: 0;
@@ -47,23 +51,28 @@ transform: scale(1.1);
     pointer-events: none;
     transition: all .5s ease;
 }
-.lightbox.isActive{
+
+.lightbox.isActive {
     opacity: 1;
     pointer-events: auto;
 }
-.lightbox__btn{
-width: 3rem;
-cursor: pointer;
-transition: all .5s ease;
+
+.lightbox__btn {
+    width: 3rem;
+    cursor: pointer;
+    transition: all .5s ease;
 }
+
 .lightbox__btn:hover {
     transform: scale(.9);
 }
+
 .lightbox__btn:active {
     transform: scale(1.1);
 }
-.lightbox__img{
- width: 80%;
- height: 70vh;
- box-shadow: 0 0 1rem 0 rgba(0,0,0,.4);
+
+.lightbox__img {
+    width: 80%;
+    height: 85vh;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .4);
 }

@@ -4,8 +4,11 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	margin-top: -300px;
+	margin-top: -70px;
 	margin-bottom: 30px;
+	@media (width <=520px) {
+			margin-top: 1rem;
+		}
 }
 
 .titulos {
